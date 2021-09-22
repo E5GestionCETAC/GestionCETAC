@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
 		EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */; };
 		EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */; };
 		EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45726FBE33C00B5B565 /* ViewController.swift */; };
 		EA9EA45B26FBE33C00B5B565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA45926FBE33C00B5B565 /* Main.storyboard */; };
 		EA9EA45D26FBE34600B5B565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA45C26FBE34600B5B565 /* Assets.xcassets */; };
 		EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA45E26FBE34600B5B565 /* LaunchScreen.storyboard */; };
+		EA9EA46926FBE3EB00B5B565 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA46826FBE3EB00B5B565 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
+		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
 		EA9EA45026FBE33C00B5B565 /* GestionCETAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestionCETAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		EA9EA45C26FBE34600B5B565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9EA45F26FBE34600B5B565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9EA46126FBE34600B5B565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA9EA46826FBE3EB00B5B565 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCAFF387FADCB99D53157FD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E44B2443FC6CE32860AC1E53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */,
+				77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EA9EA44726FBE33C00B5B565 = {
 			isa = PBXGroup;
 			children = (
 				EA9EA45226FBE33C00B5B565 /* GestionCETAC */,
 				EA9EA45126FBE33C00B5B565 /* Products */,
+				E44B2443FC6CE32860AC1E53 /* Pods */,
+				DCAFF387FADCB99D53157FD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +90,7 @@
 				EA9EA45C26FBE34600B5B565 /* Assets.xcassets */,
 				EA9EA45E26FBE34600B5B565 /* LaunchScreen.storyboard */,
 				EA9EA46126FBE34600B5B565 /* Info.plist */,
+				EA9EA46826FBE3EB00B5B565 /* GoogleService-Info.plist */,
 			);
 			path = GestionCETAC;
 			sourceTree = "<group>";
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA9EA46426FBE34600B5B565 /* Build configuration list for PBXNativeTarget "GestionCETAC" */;
 			buildPhases = (
+				8161BEF9A1A416C296ECA97D /* [CP] Check Pods Manifest.lock */,
 				EA9EA44C26FBE33C00B5B565 /* Sources */,
 				EA9EA44D26FBE33C00B5B565 /* Frameworks */,
 				EA9EA44E26FBE33C00B5B565 /* Resources */,
+				99DF9F5F6745D67329C1DB01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */,
+				EA9EA46926FBE3EB00B5B565 /* GoogleService-Info.plist in Resources */,
 				EA9EA45D26FBE34600B5B565 /* Assets.xcassets in Resources */,
 				EA9EA45B26FBE33C00B5B565 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8161BEF9A1A416C296ECA97D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GestionCETAC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99DF9F5F6745D67329C1DB01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA9EA44C26FBE33C00B5B565 /* Sources */ = {
@@ -283,6 +356,7 @@
 		};
 		EA9EA46526FBE34600B5B565 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +375,7 @@
 		};
 		EA9EA46626FBE34600B5B565 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
