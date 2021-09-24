@@ -33,7 +33,7 @@ Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se compar
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Terapia" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-12-t9A">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acomp" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-12-t9A">
                                 <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fdC-12-t9A" secondAttribute="height" multiplier="811:303" id="JrK-Zm-H9K"/>
@@ -82,7 +82,7 @@ Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la par
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holistico" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Ii-Ic7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floresdb" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Ii-Ic7">
                                 <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Urd-Ii-Ic7" secondAttribute="height" multiplier="811:303" id="7wa-hS-eDU"/>
@@ -117,7 +117,7 @@ Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la par
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-1S-NnO">
-                                <rect key="frame" x="298" y="80" width="214.5" height="46"/>
+                                <rect key="frame" x="297.5" y="80" width="215" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -159,9 +159,9 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
         </scene>
     </scenes>
     <resources>
-        <image name="Terapia" width="2052" height="708"/>
+        <image name="acomp" width="1024" height="459"/>
         <image name="flores" width="1000" height="640"/>
-        <image name="holistico" width="800" height="400"/>
+        <image name="floresdb" width="1280" height="847"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
