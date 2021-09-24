@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,15 +15,308 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5s-4g-QUd">
+                                <rect key="frame" x="156" y="150" width="103" height="43"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Misión">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="HgZ-BU-gDD">
+                                <rect key="frame" x="0.0" y="193" width="414" height="358"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="M0U-so-qPZ">
+                                <rect key="frame" x="44" y="556" width="327" height="155"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Acompañar, guiar y encauzar a personas, pacientes con alguna enfermedad y a sus familiares a través de la tanatología mejorando su estado emocional, físico, psicológico y espiritual logrando reencuentren un sentido a la vida asumiendo nuestro compromiso y calidad humana con cada uno de ellos.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.99215686274509807" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M0U-so-qPZ" firstAttribute="top" secondItem="HgZ-BU-gDD" secondAttribute="bottom" constant="5" id="0ql-AG-S0z"/>
+                            <constraint firstItem="HgZ-BU-gDD" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="5Kd-1E-bUH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="M0U-so-qPZ" secondAttribute="bottom" constant="151" id="69O-gF-yCM"/>
+                            <constraint firstItem="M0U-so-qPZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="44" id="6qx-59-aaI"/>
+                            <constraint firstItem="M0U-so-qPZ" firstAttribute="top" secondItem="HgZ-BU-gDD" secondAttribute="bottom" constant="5" id="85o-Di-UXQ"/>
+                            <constraint firstItem="H5s-4g-QUd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="156" id="L8E-s0-WAf"/>
+                            <constraint firstItem="HgZ-BU-gDD" firstAttribute="top" secondItem="H5s-4g-QUd" secondAttribute="bottom" id="Lyi-3l-xjq"/>
+                            <constraint firstItem="HgZ-BU-gDD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZzR-jE-dXg"/>
+                            <constraint firstItem="H5s-4g-QUd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="106" id="aRb-z8-3do"/>
+                            <constraint firstItem="HgZ-BU-gDD" firstAttribute="top" secondItem="H5s-4g-QUd" secondAttribute="bottom" id="jfy-wa-WcX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M0U-so-qPZ" secondAttribute="trailing" constant="43" id="ndw-Pq-YjF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H5s-4g-QUd" secondAttribute="trailing" constant="155" id="tFe-pv-5rt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-72.463768115942031" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wKL-Da-9Yj">
+            <objects>
+                <viewController id="jsr-h1-d5V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5hM-Jv-kkW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JOR-nF-5vp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bD8-VY-i3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="-690"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kow-nz-V0p">
+            <objects>
+                <viewController id="1yH-I4-cqT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T9G-Uh-jqW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhB-07-jnY">
+                                <rect key="frame" x="156" y="150" width="103" height="40"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Visión">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="if8-zd-L5Q">
+                                <rect key="frame" x="44" y="533" width="327" height="184"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="sGs-EK-9wp"/>
+                                </constraints>
+                                <string key="text">Ser la mejor opción en el servicio en tanatología en la Ciudad de México ampliando nuestros servicios en el interior de la República Mexicana asumiendo nuestro compromiso de ofrecer beneficios a las personas con calidez humana</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="vFq-wL-Rov">
+                                <rect key="frame" x="0.0" y="222" width="414" height="253"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aso-Uh-72a"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vFq-wL-Rov" firstAttribute="trailing" secondItem="Aso-Uh-72a" secondAttribute="trailing" id="0yg-qH-UKg"/>
+                            <constraint firstItem="fhB-07-jnY" firstAttribute="leading" secondItem="Aso-Uh-72a" secondAttribute="leading" constant="156" id="4vx-e6-5Zk"/>
+                            <constraint firstItem="Aso-Uh-72a" firstAttribute="trailing" secondItem="fhB-07-jnY" secondAttribute="trailing" constant="155" id="6Ky-bZ-cKI"/>
+                            <constraint firstItem="Aso-Uh-72a" firstAttribute="bottom" secondItem="fhB-07-jnY" secondAttribute="bottom" constant="672" id="L0S-e4-SUo"/>
+                            <constraint firstItem="Aso-Uh-72a" firstAttribute="trailing" secondItem="if8-zd-L5Q" secondAttribute="trailing" constant="43" id="LKX-ny-beJ"/>
+                            <constraint firstItem="if8-zd-L5Q" firstAttribute="leading" secondItem="Aso-Uh-72a" secondAttribute="leading" constant="44" id="RWY-sj-9Y3"/>
+                            <constraint firstItem="vFq-wL-Rov" firstAttribute="top" secondItem="fhB-07-jnY" secondAttribute="bottom" constant="32" id="W9y-Ma-Gnx"/>
+                            <constraint firstItem="if8-zd-L5Q" firstAttribute="top" secondItem="vFq-wL-Rov" secondAttribute="bottom" constant="58" id="blv-77-NmV"/>
+                            <constraint firstItem="Aso-Uh-72a" firstAttribute="bottom" secondItem="if8-zd-L5Q" secondAttribute="bottom" constant="145" id="cti-GU-Og2"/>
+                            <constraint firstItem="vFq-wL-Rov" firstAttribute="leading" secondItem="Aso-Uh-72a" secondAttribute="leading" id="iHb-VJ-LSh"/>
+                            <constraint firstItem="fhB-07-jnY" firstAttribute="top" secondItem="Aso-Uh-72a" secondAttribute="top" constant="106" id="sKJ-ki-FeL"/>
+                            <constraint firstItem="if8-zd-L5Q" firstAttribute="top" secondItem="vFq-wL-Rov" secondAttribute="bottom" constant="58" id="voY-eB-M9R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZK-sm-t2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="84"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jnq-gt-dmS">
+            <objects>
+                <viewController id="WuF-LT-jDf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9gd-VZ-Wtr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Respeto: Dar valía a la ideología de cada individuo respetando sus creencias, estatus económico o género." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="HXa-oS-Tc5">
+                                <rect key="frame" x="44" y="433" width="327" height="61"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="l9Q-86-9oL"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zsz-6a-wFE">
+                                <rect key="frame" x="0.0" y="225" width="414" height="171"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Honestidad: Conducirnos con la verdad y transparencia con todos los individuos, asociados y aliados" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yde-wc-l6j">
+                                <rect key="frame" x="44" y="494" width="327" height="69"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="jKF-hY-l6x"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Empatía: Reconocer, comprender y apreciar las emociones y sentimientos de los demás." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5aq-Xs-HpO">
+                                <rect key="frame" x="44" y="571" width="327" height="51"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="ggm-ft-5Qd"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VMu-da-cmD">
+                                <rect key="frame" x="44" y="630" width="327" height="80"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Integridad: Conducirnos con rectitud y ética en las ideas, creencias y comportamientos de nuestros colaboradores con la interacción con la comunidad.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Humildad: Tener la sabiduría de reconocer y respetar las habilidades, cualidades, capacidades y aptitudes del ser humano." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="33u-0z-ws7">
+                                <rect key="frame" x="44" y="718" width="327" height="64"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6sU-iS-tB3"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWW-Vs-wfd">
+                                <rect key="frame" x="145" y="146" width="124" height="43"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Valores">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mF6-zQ-45s"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zsz-6a-wFE" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" id="4Tx-rN-bRm"/>
+                            <constraint firstItem="VWW-Vs-wfd" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" constant="145" id="7hC-fP-sFJ"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="trailing" secondItem="VWW-Vs-wfd" secondAttribute="trailing" constant="145" id="BwO-uN-RMg"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="trailing" secondItem="VMu-da-cmD" secondAttribute="trailing" constant="43" id="KkV-TV-Qgv"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="trailing" secondItem="HXa-oS-Tc5" secondAttribute="trailing" constant="43" id="RfY-3l-q9z"/>
+                            <constraint firstItem="5aq-Xs-HpO" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" constant="44" id="Sy2-4N-WU5"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="trailing" secondItem="33u-0z-ws7" secondAttribute="trailing" constant="43" id="TMe-20-SyJ"/>
+                            <constraint firstAttribute="bottom" secondItem="yde-wc-l6j" secondAttribute="bottom" constant="333" id="Ued-EG-Iys"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="bottom" secondItem="33u-0z-ws7" secondAttribute="bottom" constant="80" id="VGD-yC-O8q"/>
+                            <constraint firstItem="33u-0z-ws7" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" constant="44" id="YD6-vM-byY"/>
+                            <constraint firstItem="33u-0z-ws7" firstAttribute="top" secondItem="VMu-da-cmD" secondAttribute="bottom" constant="8" symbolic="YES" id="aPu-1e-wWK"/>
+                            <constraint firstItem="VMu-da-cmD" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" constant="44" id="bS9-LM-VTF"/>
+                            <constraint firstItem="Zsz-6a-wFE" firstAttribute="trailing" secondItem="mF6-zQ-45s" secondAttribute="trailing" id="bVb-3N-JMc"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="trailing" secondItem="5aq-Xs-HpO" secondAttribute="trailing" constant="43" id="h77-LD-ogg"/>
+                            <constraint firstItem="HXa-oS-Tc5" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" constant="44" id="lC2-IV-TpB"/>
+                            <constraint firstItem="yde-wc-l6j" firstAttribute="top" secondItem="HXa-oS-Tc5" secondAttribute="bottom" id="nZI-S6-k2G"/>
+                            <constraint firstItem="VWW-Vs-wfd" firstAttribute="top" secondItem="mF6-zQ-45s" secondAttribute="top" constant="102" id="qxR-0A-7mO"/>
+                            <constraint firstItem="yde-wc-l6j" firstAttribute="top" secondItem="HXa-oS-Tc5" secondAttribute="bottom" id="uAq-yY-gAS"/>
+                            <constraint firstItem="VMu-da-cmD" firstAttribute="top" secondItem="5aq-Xs-HpO" secondAttribute="bottom" constant="8" symbolic="YES" id="vDo-JW-6uQ"/>
+                            <constraint firstItem="yde-wc-l6j" firstAttribute="leading" secondItem="mF6-zQ-45s" secondAttribute="leading" constant="44" id="vxa-qW-PXW"/>
+                            <constraint firstItem="mF6-zQ-45s" firstAttribute="trailing" secondItem="yde-wc-l6j" secondAttribute="trailing" constant="43" id="wI7-WQ-x4G"/>
+                            <constraint firstItem="5aq-Xs-HpO" firstAttribute="top" secondItem="yde-wc-l6j" secondAttribute="bottom" constant="8" symbolic="YES" id="waR-8T-nAB"/>
+                            <constraint firstItem="Zsz-6a-wFE" firstAttribute="top" secondItem="VWW-Vs-wfd" secondAttribute="bottom" constant="36" id="y67-lM-Uxx"/>
+                            <constraint firstItem="33u-0z-ws7" firstAttribute="top" secondItem="VMu-da-cmD" secondAttribute="bottom" constant="8" id="ycn-m2-hLO"/>
+                            <constraint firstItem="HXa-oS-Tc5" firstAttribute="top" secondItem="Zsz-6a-wFE" secondAttribute="bottom" constant="37" id="zZF-qq-kvg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQ3-Mt-jIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547.8260869565217" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BiI-IW-ptp">
+            <objects>
+                <viewController id="agY-mv-wIj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTX-EL-MUR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shq-Xq-TcM">
+                                <rect key="frame" x="130" y="118" width="154" height="43"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Objetivos">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="system" size="36"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ekp-BE-FLW">
+                                <rect key="frame" x="0.0" y="225" width="414" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="UOf-7y-TCO"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="f7J-jn-eiW">
+                                <rect key="frame" x="28" y="425" width="359" height="365"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Apoyar a personas de escasos recursos con algún tipo de discapacidad para satisfacer sus necesidades humanas de acuerdo a la pirámide de Maslow: fisiológicas, de seguridad, de pertenencia, reconocimiento y autorrealización, a través de la disciplina de tanatología.
+
+Brindar cuidado, capacitación y orientación tanto emocional, psicológica y espiritualmente a los adultos mayores, personas con enfermedades, personas con enfermedades crónico-degenerativas y en fase terminal, como también a sus familiares. Asimismo, proporcionando contención a cualquier tipo de pérdida significativa y por muerte logrando reencuentren un nuevo sentido a la vida.
+
+Dar acompañamiento y consejería a personas y pacientes que enfrentan situaciones en crisis, estrés postraumático, abusos, maltratos, así como situaciones que provocan pérdidas de distinta índole: pérdida de un familiar, de una extremidad del cuerpo, de autoestima, de identidad, laboral, bienes materiales; infertilidad, anorexia, bulimia, intentos de suicidio, viudez, divorcio, violencia intrafamiliar, infidelidad, portadores de VIH-SIDA o personas con enfermedades en fase terminal, entre otras. También se da acompañamiento a los familiares que son afectados por la situación y el entorno.
+
+</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CWA-CP-YBr"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ekp-BE-FLW" firstAttribute="top" secondItem="Shq-Xq-TcM" secondAttribute="bottom" constant="64" id="24m-78-5gB"/>
+                            <constraint firstItem="f7J-jn-eiW" firstAttribute="top" secondItem="Ekp-BE-FLW" secondAttribute="bottom" constant="32" id="3aL-F2-14C"/>
+                            <constraint firstItem="CWA-CP-YBr" firstAttribute="trailing" secondItem="f7J-jn-eiW" secondAttribute="trailing" constant="27" id="FQ7-eJ-T0V"/>
+                            <constraint firstItem="Shq-Xq-TcM" firstAttribute="top" secondItem="CWA-CP-YBr" secondAttribute="top" constant="74" id="KHL-rK-hJh"/>
+                            <constraint firstItem="f7J-jn-eiW" firstAttribute="leading" secondItem="CWA-CP-YBr" secondAttribute="leading" constant="28" id="Oik-xi-WjO"/>
+                            <constraint firstItem="CWA-CP-YBr" firstAttribute="trailing" secondItem="Shq-Xq-TcM" secondAttribute="trailing" constant="130" id="Siq-kt-z0Z"/>
+                            <constraint firstItem="f7J-jn-eiW" firstAttribute="top" secondItem="Ekp-BE-FLW" secondAttribute="bottom" constant="32" id="Xav-v9-1QO"/>
+                            <constraint firstItem="Shq-Xq-TcM" firstAttribute="leading" secondItem="CWA-CP-YBr" secondAttribute="leading" constant="130" id="ZS6-74-9Th"/>
+                            <constraint firstItem="Ekp-BE-FLW" firstAttribute="top" secondItem="Shq-Xq-TcM" secondAttribute="bottom" constant="64" id="aRX-8h-bmE"/>
+                            <constraint firstItem="Ekp-BE-FLW" firstAttribute="leading" secondItem="CWA-CP-YBr" secondAttribute="leading" id="jQO-TT-0P6"/>
+                            <constraint firstItem="CWA-CP-YBr" firstAttribute="bottom" secondItem="f7J-jn-eiW" secondAttribute="bottom" constant="72" id="lCN-lo-CJL"/>
+                            <constraint firstItem="Ekp-BE-FLW" firstAttribute="trailing" secondItem="CWA-CP-YBr" secondAttribute="trailing" id="t0m-du-YmW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sk5-om-Lx8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2347.826086956522" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="640" height="358"/>
+        <image name="2" width="627" height="418"/>
+        <image name="3" width="640" height="365.5"/>
+        <image name="4" width="640" height="361"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
