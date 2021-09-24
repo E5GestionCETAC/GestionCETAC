@@ -16,10 +16,10 @@
 		C2C99E7626FE4E11008FBDF1 /* mision.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E6D26FE4E10008FBDF1 /* mision.jpeg */; };
 		C2C99E7726FE4E11008FBDF1 /* inicio2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E6E26FE4E10008FBDF1 /* inicio2.png */; };
 		C2C99E7826FE4E11008FBDF1 /* valores.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E6F26FE4E11008FBDF1 /* valores.jpeg */; };
-		C2C99E7926FE4E11008FBDF1 /* alternativos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E7026FE4E11008FBDF1 /* alternativos.jpeg */; };
 		C2C99E7A26FE4E11008FBDF1 /* acompanamiento.png in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E7126FE4E11008FBDF1 /* acompanamiento.png */; };
 		C2C99E7B26FE4E11008FBDF1 /* holisticos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */; };
 		C2C99E7C26FE4E11008FBDF1 /* objetivos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E7326FE4E11008FBDF1 /* objetivos.jpeg */; };
+		C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */; };
 		EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */; };
 		EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */; };
 		EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45726FBE33C00B5B565 /* ViewController.swift */; };
@@ -41,10 +41,10 @@
 		C2C99E6D26FE4E10008FBDF1 /* mision.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mision.jpeg; sourceTree = "<group>"; };
 		C2C99E6E26FE4E10008FBDF1 /* inicio2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inicio2.png; sourceTree = "<group>"; };
 		C2C99E6F26FE4E11008FBDF1 /* valores.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = valores.jpeg; sourceTree = "<group>"; };
-		C2C99E7026FE4E11008FBDF1 /* alternativos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alternativos.jpeg; sourceTree = "<group>"; };
 		C2C99E7126FE4E11008FBDF1 /* acompanamiento.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acompanamiento.png; sourceTree = "<group>"; };
 		C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holisticos.jpeg; sourceTree = "<group>"; };
 		C2C99E7326FE4E11008FBDF1 /* objetivos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = objetivos.jpeg; sourceTree = "<group>"; };
+		C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alternativos.jpeg; sourceTree = "<group>"; };
 		EA9EA45026FBE33C00B5B565 /* GestionCETAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestionCETAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		C2C99E6A26FE4DDC008FBDF1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */,
 				C2C99E7126FE4E11008FBDF1 /* acompanamiento.png */,
-				C2C99E7026FE4E11008FBDF1 /* alternativos.jpeg */,
 				C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */,
 				C2C99E6C26FE4E10008FBDF1 /* inicio1.png */,
 				C2C99E6E26FE4E10008FBDF1 /* inicio2.png */,
@@ -222,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C99E7B26FE4E11008FBDF1 /* holisticos.jpeg in Resources */,
+				C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */,
 				C2C99E7826FE4E11008FBDF1 /* valores.jpeg in Resources */,
 				C2C99E7A26FE4E11008FBDF1 /* acompanamiento.png in Resources */,
 				EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */,
@@ -236,7 +237,6 @@
 				C2C99E7726FE4E11008FBDF1 /* inicio2.png in Resources */,
 				C2C99E7526FE4E11008FBDF1 /* inicio1.png in Resources */,
 				C2C99E7426FE4E11008FBDF1 /* vision.jpeg in Resources */,
-				C2C99E7926FE4E11008FBDF1 /* alternativos.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
