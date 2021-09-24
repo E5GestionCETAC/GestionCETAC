@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,19 +13,157 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompañamiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nep-DB-fnq">
+                                <rect key="frame" x="248.5" y="80" width="313" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-8X-yV1">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Tanatología: Proceso de encuentro personal en donde a través de un diálogo con la ayuda de técnicas y herramientas tanatológicas la persona identifica y reconoce sus emociones ante una pérdida.
+
+Acompañamiento Individual: Proceso individual en donde se crea un vínculo de afecto y confianza, la persona se siente escuchada, comprendida, respetada y aceptada. Se busca resignificar su propia vida de alguna situación que está viviendo o vivió (miedos, violencia, dudas, inseguridades, bloqueos, vicios, etc.) con el fin de ayudarlos a desarrollar soluciones en su propio beneficio y vivir el aquí y el ahora.
+
+Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se comparten las experiencias que al mismo tiempo está siendo vivida por el resto de los participantes. Se crean lazos de confianza, compasión, empatía y aceptación en un espacio seguro en donde se es libre de comunicar y dar solución ante una situación.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acomp" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-12-t9A">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fdC-12-t9A" secondAttribute="height" multiplier="811:303" id="JrK-Zm-H9K"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iUf-8X-yV1" secondAttribute="trailing" constant="71" id="37j-5M-XBr"/>
+                            <constraint firstItem="fdC-12-t9A" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="5Bl-hY-V0o"/>
+                            <constraint firstItem="nep-DB-fnq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HV8-wu-rUf"/>
+                            <constraint firstItem="iUf-8X-yV1" firstAttribute="top" secondItem="fdC-12-t9A" secondAttribute="bottom" constant="43" id="Utb-NO-Dkw"/>
+                            <constraint firstItem="iUf-8X-yV1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="71" id="aLA-0K-2OW"/>
+                            <constraint firstItem="fdC-12-t9A" firstAttribute="top" secondItem="nep-DB-fnq" secondAttribute="bottom" constant="90" id="cOb-SU-FEy"/>
+                            <constraint firstItem="nep-DB-fnq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="gpw-gK-n1h"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="iUf-8X-yV1" secondAttribute="bottom" constant="40" id="pHL-bO-YAk"/>
+                            <constraint firstAttribute="trailing" secondItem="fdC-12-t9A" secondAttribute="trailing" id="rpa-fp-daR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.81481481481481" y="93.888888888888886"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cJC-ol-Mld">
+            <objects>
+                <viewController id="kt1-Fy-Csy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4J4-Jv-uAo">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holísticos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHo-rn-CeX">
+                                <rect key="frame" x="317" y="80" width="176" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMZ-tp-jgV">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Aromaterapia y Musicoterapia: En un espacio y ambiente de tranquilidad la persona vive un estado de bienestar físico, emocional y mental mediante el uso controlado de los aromas de nuestras esencias combinado con musicoterapia transportando al individuo a un ambiente de armonía y sensación de calma y relajación con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.
+
+Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la parte física, emocional y espiritual. Se trabaja en el conjunto de chakras ubicado a lo largo de la columna vertebral hasta el cerebro. Esta energía circula a través de la persona y representa el conjunto de experiencias de distintos niveles y se almacena a lo largo de su vida y en ocasiones se encuentra bloqueada. Ayudamos a que esa energía fluya en el individuo para restablecer la armonía y conexión con su mente, sus emociones, su cuerpo y su espíritu.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floresdb" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Ii-Ic7">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Urd-Ii-Ic7" secondAttribute="height" multiplier="811:303" id="7wa-hS-eDU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Pe-8A-dYT"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Urd-Ii-Ic7" firstAttribute="top" secondItem="bHo-rn-CeX" secondAttribute="bottom" constant="90" id="0F2-Gx-xqQ"/>
+                            <constraint firstItem="bHo-rn-CeX" firstAttribute="centerX" secondItem="4J4-Jv-uAo" secondAttribute="centerX" id="GWw-Zz-wmZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Urd-Ii-Ic7" secondAttribute="trailing" id="HuU-YI-1d6"/>
+                            <constraint firstItem="bHo-rn-CeX" firstAttribute="top" secondItem="5Pe-8A-dYT" secondAttribute="top" constant="80" id="caq-2e-uK6"/>
+                            <constraint firstItem="Urd-Ii-Ic7" firstAttribute="leading" secondItem="4J4-Jv-uAo" secondAttribute="leading" id="es0-a6-VhD"/>
+                            <constraint firstItem="5Pe-8A-dYT" firstAttribute="trailing" secondItem="bMZ-tp-jgV" secondAttribute="trailing" constant="71" id="lcz-6c-BhY"/>
+                            <constraint firstItem="5Pe-8A-dYT" firstAttribute="bottom" secondItem="bMZ-tp-jgV" secondAttribute="bottom" constant="40" id="mBs-mt-CAg"/>
+                            <constraint firstItem="bMZ-tp-jgV" firstAttribute="top" secondItem="Urd-Ii-Ic7" secondAttribute="bottom" constant="43" id="piO-S5-jyT"/>
+                            <constraint firstItem="bMZ-tp-jgV" firstAttribute="leading" secondItem="5Pe-8A-dYT" secondAttribute="leading" constant="71" id="u5S-iB-t3R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4z-AK-BrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="94"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PQp-1N-gxd">
+            <objects>
+                <viewController id="IsW-pv-Bml" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gai-ud-I1J">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMC-1S-NnO">
+                                <rect key="frame" x="297.5" y="80" width="215" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0P-n0-VeB">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Flores De Bach: Ayuda a reestablecer el equilibrio emocional y energético mediante extractos naturales extraídos de flores silvestres con el fin de relajar y aliviar la mente en situaciones de duelo, ansiedad, miedos, stress, entre otros. No tienen efectos secundarios y sin problema se pueden utilizar mientras consumes otros medicamentos. Contamos con 38 soluciones naturales.
+
+Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia que, a través del olfato, estimula el sistema nervioso central ofreciendo resultados positivos en el manejo de las emociones. Se cuenta con brisas relajantes, brisas reanimante y brisas equilibrantes.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flores" translatesAutoresizingMaskIntoConstraints="NO" id="qMc-kZ-IEG">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qMc-kZ-IEG" secondAttribute="height" multiplier="811:303" id="tph-Ox-6FR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ki7-09-eCT"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="qMc-kZ-IEG" firstAttribute="top" secondItem="RMC-1S-NnO" secondAttribute="bottom" constant="90" id="06d-8r-cCI"/>
+                            <constraint firstItem="RMC-1S-NnO" firstAttribute="top" secondItem="Ki7-09-eCT" secondAttribute="top" constant="80" id="BbN-S7-W3I"/>
+                            <constraint firstItem="F0P-n0-VeB" firstAttribute="leading" secondItem="Ki7-09-eCT" secondAttribute="leading" constant="71" id="FTP-Tv-UjE"/>
+                            <constraint firstItem="Ki7-09-eCT" firstAttribute="trailing" secondItem="F0P-n0-VeB" secondAttribute="trailing" constant="71" id="NC8-hc-ia7"/>
+                            <constraint firstItem="RMC-1S-NnO" firstAttribute="centerX" secondItem="gai-ud-I1J" secondAttribute="centerX" id="ZQ8-Fd-dre"/>
+                            <constraint firstItem="Ki7-09-eCT" firstAttribute="bottom" secondItem="F0P-n0-VeB" secondAttribute="bottom" constant="40" id="eQE-U2-ONq"/>
+                            <constraint firstItem="F0P-n0-VeB" firstAttribute="top" secondItem="qMc-kZ-IEG" secondAttribute="bottom" constant="43" id="fTR-bR-xUo"/>
+                            <constraint firstItem="qMc-kZ-IEG" firstAttribute="leading" secondItem="gai-ud-I1J" secondAttribute="leading" id="oeZ-Qg-bKz"/>
+                            <constraint firstAttribute="trailing" secondItem="qMc-kZ-IEG" secondAttribute="trailing" id="wUk-C3-maA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wM7-Ck-aM6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="94"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="acomp" width="1024" height="459"/>
+        <image name="flores" width="1000" height="640"/>
+        <image name="floresdb" width="1280" height="847"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
