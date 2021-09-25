@@ -33,7 +33,7 @@ Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se compar
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acomp" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-12-t9A">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acompanamiento" translatesAutoresizingMaskIntoConstraints="NO" id="fdC-12-t9A">
                                 <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fdC-12-t9A" secondAttribute="height" multiplier="811:303" id="JrK-Zm-H9K"/>
@@ -82,7 +82,7 @@ Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la par
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floresdb" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Ii-Ic7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holisticos" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Ii-Ic7">
                                 <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Urd-Ii-Ic7" secondAttribute="height" multiplier="811:303" id="7wa-hS-eDU"/>
@@ -131,7 +131,7 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flores" translatesAutoresizingMaskIntoConstraints="NO" id="qMc-kZ-IEG">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alternativos" translatesAutoresizingMaskIntoConstraints="NO" id="qMc-kZ-IEG">
                                 <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qMc-kZ-IEG" secondAttribute="height" multiplier="811:303" id="tph-Ox-6FR"/>
@@ -159,9 +159,9 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
         </scene>
     </scenes>
     <resources>
-        <image name="acomp" width="1024" height="459"/>
-        <image name="flores" width="1000" height="640"/>
-        <image name="floresdb" width="1280" height="847"/>
+        <image name="acompanamiento" width="1024" height="459"/>
+        <image name="alternativos" width="1000" height="640"/>
+        <image name="holisticos" width="800" height="400"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

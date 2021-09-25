@@ -174,6 +174,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfH-AC-ehu">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="BCa-qv-x4b" kind="show" id="M7g-CY-bOd"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mision" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-iH-0uJ">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -196,6 +199,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMV-E7-Tvi">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="Soe-Np-4DE" kind="show" id="fFz-tM-1qE"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vision" translatesAutoresizingMaskIntoConstraints="NO" id="1SD-G3-Ugy">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -218,6 +224,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIu-Go-GeI">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="BvC-bb-mPR" kind="show" id="efr-JH-xoB"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="objetivos" translatesAutoresizingMaskIntoConstraints="NO" id="v6V-oy-rH9">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -240,6 +249,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peu-Cy-lIW">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="vuc-VN-tdL" kind="show" id="EQK-aI-cHu"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="valores" translatesAutoresizingMaskIntoConstraints="NO" id="1a1-d5-BBu">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
@@ -568,24 +580,24 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             <objects>
                 <viewController id="BCa-qv-x4b" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="10v-zX-cHG">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87I-jW-BMg">
-                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <rect key="frame" x="71" y="522" width="562" height="433.5"/>
                                 <string key="text">Acompañar, guiar y encauzar a personas, pacientes con alguna enfermedad y a sus familiares a través de la tanatología mejorando su estado emocional, físico, psicológico y espiritual logrando reencuentren un sentido a la vida asumiendo nuestro compromiso y calidad humana con cada uno de ellos.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mision" translatesAutoresizingMaskIntoConstraints="NO" id="4j9-PH-NW7">
-                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <rect key="frame" x="0.0" y="216" width="704" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4j9-PH-NW7" secondAttribute="height" multiplier="811:303" id="CkL-0g-wIN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH8-WE-jlc">
-                                <rect key="frame" x="347" y="80" width="116.5" height="46"/>
+                                <rect key="frame" x="294" y="80" width="116.5" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -616,24 +628,24 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             <objects>
                 <viewController id="Soe-Np-4DE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWS-E7-eYZ">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPW-6r-YdC">
-                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <rect key="frame" x="71" y="522" width="562" height="433.5"/>
                                 <string key="text">Ser la mejor opción en el servicio en tanatología en la Ciudad de México ampliando nuestros servicios en el interior de la República Mexicana asumiendo nuestro compromiso de ofrecer beneficios a las personas con calidez humana.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vision" translatesAutoresizingMaskIntoConstraints="NO" id="24r-QO-aw7">
-                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <rect key="frame" x="0.0" y="216" width="704" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="24r-QO-aw7" secondAttribute="height" multiplier="811:303" id="2SO-3G-Jtc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI6-b7-gwd">
-                                <rect key="frame" x="350.5" y="80" width="109.5" height="46"/>
+                                <rect key="frame" x="297.5" y="80" width="109.5" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -664,12 +676,12 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             <objects>
                 <viewController id="vuc-VN-tdL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XVf-JU-fAa">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPW-rV-sVe">
-                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
-                                <mutableString key="text">Respeto: Dar valía a la ideología de cada individuo respetando sus creencias, estatus económico o género.
+                                <rect key="frame" x="71" y="522" width="562" height="433.5"/>
+                                <string key="text">Respeto: Dar valía a la ideología de cada individuo respetando sus creencias, estatus económico o género.
 
 Honestidad: Conducirnos con la verdad y transparencia con todos los individuos, asociados y aliados.
 
@@ -677,19 +689,19 @@ Empatía: Reconocer, comprender y apreciar las emociones y sentimientos de los d
 
 Integridad: Conducirnos con rectitud y ética en las ideas, creencias y comportamientos de nuestros colaboradores con la interacción con la comunidad.
 
-Humildad: Tener la sabiduría de reconocer y respetar las habilidades, cualidades, capacidades y aptitudes del ser humano.</mutableString>
+Humildad: Tener la sabiduría de reconocer y respetar las habilidades, cualidades, capacidades y aptitudes del ser humano.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valores" translatesAutoresizingMaskIntoConstraints="NO" id="YDr-ki-zLG">
-                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <rect key="frame" x="0.0" y="216" width="704" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YDr-ki-zLG" secondAttribute="height" multiplier="811:303" id="gvO-is-7iU"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-Wh-Kd0">
-                                <rect key="frame" x="339.5" y="80" width="131.5" height="46"/>
+                                <rect key="frame" x="286.5" y="80" width="131.5" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -720,28 +732,28 @@ Humildad: Tener la sabiduría de reconocer y respetar las habilidades, cualidade
             <objects>
                 <viewController id="BvC-bb-mPR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="txB-NQ-V70">
-                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-wN-7BA">
-                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
-                                <mutableString key="text">Apoyar a personas de escasos recursos con algún tipo de discapacidad para satisfacer sus necesidades humanas de acuerdo a la pirámide de Maslow: fisiológicas, de seguridad, de pertenencia, reconocimiento y autorrealización, a través de la disciplina de tanatología.
+                                <rect key="frame" x="71" y="522" width="562" height="433.5"/>
+                                <string key="text">Apoyar a personas de escasos recursos con algún tipo de discapacidad para satisfacer sus necesidades humanas de acuerdo a la pirámide de Maslow: fisiológicas, de seguridad, de pertenencia, reconocimiento y autorrealización, a través de la disciplina de tanatología.
 
 Brindar cuidado, capacitación y orientación tanto emocional, psicológica y espiritualmente a los adultos mayores, personas con enfermedades, personas con enfermedades crónico-degenerativas y en fase terminal, como también a sus familiares. Asimismo, proporcionando contención a cualquier tipo de pérdida significativa y por muerte logrando reencuentren un nuevo sentido a la vida.
 
-Dar acompañamiento y consejería a personas y pacientes que enfrentan situaciones en crisis, estrés postraumático, abusos, maltratos, así como situaciones que provocan pérdidas de distinta índole: pérdida de un familiar, de una extremidad del cuerpo, de autoestima, de identidad, laboral, bienes materiales; infertilidad, anorexia, bulimia, intentos de suicidio, viudez, divorcio, violencia intrafamiliar, infidelidad, portadores de VIH-SIDA o personas con enfermedades en fase terminal, entre otras. También se da acompañamiento a los familiares que son afectados por la situación y el entorno.</mutableString>
+Dar acompañamiento y consejería a personas y pacientes que enfrentan situaciones en crisis, estrés postraumático, abusos, maltratos, así como situaciones que provocan pérdidas de distinta índole: pérdida de un familiar, de una extremidad del cuerpo, de autoestima, de identidad, laboral, bienes materiales; infertilidad, anorexia, bulimia, intentos de suicidio, viudez, divorcio, violencia intrafamiliar, infidelidad, portadores de VIH-SIDA o personas con enfermedades en fase terminal, entre otras. También se da acompañamiento a los familiares que son afectados por la situación y el entorno.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="objetivos" translatesAutoresizingMaskIntoConstraints="NO" id="hhl-XF-vfE">
-                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <rect key="frame" x="0.0" y="216" width="704" height="263"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hhl-XF-vfE" secondAttribute="height" multiplier="811:303" id="cPL-eX-zdD"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objetivos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPQ-sh-7vb">
-                                <rect key="frame" x="321" y="80" width="168.5" height="46"/>
+                                <rect key="frame" x="268" y="80" width="168.5" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

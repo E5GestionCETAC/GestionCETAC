@@ -96,20 +96,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		C2C99E7D26FE4E25008FBDF1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C2C99E7E26FE4E2F008FBDF1 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		DCAFF387FADCB99D53157FD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +134,6 @@
 		EA9EA45226FBE33C00B5B565 /* GestionCETAC */ = {
 			isa = PBXGroup;
 			children = (
-				C2C99E7E26FE4E2F008FBDF1 /* Controllers */,
-				C2C99E7D26FE4E25008FBDF1 /* Models */,
 				C2C99E6A26FE4DDC008FBDF1 /* Images */,
 				C2C870E826FD07A3008E77C2 /* Storyboards */,
 				EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */,
