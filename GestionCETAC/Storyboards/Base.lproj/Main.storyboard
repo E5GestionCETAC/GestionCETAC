@@ -822,7 +822,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATt-Af-Bjd">
                                         <rect key="frame" x="0.0" y="56" width="300" height="38"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Registrarse"/>
+                                        <state key="normal" title="Registrarse">
+                                            <color key="titleColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="DRW-tQ-Gki" kind="show" id="4Z1-t5-V14"/>
                                         </connections>
@@ -846,16 +848,20 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
             </objects>
             <point key="canvasLocation" x="1546.6666666666665" y="2075.5555555555557"/>
         </scene>
-        <!--Registro-->
+        <!--Inicio de sesión-->
         <scene sceneID="ykd-XL-OUa">
             <objects>
-                <viewController id="v4W-4u-Iqx" sceneMemberID="viewController">
+                <viewController id="v4W-4u-Iqx" customClass="LoginiViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOM-xB-p5y">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="QeJ-h0-JSt">
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-hp-PhO">
-                                <rect key="frame" x="245" y="397.5" width="320" height="285"/>
+                                <rect key="frame" x="245" y="401" width="320" height="278"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Usuario" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-HW-tGo">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
@@ -879,10 +885,13 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                         <state key="normal" title="Iniciar sesión">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="LogIn:" destination="v4W-4u-Iqx" eventType="touchUpInside" id="XSg-VM-rUa"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-3G-6Ep">
-                                        <rect key="frame" x="0.0" y="261" width="320" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="261" width="320" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -891,10 +900,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                     <constraint firstAttribute="width" constant="320" id="Hmj-Gi-MSl"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="QeJ-h0-JSt">
-                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YVW-Fg-d88"/>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -904,9 +909,14 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="VdO-Xe-Btx"/>
-                    <navigationItem key="navigationItem" title="Registro" id="xD4-Lz-jFX">
+                    <navigationItem key="navigationItem" title="Inicio de sesión" id="xD4-Lz-jFX">
                         <barButtonItem key="backBarButtonItem" title=" " id="r9K-pD-aUD"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="errorText" destination="pWJ-3G-6Ep" id="Wc3-Oi-YcS"/>
+                        <outlet property="passwordTextField" destination="GQx-2B-HBg" id="yQ4-2I-2qU"/>
+                        <outlet property="usernameTextField" destination="0Eo-HW-tGo" id="Pvh-L5-bHB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcv-cK-Ziu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -915,22 +925,26 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <!--Registro-->
         <scene sceneID="8dS-YR-Hlg">
             <objects>
-                <viewController id="DRW-tQ-Gki" sceneMemberID="viewController">
+                <viewController id="DRW-tQ-Gki" customClass="SignupViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="soZ-7W-q0x">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-Iu-OOp">
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VGu-6k-yn3">
                                 <rect key="frame" x="245" y="227" width="320" height="626.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uve-Yg-uD2">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0U-XX-hQy">
-                                        <rect key="frame" x="0.0" y="65.5" width="320" height="34"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="35.5"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
@@ -969,6 +983,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                         <state key="normal" title="Registrarse">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="SignUp:" destination="DRW-tQ-Gki" eventType="touchUpInside" id="VhS-I1-0tR"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERJ-iT-IG3">
                                         <rect key="frame" x="0.0" y="606" width="320" height="20.5"/>
@@ -978,10 +995,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cTz-Iu-OOp">
-                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GfD-7d-MUr"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -993,6 +1006,15 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     <navigationItem key="navigationItem" title="Registro" id="X94-oW-dGp">
                         <barButtonItem key="backBarButtonItem" title=" " id="n1K-O0-AfB"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="apellidoTextField" destination="P0U-XX-hQy" id="Juv-QZ-uzu"/>
+                        <outlet property="emailTextField" destination="utl-Ak-sXV" id="yRc-yo-PFR"/>
+                        <outlet property="errorLabel" destination="ERJ-iT-IG3" id="fGV-ld-xNv"/>
+                        <outlet property="nombreTextField" destination="uve-Yg-uD2" id="sNP-59-XOV"/>
+                        <outlet property="passwordTextField" destination="dF4-e0-8zf" id="rQo-8Y-Iuf"/>
+                        <outlet property="rolPickerView" destination="lyd-le-HAa" id="0Ax-im-tQy"/>
+                        <outlet property="usernameTextField" destination="RiQ-Yi-yCF" id="cDB-my-XXO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-3c-GJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
