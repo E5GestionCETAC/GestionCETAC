@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
 		C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C274AFB2270235A3003DC50F /* GoogleService-Info.plist */; };
+		C274AFD227023907003DC50F /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD127023907003DC50F /* loginBackground.png */; };
+		C274AFD927024087003DC50F /* signupBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD827024087003DC50F /* signupBackground.jpeg */; };
 		C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870E926FD0823008E77C2 /* gus.storyboard */; };
 		C2C870EC26FD0837008E77C2 /* diogenes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870EB26FD0837008E77C2 /* diogenes.storyboard */; };
 		C2C870EE26FD0844008E77C2 /* amm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870ED26FD0844008E77C2 /* amm.storyboard */; };
@@ -34,6 +36,8 @@
 		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
 		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
 		C274AFB2270235A3003DC50F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C274AFD127023907003DC50F /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
+		C274AFD827024087003DC50F /* signupBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signupBackground.jpeg; sourceTree = "<group>"; };
 		C2C870E926FD0823008E77C2 /* gus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gus.storyboard; sourceTree = "<group>"; };
 		C2C870EB26FD0837008E77C2 /* diogenes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = diogenes.storyboard; sourceTree = "<group>"; };
 		C2C870ED26FD0844008E77C2 /* amm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = amm.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				C2C99E7326FE4E11008FBDF1 /* objetivos.jpeg */,
 				C2C99E6F26FE4E11008FBDF1 /* valores.jpeg */,
 				C2C99E6B26FE4E10008FBDF1 /* vision.jpeg */,
+				C274AFD127023907003DC50F /* loginBackground.png */,
+				C274AFD827024087003DC50F /* signupBackground.jpeg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C99E7B26FE4E11008FBDF1 /* holisticos.jpeg in Resources */,
+				C274AFD927024087003DC50F /* signupBackground.jpeg in Resources */,
 				C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */,
 				C2C99E7826FE4E11008FBDF1 /* valores.jpeg in Resources */,
 				C2C99E7A26FE4E11008FBDF1 /* acompanamiento.png in Resources */,
@@ -218,6 +225,7 @@
 				C2C870EC26FD0837008E77C2 /* diogenes.storyboard in Resources */,
 				C2C870EE26FD0844008E77C2 /* amm.storyboard in Resources */,
 				EA9EA45B26FBE33C00B5B565 /* Main.storyboard in Resources */,
+				C274AFD227023907003DC50F /* loginBackground.png in Resources */,
 				C2C99E7726FE4E11008FBDF1 /* inicio2.png in Resources */,
 				C2C99E7526FE4E11008FBDF1 /* inicio1.png in Resources */,
 				C2C99E7426FE4E11008FBDF1 /* vision.jpeg in Resources */,
