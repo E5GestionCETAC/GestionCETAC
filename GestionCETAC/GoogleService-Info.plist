@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>981994612067-3eij3k473chf7voo9kgq8m6ndqu1a9m1.apps.googleusercontent.com</string>
+	<string>904125181864-o9ipr13uhhh973qvfpg70sa3cudk1k5r.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.981994612067-3eij3k473chf7voo9kgq8m6ndqu1a9m1</string>
+	<string>com.googleusercontent.apps.904125181864-o9ipr13uhhh973qvfpg70sa3cudk1k5r</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCMZImZH2xwT6L4U_H42Z2muTAUAChgeK4</string>
+	<string>AIzaSyARzXsaGwnc2dA1fykwOdhgeKQmhDqePf4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>981994612067</string>
+	<string>904125181864</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>mx.A01653126.Tabla514</string>
+	<string>mx.itesm.A251150126.GestionCETAC</string>
 	<key>PROJECT_ID</key>
-	<string>tabla514</string>
+	<string>gestioncetac</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tabla514.appspot.com</string>
+	<string>gestioncetac.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:981994612067:ios:4ef131a7eeb9be49fc5f56</string>
+	<string>1:904125181864:ios:b84de41feff7a1e07ab79d</string>
 </dict>
 </plist>

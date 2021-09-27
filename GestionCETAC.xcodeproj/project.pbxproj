@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
+		C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C274AFB2270235A3003DC50F /* GoogleService-Info.plist */; };
 		C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870E926FD0823008E77C2 /* gus.storyboard */; };
 		C2C870EC26FD0837008E77C2 /* diogenes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870EB26FD0837008E77C2 /* diogenes.storyboard */; };
 		C2C870EE26FD0844008E77C2 /* amm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870ED26FD0844008E77C2 /* amm.storyboard */; };
@@ -26,13 +27,13 @@
 		EA9EA45B26FBE33C00B5B565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA45926FBE33C00B5B565 /* Main.storyboard */; };
 		EA9EA45D26FBE34600B5B565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA45C26FBE34600B5B565 /* Assets.xcassets */; };
 		EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA45E26FBE34600B5B565 /* LaunchScreen.storyboard */; };
-		EA9EA46926FBE3EB00B5B565 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA9EA46826FBE3EB00B5B565 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
 		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
+		C274AFB2270235A3003DC50F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C2C870E926FD0823008E77C2 /* gus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gus.storyboard; sourceTree = "<group>"; };
 		C2C870EB26FD0837008E77C2 /* diogenes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = diogenes.storyboard; sourceTree = "<group>"; };
 		C2C870ED26FD0844008E77C2 /* amm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = amm.storyboard; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		EA9EA45C26FBE34600B5B565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9EA45F26FBE34600B5B565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9EA46126FBE34600B5B565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA9EA46826FBE3EB00B5B565 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 				EA9EA45726FBE33C00B5B565 /* ViewController.swift */,
 				EA9EA45C26FBE34600B5B565 /* Assets.xcassets */,
 				EA9EA46126FBE34600B5B565 /* Info.plist */,
-				EA9EA46826FBE3EB00B5B565 /* GoogleService-Info.plist */,
+				C274AFB2270235A3003DC50F /* GoogleService-Info.plist */,
 			);
 			path = GestionCETAC;
 			sourceTree = "<group>";
@@ -212,9 +212,9 @@
 				EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */,
 				C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */,
 				C2C99E7626FE4E11008FBDF1 /* mision.jpeg in Resources */,
-				EA9EA46926FBE3EB00B5B565 /* GoogleService-Info.plist in Resources */,
 				C2C99E7C26FE4E11008FBDF1 /* objetivos.jpeg in Resources */,
 				EA9EA45D26FBE34600B5B565 /* Assets.xcassets in Resources */,
+				C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */,
 				C2C870EC26FD0837008E77C2 /* diogenes.storyboard in Resources */,
 				C2C870EE26FD0844008E77C2 /* amm.storyboard in Resources */,
 				EA9EA45B26FBE33C00B5B565 /* Main.storyboard in Resources */,
