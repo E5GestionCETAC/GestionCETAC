@@ -15,11 +15,11 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBOutlet weak var apellidoTextField: UITextField!
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var password1TextField: UITextField!
+    
+    @IBOutlet weak var password2TextField: UITextField!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -45,9 +45,8 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             //Cleaned versions of data
             let nombre = nombreTextField.text!
             let apellidos = apellidoTextField.text!
-            let username = usernameTextField.text!
             let email = emailTextField.text!
-            let password = passwordTextField.text!
+            let password = password1TextField.text!
             //Crear usuario
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
@@ -56,7 +55,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                 }else{
                     //Registrar usuario a la base de datos
                     let db = Firestore.firestore()
-                    db.collection("cetacUsers").addDocument(data: ["nombre":nombre, "apellidos" : apellidos, "rol": self.rol, "usuario":username, "uid": result!.user.uid]) { (error) in
+                    db.collection("cetacUsers").addDocument(data: ["nombre":nombre, "apellidos" : apellidos, "rol": self.rol, "uid": result!.user.uid]) { (error) in
                         if error != nil{
                             self.showError(error!.localizedDescription)
                         }
@@ -68,15 +67,18 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func validateFields() -> String? {
-        if (nombreTextField.text!.isEmpty || apellidoTextField.text!.isEmpty || usernameTextField.text!.isEmpty || emailTextField.text!.isEmpty || passwordTextField.text!.isEmpty || rol.isEmpty){
+        if (nombreTextField.text!.isEmpty || apellidoTextField.text!.isEmpty ||  emailTextField.text!.isEmpty || password1TextField.text!.isEmpty || rol.isEmpty){
             
             return "Los campos no pueden estar vacíos"
         }
         if isValidEmail(emailTextField.text!) == false {
             return "El correo electrónico es inválido"
         }
-        if isValidPassword(passwordTextField.text!) == false {
-            return "La contraseña no es segura"
+        if password1TextField.text! != password2TextField.text! {
+            return "Las contraseñas no coinciden"
+        }
+        if isValidPassword(password1TextField.text!) == false{
+            return "La contraseña no es segura. Debe de contener por lo menos 8 carácteres, 1 carácter especial, 1 mayúscula, 1 minúscula y 1 número"
         }
         return nil
     }
