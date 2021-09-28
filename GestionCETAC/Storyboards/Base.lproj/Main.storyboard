@@ -886,16 +886,111 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft4-Kz-yCq">
-                                <rect key="frame" x="367" y="530" width="76" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ib2-Ko-chp" userLabel="MisionView">
+                                <rect key="frame" x="130" y="265" width="250" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-l5-URN">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mis_usuarios" translatesAutoresizingMaskIntoConstraints="NO" id="ozi-e7-Lbz">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Mis usuarios" translatesAutoresizingMaskIntoConstraints="NO" id="bVp-9G-DVc">
+                                        <rect key="frame" x="0.0" y="200" width="250" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYK-XB-1KO" userLabel="VisionView">
+                                <rect key="frame" x="430" y="265" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXR-TW-RpW">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mis_sesiones" translatesAutoresizingMaskIntoConstraints="NO" id="7Lf-xy-3EM">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Mis sesiones" translatesAutoresizingMaskIntoConstraints="NO" id="PhL-sy-c02">
+                                        <rect key="frame" x="0.0" y="200" width="250" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GCJ-mI-9nH" userLabel="ValoresView">
+                                <rect key="frame" x="430" y="565" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-a1-NW8">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="indicadores" translatesAutoresizingMaskIntoConstraints="NO" id="3fX-uL-mlH">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Indicadores" translatesAutoresizingMaskIntoConstraints="NO" id="T0z-UT-0kr">
+                                        <rect key="frame" x="0.0" y="198" width="250" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ekv-zb-vCh" userLabel="ObjetivosView">
+                                <rect key="frame" x="130" y="565" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-Le-A2X">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reportes.png" translatesAutoresizingMaskIntoConstraints="NO" id="J9r-RI-AZj">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Reportes" translatesAutoresizingMaskIntoConstraints="NO" id="tfR-0p-WJs">
+                                        <rect key="frame" x="0.0" y="198" width="250" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-GI-8nO">
+                                <rect key="frame" x="287" y="120" width="236" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6qs-Sa-aI1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ujl-GI-8nO" firstAttribute="centerX" secondItem="cPt-lI-GYh" secondAttribute="centerX" id="WmQ-Aj-PNL"/>
+                            <constraint firstItem="ujl-GI-8nO" firstAttribute="top" secondItem="6qs-Sa-aI1" secondAttribute="top" constant="70" id="Z5e-vx-LLQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gestion CETAC" id="IdO-au-nJs"/>
                 </viewController>
@@ -1054,21 +1149,22 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <image name="alternativos" width="1000" height="640"/>
         <image name="holisticos" width="800" height="400"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="indicadores" width="512" height="512"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="loginBackground" width="3560" height="5360"/>
+        <image name="mis_sesiones" width="499" height="345"/>
+        <image name="mis_usuarios" width="320" height="320"/>
         <image name="mision" width="1400" height="784"/>
         <image name="objetivos" width="1254" height="836"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="pip" catalog="system" width="128" height="96"/>
+        <image name="reportes.png" width="120" height="120"/>
         <image name="signupBackground" width="4667" height="7000"/>
         <image name="valores" width="1400" height="790"/>
         <image name="vision" width="1400" height="800"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

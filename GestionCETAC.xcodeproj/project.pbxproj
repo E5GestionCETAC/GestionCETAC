@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
+		C26378CD2703B68A00900453 /* mis_sesiones.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CA2703B68800900453 /* mis_sesiones.png */; };
+		C26378CE2703B68A00900453 /* mis_usuarios.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C26378CB2703B68900900453 /* mis_usuarios.jpeg */; };
+		C26378CF2703B68A00900453 /* indicadores.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CC2703B68A00900453 /* indicadores.png */; };
+		C26378D12703B69400900453 /* reportes.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378D02703B69400900453 /* reportes.png */; };
 		C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C274AFB2270235A3003DC50F /* GoogleService-Info.plist */; };
 		C274AFD227023907003DC50F /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD127023907003DC50F /* loginBackground.png */; };
 		C274AFD927024087003DC50F /* signupBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD827024087003DC50F /* signupBackground.jpeg */; };
@@ -39,6 +43,10 @@
 		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
 		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
+		C26378CA2703B68800900453 /* mis_sesiones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mis_sesiones.png; sourceTree = "<group>"; };
+		C26378CB2703B68900900453 /* mis_usuarios.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mis_usuarios.jpeg; sourceTree = "<group>"; };
+		C26378CC2703B68A00900453 /* indicadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicadores.png; sourceTree = "<group>"; };
+		C26378D02703B69400900453 /* reportes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reportes.png; sourceTree = "<group>"; };
 		C274AFB2270235A3003DC50F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C274AFD127023907003DC50F /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
 		C274AFD827024087003DC50F /* signupBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signupBackground.jpeg; sourceTree = "<group>"; };
@@ -113,9 +121,13 @@
 		C2C99E6A26FE4DDC008FBDF1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C26378CC2703B68A00900453 /* indicadores.png */,
+				C26378CA2703B68800900453 /* mis_sesiones.png */,
+				C26378CB2703B68900900453 /* mis_usuarios.jpeg */,
 				C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */,
 				C2C99E7126FE4E11008FBDF1 /* acompanamiento.png */,
 				C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */,
+				C26378D02703B69400900453 /* reportes.png */,
 				C2C99E6C26FE4E10008FBDF1 /* inicio1.png */,
 				C2C99E6E26FE4E10008FBDF1 /* inicio2.png */,
 				C2C99E6D26FE4E10008FBDF1 /* mision.jpeg */,
@@ -244,17 +256,21 @@
 				C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */,
 				C2C99E7826FE4E11008FBDF1 /* valores.jpeg in Resources */,
 				C2C99E7A26FE4E11008FBDF1 /* acompanamiento.png in Resources */,
+				C26378CF2703B68A00900453 /* indicadores.png in Resources */,
 				EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */,
 				C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */,
 				C2C99E7626FE4E11008FBDF1 /* mision.jpeg in Resources */,
+				C26378D12703B69400900453 /* reportes.png in Resources */,
 				C2C99E7C26FE4E11008FBDF1 /* objetivos.jpeg in Resources */,
 				EA9EA45D26FBE34600B5B565 /* Assets.xcassets in Resources */,
 				C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */,
 				C2C870EC26FD0837008E77C2 /* diogenes.storyboard in Resources */,
+				C26378CE2703B68A00900453 /* mis_usuarios.jpeg in Resources */,
 				C2C870EE26FD0844008E77C2 /* amm.storyboard in Resources */,
 				EA9EA45B26FBE33C00B5B565 /* Main.storyboard in Resources */,
 				C274AFD227023907003DC50F /* loginBackground.png in Resources */,
 				C2C99E7726FE4E11008FBDF1 /* inicio2.png in Resources */,
+				C26378CD2703B68A00900453 /* mis_sesiones.png in Resources */,
 				C2C99E7526FE4E11008FBDF1 /* inicio1.png in Resources */,
 				C2C99E7426FE4E11008FBDF1 /* vision.jpeg in Resources */,
 			);
