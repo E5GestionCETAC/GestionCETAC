@@ -52,13 +52,13 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 if let error = error{
-                    self.showError("Error creating user \(error)")
+                    self.showError(error.localizedDescription)
                 }else{
                     //Registrar usuario a la base de datos
                     let db = Firestore.firestore()
                     db.collection("cetacUsers").addDocument(data: ["nombre":nombre, "apellidos" : apellidos, "rol": self.rol, "usuario":username, "uid": result!.user.uid]) { (error) in
                         if error != nil{
-                            self.showError("No se pudo guardar los datos")
+                            self.showError(error!.localizedDescription)
                         }
                     }
                     self.transitionToGestionCETAC()
@@ -100,9 +100,8 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func transitionToGestionCETAC() {
-        let homeGestionCETAC = storyboard?.instantiateViewController(identifier: "homeGestionCETAC") as? HomeGestionCETACViewController
-        view.window?.rootViewController = homeGestionCETAC
-        view.window?.makeKeyAndVisible()
+        let HomeGestionCETAC = self.storyboard?.instantiateViewController(withIdentifier: "homeGestionCETAC") as? HomeGestionCETACViewController
+        self.navigationController?.pushViewController(HomeGestionCETAC!, animated: true)
     }
     
     //Picker view

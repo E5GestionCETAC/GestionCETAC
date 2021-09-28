@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1p-3W-6dS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1p-3W-6dS">
     <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -889,7 +889,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                             <action selector="LogIn:" destination="v4W-4u-Iqx" eventType="touchUpInside" id="XSg-VM-rUa"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-3G-6Ep">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-3G-6Ep">
                                         <rect key="frame" x="0.0" y="261" width="320" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -913,9 +913,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <barButtonItem key="backBarButtonItem" title=" " id="r9K-pD-aUD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="0Eo-HW-tGo" id="Pvh-L5-bHB"/>
                         <outlet property="errorText" destination="pWJ-3G-6Ep" id="Wc3-Oi-YcS"/>
                         <outlet property="passwordTextField" destination="GQx-2B-HBg" id="yQ4-2I-2qU"/>
-                        <outlet property="usernameTextField" destination="0Eo-HW-tGo" id="Pvh-L5-bHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcv-cK-Ziu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -945,7 +945,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYN-N8-asY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4603.7037037037035" y="2160.5555555555557"/>
+            <point key="canvasLocation" x="5360.74074074074" y="2160.5555555555557"/>
         </scene>
         <!--Registro-->
         <scene sceneID="8dS-YR-Hlg">
@@ -960,7 +960,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VGu-6k-yn3">
-                                <rect key="frame" x="245" y="227" width="320" height="626.5"/>
+                                <rect key="frame" x="245" y="228.5" width="320" height="623"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nombre(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uve-Yg-uD2">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
@@ -1012,9 +1012,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                             <action selector="SignUp:" destination="DRW-tQ-Gki" eventType="touchUpInside" id="VhS-I1-0tR"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERJ-iT-IG3">
-                                        <rect key="frame" x="0.0" y="606" width="320" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERJ-iT-IG3">
+                                        <rect key="frame" x="0.0" y="606" width="320" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1064,6 +1064,24 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uu-Yx-kcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.62962962962956" y="2075.5555555555557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WFX-RV-P7l">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zmx-fA-iN6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JeI-Hn-c2U">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lee-K9-xKk" kind="relationship" relationship="rootViewController" id="htE-BG-QqW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lik-av-p5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4603.7037037037035" y="2160.5555555555557"/>
         </scene>
     </scenes>
     <resources>
