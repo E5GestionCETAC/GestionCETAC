@@ -7,8 +7,14 @@ target 'GestionCETAC' do
 
   # Pods for GestionCETAC
   # add the Firebase pod for Google Analytics
+  pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+
+  # Optionally, include the Swift extensions if you're using Swift.
+  pod 'FirebaseFirestoreSwift'
+  
   # or pod ‘Firebase/AnalyticsWithoutAdIdSupport’
   # for Analytics without IDFA collection capability
 
