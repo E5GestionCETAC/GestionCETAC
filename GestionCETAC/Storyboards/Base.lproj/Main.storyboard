@@ -799,7 +799,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <!--Perfil-->
         <scene sceneID="rVA-Be-TUt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JY0-jj-oI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="aQY-1x-y8w" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vlM-jy-aJB">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
@@ -845,6 +844,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     <tabBarItem key="tabBarItem" title="Item" id="Xdx-UG-Srg"/>
                     <navigationItem key="navigationItem" title="Perfil" id="ZcM-P0-Uq8"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JY0-jj-oI6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1546.6666666666665" y="2075.5555555555557"/>
         </scene>
@@ -922,6 +922,31 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
             </objects>
             <point key="canvasLocation" x="2237.7777777777778" y="2075.5555555555557"/>
         </scene>
+        <!--Gestion CETAC-->
+        <scene sceneID="CLP-k5-TiN">
+            <objects>
+                <viewController storyboardIdentifier="homeGestionCETAC" id="lee-K9-xKk" customClass="HomeGestionCETACViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cPt-lI-GYh">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft4-Kz-yCq">
+                                <rect key="frame" x="367" y="530" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6qs-Sa-aI1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gestion CETAC" id="IdO-au-nJs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYN-N8-asY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4603.7037037037035" y="2160.5555555555557"/>
+        </scene>
         <!--Registro-->
         <scene sceneID="8dS-YR-Hlg">
             <objects>
@@ -941,31 +966,31 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0U-XX-hQy">
                                         <rect key="frame" x="0.0" y="64" width="320" height="35.5"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Usuario" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="RiQ-Yi-yCF">
                                         <rect key="frame" x="0.0" y="129.5" width="320" height="35.5"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="utl-Ak-sXV">
                                         <rect key="frame" x="0.0" y="195" width="320" height="35.5"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Contraseña" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="dF4-e0-8zf">
                                         <rect key="frame" x="0.0" y="260.5" width="320" height="35.5"/>
                                         <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyd-le-HAa">
                                         <rect key="frame" x="0.0" y="326" width="320" height="150"/>
@@ -1023,7 +1048,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <!--Perfil-->
         <scene sceneID="GAT-tv-hrr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3uu-Yx-kcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TlG-Op-6MM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="dAD-Ad-NZ1"/>
                     <toolbarItems/>
@@ -1037,6 +1061,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <segue destination="aQY-1x-y8w" kind="relationship" relationship="rootViewController" id="sTt-Rj-0Mk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uu-Yx-kcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.62962962962956" y="2075.5555555555557"/>
         </scene>
@@ -1061,6 +1086,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <image name="vision" width="1400" height="800"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
