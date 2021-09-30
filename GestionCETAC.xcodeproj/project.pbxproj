@@ -12,6 +12,9 @@
 		C26378CE2703B68A00900453 /* mis_usuarios.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C26378CB2703B68900900453 /* mis_usuarios.jpeg */; };
 		C26378CF2703B68A00900453 /* indicadores.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CC2703B68A00900453 /* indicadores.png */; };
 		C26378D12703B69400900453 /* reportes.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378D02703B69400900453 /* reportes.png */; };
+		C26378D32703C41500900453 /* cetacUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26378D22703C41500900453 /* cetacUserController.swift */; };
+		C26378D52704B0B400900453 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26378D42704B0B400900453 /* Usuario.swift */; };
+		C26378D72704B21100900453 /* Hijo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26378D62704B21100900453 /* Hijo.swift */; };
 		C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C274AFB2270235A3003DC50F /* GoogleService-Info.plist */; };
 		C274AFD227023907003DC50F /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD127023907003DC50F /* loginBackground.png */; };
 		C274AFD927024087003DC50F /* signupBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD827024087003DC50F /* signupBackground.jpeg */; };
@@ -19,6 +22,8 @@
 		C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274AFE02702614B003DC50F /* SignupViewController.swift */; };
 		C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */; };
 		C274AFE82702622D003DC50F /* cetacUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274AFE72702622D003DC50F /* cetacUser.swift */; };
+		C2BF29F52704E63800621763 /* usuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF29F42704E63800621763 /* usuarioController.swift */; };
+		C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF29F62705069B00621763 /* EncuadreViewController.swift */; };
 		C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870E926FD0823008E77C2 /* gus.storyboard */; };
 		C2C870EC26FD0837008E77C2 /* diogenes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870EB26FD0837008E77C2 /* diogenes.storyboard */; };
 		C2C870EE26FD0844008E77C2 /* amm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870ED26FD0844008E77C2 /* amm.storyboard */; };
@@ -47,6 +52,9 @@
 		C26378CB2703B68900900453 /* mis_usuarios.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mis_usuarios.jpeg; sourceTree = "<group>"; };
 		C26378CC2703B68A00900453 /* indicadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicadores.png; sourceTree = "<group>"; };
 		C26378D02703B69400900453 /* reportes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reportes.png; sourceTree = "<group>"; };
+		C26378D22703C41500900453 /* cetacUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cetacUserController.swift; sourceTree = "<group>"; };
+		C26378D42704B0B400900453 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		C26378D62704B21100900453 /* Hijo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hijo.swift; sourceTree = "<group>"; };
 		C274AFB2270235A3003DC50F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C274AFD127023907003DC50F /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
 		C274AFD827024087003DC50F /* signupBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signupBackground.jpeg; sourceTree = "<group>"; };
@@ -54,6 +62,8 @@
 		C274AFE02702614B003DC50F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGestionCETACViewController.swift; sourceTree = "<group>"; };
 		C274AFE72702622D003DC50F /* cetacUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cetacUser.swift; sourceTree = "<group>"; };
+		C2BF29F42704E63800621763 /* usuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuarioController.swift; sourceTree = "<group>"; };
+		C2BF29F62705069B00621763 /* EncuadreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuadreViewController.swift; sourceTree = "<group>"; };
 		C2C870E926FD0823008E77C2 /* gus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gus.storyboard; sourceTree = "<group>"; };
 		C2C870EB26FD0837008E77C2 /* diogenes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = diogenes.storyboard; sourceTree = "<group>"; };
 		C2C870ED26FD0844008E77C2 /* amm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = amm.storyboard; sourceTree = "<group>"; };
@@ -94,6 +104,7 @@
 				C274AFDD27026129003DC50F /* LoginiViewController.swift */,
 				C274AFE02702614B003DC50F /* SignupViewController.swift */,
 				C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */,
+				C2BF29F62705069B00621763 /* EncuadreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,6 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				C274AFE72702622D003DC50F /* cetacUser.swift */,
+				C26378D22703C41500900453 /* cetacUserController.swift */,
+				C26378D42704B0B400900453 /* Usuario.swift */,
+				C26378D62704B21100900453 /* Hijo.swift */,
+				C2BF29F42704E63800621763 /* usuarioController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,12 +341,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */,
+				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
 				C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */,
 				C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */,
 				C274AFDE27026129003DC50F /* LoginiViewController.swift in Sources */,
+				C26378D72704B21100900453 /* Hijo.swift in Sources */,
+				C26378D52704B0B400900453 /* Usuario.swift in Sources */,
 				C274AFE82702622D003DC50F /* cetacUser.swift in Sources */,
 				EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */,
+				C2BF29F52704E63800621763 /* usuarioController.swift in Sources */,
+				C26378D32703C41500900453 /* cetacUserController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

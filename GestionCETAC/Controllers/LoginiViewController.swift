@@ -19,7 +19,7 @@ class LoginiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarController?.tabBar.isHidden = false
         errorText.alpha = 0
     }
     
