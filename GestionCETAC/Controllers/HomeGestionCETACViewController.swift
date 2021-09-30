@@ -6,25 +6,25 @@
 //
 
 import UIKit
-
+import Firebase
 class HomeGestionCETACViewController: UIViewController {
-
+    
+    //let db = Firestore.firestore()
+    var currentUserController = cetacUserController()
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = true
-
+        //self.tabBarController?.tabBar.isHidden = true
+        currentUserController.getUserInfo{ (result) in
+            switch result{
+            case .success(let user):self.setName(username: user.nombre)
+            case .failure(let error): print(error.localizedDescription)
+            }
+        }
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setName(username : String) {
+        self.welcomeLabel.text! = "¡Bienvenido \(username)!"
     }
-    */
-
 }

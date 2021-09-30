@@ -33,6 +33,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         super.viewDidLoad()
         errorLabel.alpha = 0
         rolPickerView.delegate = self
+        self.tabBarController?.tabBar.isHidden = false
         // Do any additional setup after loading the view.
     }
     
@@ -67,7 +68,7 @@ class SignupViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func validateFields() -> String? {
-        if (nombreTextField.text!.isEmpty || apellidoTextField.text!.isEmpty ||  emailTextField.text!.isEmpty || password1TextField.text!.isEmpty || rol.isEmpty){
+        if (nombreTextField.text!.isEmpty || apellidoTextField.text!.isEmpty ||  emailTextField.text!.isEmpty || password1TextField.text!.isEmpty || rol.isEmpty || password2TextField.text!.isEmpty){
             
             return "Los campos no pueden estar vacíos"
         }
