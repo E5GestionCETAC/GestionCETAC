@@ -22,6 +22,10 @@
 		C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274AFE02702614B003DC50F /* SignupViewController.swift */; };
 		C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */; };
 		C274AFE82702622D003DC50F /* cetacUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274AFE72702622D003DC50F /* cetacUser.swift */; };
+		C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */; };
+		C2761D8B27073EAD000C65A2 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = C2761D8A27073EAD000C65A2 /* Icons */; };
+		C2761D8D27074374000C65A2 /* MisUsuariosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2761D8C27074374000C65A2 /* MisUsuariosViewController.swift */; };
+		C2761D8F2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */; };
 		C2BF29F52704E63800621763 /* usuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF29F42704E63800621763 /* usuarioController.swift */; };
 		C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF29F62705069B00621763 /* EncuadreViewController.swift */; };
 		C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870E926FD0823008E77C2 /* gus.storyboard */; };
@@ -62,6 +66,10 @@
 		C274AFE02702614B003DC50F /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGestionCETACViewController.swift; sourceTree = "<group>"; };
 		C274AFE72702622D003DC50F /* cetacUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cetacUser.swift; sourceTree = "<group>"; };
+		C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioCollectionViewCell.swift; sourceTree = "<group>"; };
+		C2761D8A27073EAD000C65A2 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		C2761D8C27074374000C65A2 /* MisUsuariosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisUsuariosViewController.swift; sourceTree = "<group>"; };
+		C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisUsuariosCollectionViewController.swift; sourceTree = "<group>"; };
 		C2BF29F42704E63800621763 /* usuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuarioController.swift; sourceTree = "<group>"; };
 		C2BF29F62705069B00621763 /* EncuadreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuadreViewController.swift; sourceTree = "<group>"; };
 		C2C870E926FD0823008E77C2 /* gus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gus.storyboard; sourceTree = "<group>"; };
@@ -105,6 +113,9 @@
 				C274AFE02702614B003DC50F /* SignupViewController.swift */,
 				C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */,
 				C2BF29F62705069B00621763 /* EncuadreViewController.swift */,
+				C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */,
+				C2761D8C27074374000C65A2 /* MisUsuariosViewController.swift */,
+				C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 		C2C99E6A26FE4DDC008FBDF1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C2761D8A27073EAD000C65A2 /* Icons */,
 				C26378CC2703B68A00900453 /* indicadores.png */,
 				C26378CA2703B68800900453 /* mis_sesiones.png */,
 				C26378CB2703B68900900453 /* mis_usuarios.jpeg */,
@@ -271,6 +283,7 @@
 				C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */,
 				C2C99E7826FE4E11008FBDF1 /* valores.jpeg in Resources */,
 				C2C99E7A26FE4E11008FBDF1 /* acompanamiento.png in Resources */,
+				C2761D8B27073EAD000C65A2 /* Icons in Resources */,
 				C26378CF2703B68A00900453 /* indicadores.png in Resources */,
 				EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */,
 				C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */,
@@ -340,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2761D8F2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift in Sources */,
 				EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */,
 				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
@@ -349,8 +363,10 @@
 				C26378D72704B21100900453 /* Hijo.swift in Sources */,
 				C26378D52704B0B400900453 /* Usuario.swift in Sources */,
 				C274AFE82702622D003DC50F /* cetacUser.swift in Sources */,
+				C2761D8D27074374000C65A2 /* MisUsuariosViewController.swift in Sources */,
 				EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */,
 				C2BF29F52704E63800621763 /* usuarioController.swift in Sources */,
+				C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */,
 				C26378D32703C41500900453 /* cetacUserController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
