@@ -16,6 +16,7 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
     var users = [Usuario]()
     var cetacUID:String?
     
+    /*
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         currentUserController.getUserInfo{ (result) in
@@ -25,7 +26,8 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
             }
         }
     }
-    
+    */
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 
