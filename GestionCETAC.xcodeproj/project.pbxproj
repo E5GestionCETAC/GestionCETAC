@@ -10,6 +10,10 @@
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
 		80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7529F2707CFDC00BABE56 /* Sesion.swift */; };
 		80C752A32707E18000BABE56 /* sesionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C752A22707E18000BABE56 /* sesionController.swift */; };
+		C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */; };
+		C25EF308270980EA0046EA18 /* encuadre_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF306270980E50046EA18 /* encuadre_header.png */; };
+		C25EF30B270982AF0046EA18 /* seguimiento_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF30A270982AF0046EA18 /* seguimiento_header.png */; };
+		C25EF30D270987090046EA18 /* SeguimientoSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30C270987080046EA18 /* SeguimientoSesionViewController.swift */; };
 		C26378CD2703B68A00900453 /* mis_sesiones.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CA2703B68800900453 /* mis_sesiones.png */; };
 		C26378CE2703B68A00900453 /* mis_usuarios.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C26378CB2703B68900900453 /* mis_usuarios.jpeg */; };
 		C26378CF2703B68A00900453 /* indicadores.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CC2703B68A00900453 /* indicadores.png */; };
@@ -55,6 +59,10 @@
 		80C7529F2707CFDC00BABE56 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
 		80C752A22707E18000BABE56 /* sesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sesionController.swift; sourceTree = "<group>"; };
 		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
+		C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarPickerViewUtility.swift; sourceTree = "<group>"; };
+		C25EF306270980E50046EA18 /* encuadre_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encuadre_header.png; sourceTree = "<group>"; };
+		C25EF30A270982AF0046EA18 /* seguimiento_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seguimiento_header.png; sourceTree = "<group>"; };
+		C25EF30C270987080046EA18 /* SeguimientoSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguimientoSesionViewController.swift; sourceTree = "<group>"; };
 		C26378CA2703B68800900453 /* mis_sesiones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mis_sesiones.png; sourceTree = "<group>"; };
 		C26378CB2703B68900900453 /* mis_usuarios.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mis_usuarios.jpeg; sourceTree = "<group>"; };
 		C26378CC2703B68A00900453 /* indicadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicadores.png; sourceTree = "<group>"; };
@@ -108,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C25EF30127091B160046EA18 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		C274AFDC27026104003DC50F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 				C2BF29F62705069B00621763 /* EncuadreViewController.swift */,
 				C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */,
 				C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */,
+				C25EF30C270987080046EA18 /* SeguimientoSesionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,10 +173,12 @@
 				C26378CB2703B68900900453 /* mis_usuarios.jpeg */,
 				C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */,
 				C2C99E7126FE4E11008FBDF1 /* acompanamiento.png */,
+				C25EF30A270982AF0046EA18 /* seguimiento_header.png */,
 				C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */,
 				C26378D02703B69400900453 /* reportes.png */,
 				C2C99E6C26FE4E10008FBDF1 /* inicio1.png */,
 				C2C99E6E26FE4E10008FBDF1 /* inicio2.png */,
+				C25EF306270980E50046EA18 /* encuadre_header.png */,
 				C2C99E6D26FE4E10008FBDF1 /* mision.jpeg */,
 				C2C99E7326FE4E11008FBDF1 /* objetivos.jpeg */,
 				C2C99E6F26FE4E11008FBDF1 /* valores.jpeg */,
@@ -208,6 +227,7 @@
 		EA9EA45226FBE33C00B5B565 /* GestionCETAC */ = {
 			isa = PBXGroup;
 			children = (
+				C25EF30127091B160046EA18 /* Utilities */,
 				C274AFE6270261FA003DC50F /* Models */,
 				C274AFDC27026104003DC50F /* Controllers */,
 				C2C99E6A26FE4DDC008FBDF1 /* Images */,
@@ -289,6 +309,7 @@
 				C2761D8B27073EAD000C65A2 /* Icons in Resources */,
 				C26378CF2703B68A00900453 /* indicadores.png in Resources */,
 				EA9EA46026FBE34600B5B565 /* LaunchScreen.storyboard in Resources */,
+				C25EF30B270982AF0046EA18 /* seguimiento_header.png in Resources */,
 				C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */,
 				C2C99E7626FE4E11008FBDF1 /* mision.jpeg in Resources */,
 				C26378D12703B69400900453 /* reportes.png in Resources */,
@@ -302,6 +323,7 @@
 				C274AFD227023907003DC50F /* loginBackground.png in Resources */,
 				C2C99E7726FE4E11008FBDF1 /* inicio2.png in Resources */,
 				C26378CD2703B68A00900453 /* mis_sesiones.png in Resources */,
+				C25EF308270980EA0046EA18 /* encuadre_header.png in Resources */,
 				C2C99E7526FE4E11008FBDF1 /* inicio1.png in Resources */,
 				C2C99E7426FE4E11008FBDF1 /* vision.jpeg in Resources */,
 			);
@@ -367,6 +389,8 @@
 				80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */,
 				C26378D52704B0B400900453 /* Usuario.swift in Sources */,
 				C274AFE82702622D003DC50F /* cetacUser.swift in Sources */,
+				C25EF30D270987090046EA18 /* SeguimientoSesionViewController.swift in Sources */,
+				C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */,
 				EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */,
 				80C752A32707E18000BABE56 /* sesionController.swift in Sources */,
 				C2BF29F52704E63800621763 /* usuarioController.swift in Sources */,

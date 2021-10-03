@@ -10,6 +10,7 @@ import Firebase
 
 class usuarioController{
     let db = Firestore.firestore()
+    let currentUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     
     func fetchUsuarios(completion: @escaping (Result<Usuarios, Error>) -> Void){
         var usuarios = [Usuario]()
@@ -25,9 +26,9 @@ class usuarioController{
             }
         }
     }
-    func fetchUsuariosFromCetacUser(cetacUID:String, completion: @escaping (Result<Usuarios, Error>) -> Void){
+    func fetchUsuariosFromCetacUser(completion: @escaping (Result<Usuarios, Error>) -> Void){
         var usuarios = [Usuario]()
-        db.collection("usuarios").whereField("cetacUserID", isEqualTo: cetacUID).getDocuments { (querySnapshot, error) in
+        db.collection("usuarios").whereField("cetacUserID", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
@@ -83,7 +84,6 @@ class usuarioController{
             }else{
                 completion(.success("Documento agregado ID: \(ref!.documentID)"))
             }
-            
         }
     }
 }

@@ -9,17 +9,17 @@ import Foundation
 import Firebase
 
 struct Sesion {
-    let numero_expediente, numero_sesion, cuota_recuperacion : Int
-    let usuario, tanatologo, motivo, tipo_servicio, herramienta, evaluacion_sesion : String
+    let usuarioID, numero_sesion : Int
+    let tanatologoUID, motivo, tipo_servicio, herramienta, evaluacion_sesion : String
     let fecha : Timestamp
+    let cuota_recuperacion:Float
     
-    init (numero_expediente:Int, numero_sesion:Int, cuota_recuperacion:Int, usuario:String, tanatologo:String, motivo:String, tipo_servicio:String, herramienta:String, evaluacion_sesion:String, fecha:Timestamp){
+    init (usuarioID:Int, numero_sesion:Int, cuota_recuperacion:Float, tanatologoUID:String, motivo:String, tipo_servicio:String, herramienta:String, evaluacion_sesion:String, fecha:Timestamp){
         
-        self.numero_expediente = numero_expediente
+        self.usuarioID = usuarioID
         self.numero_sesion = numero_sesion
         self.cuota_recuperacion = cuota_recuperacion
-        self.usuario = usuario
-        self.tanatologo = tanatologo
+        self.tanatologoUID = tanatologoUID
         self.motivo = motivo
         self.tipo_servicio = tipo_servicio
         self.herramienta = herramienta
@@ -28,19 +28,16 @@ struct Sesion {
         
     }
     init(aDoc : DocumentSnapshot) {
-        self.numero_expediente = aDoc.get("numero_expediente") as? Int ?? 0
+        self.usuarioID = aDoc.get("usuarioID") as? Int ?? 0
         self.numero_sesion = aDoc.get("numero_sesion") as? Int ?? 0
-        self.cuota_recuperacion = aDoc.get("cuota_recuperacion") as? Int ?? 0
-        self.usuario = aDoc.get("usuario") as? String ?? ""
-        self.tanatologo = aDoc.get("tanatologo") as? String ?? ""
+        self.cuota_recuperacion = aDoc.get("cuota_recuperacion") as? Float ?? 0
+        self.tanatologoUID = aDoc.get("tanatologoUID") as? String ?? ""
         self.motivo = aDoc.get("motivo") as? String ?? ""
         self.tipo_servicio = aDoc.get("tipo_servicio") as? String ?? ""
         self.herramienta = aDoc.get("herramienta") as? String ?? ""
         self.evaluacion_sesion = aDoc.get("evaluacion sesion") as? String ?? ""
         self.fecha = aDoc.get("fecha") as? Timestamp ?? Timestamp()
-        
     }
-    
 }
 typealias Sesiones = [Sesion]
 
