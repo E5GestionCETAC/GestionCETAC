@@ -9,14 +9,26 @@ import UIKit
 import Firebase
 
 class EncuadreViewController: UIViewController {
-
+    // Picker views
     let datePicker = UIDatePicker()
-
+    
+    let servicios:[String] = ["","Servicios de Acompañamiento", "Servicios Holísticos", "Herramientas Alternativas"]
+    let motivos:[String] = ["","Abuso","Adicción","Ansiedad","Baja autoestima","Codependencia","Comunicación familiar","Conflicto con hermano","Conflicto con madre","Conflicto con padre","Dependencia","Divorcio","Duelo","Duelo grupal","Enfermedad","Enfermedad crónico degenerativa","Heridas de la infancia","Identidad de género","Infertilidad","Infidelidad","Intento de suicidio","Miedo","Pérdida de bienes materiales","Pérdida de identidad","Pérdida laboral","Relación con los padres","Ruptura de Noviazgo","Stress","Trastorno Obsesivo","Violación","Violencia intrafamiliar","Violencia psicológica","Viudez","Otro"]
+    let intervenciones:[String] = ["","Tanatología", "Acompañamiento Individual", "Acompañamiento Grupal", "Logoterapia", "Mindfulness", "Aromaterapia y Musicoterapia", "Cristaloterapia", "Reiki", "Biomagnetismo", "Angeloterapia", "Cama Térmica De Jade", "Flores De Bach", "Brisas Ambientales"]
+    let herramientas:[String] = ["","Contención","Diálogo","Ejercicio","Encuadre","Infografía","Dinámica","Lectura","Meditación","Video","Otro"]
+    
+    fileprivate let servicioPickerView = ToolbarPickerView()
+    fileprivate let motivoPickerView = ToolbarPickerView()
+    fileprivate let intervencionPickerView = ToolbarPickerView()
+    fileprivate let herramientaPickerView = ToolbarPickerView()
+    // End Picker view
+    
+    // Controladores
     var userController = usuarioController()
-    var currentUserController = cetacUserController()
+    var sesionControlador = sesionController()
     
     var id:Int?
-    var cetacUserID:String?
+    let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     var fechaNacimientoDate:Date?
     var edad:Int?
     
@@ -27,15 +39,15 @@ class EncuadreViewController: UIViewController {
     @IBOutlet weak var religionText: UITextField!
     @IBOutlet weak var ocupacionText: UITextField!
     @IBOutlet weak var procedenciaText: UITextField!
-    @IBOutlet weak var domicilioText: UITextField!
+    @IBOutlet weak var domicilioText: UITextView!
     @IBOutlet weak var tel_casaText: UITextField!
     @IBOutlet weak var celularText: UITextField!
     @IBOutlet weak var estado_civilText: UITextField!
     @IBOutlet weak var fecha_nacimientoText: UITextField!
     @IBOutlet weak var sexoText: UITextField!
     @IBOutlet weak var referido_porText: UITextField!
-    @IBOutlet weak var problemaText: UITextField!
-    @IBOutlet weak var indicador_actitudinalText: UITextField!
+    @IBOutlet weak var problemaText: UITextView!
+    @IBOutlet weak var indicador_actitudinalText: UITextView!
     @IBOutlet weak var ekrText: UITextField!
     // End Datos de usuarios---------------------------
     
@@ -44,20 +56,48 @@ class EncuadreViewController: UIViewController {
     @IBOutlet weak var tipo_servicioText: UITextField!
     @IBOutlet weak var tipo_intervencionText: UITextField!
     @IBOutlet weak var herramientaText: UITextField!
-    @IBOutlet weak var evaluacion_sesionText: UITextField!
+    @IBOutlet weak var evaluacion_sesionText: UITextView!
     @IBOutlet weak var cuota_recuperacionText: UITextField!
     // End Datos de sesion-----------------------------
     
+    // Switches
+    @IBOutlet weak var abrirExpedienteSwitch: UISwitch!
+    @IBOutlet weak var terminosCondicionesSwitch: UISwitch!
+    // End Switches
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Inicializacion de picker viewa
         createDatePickerView()
-        currentUserController.getUserInfo{ (result) in
-            switch result{
-            case .success(let user):self.cetacUserID = user.uid
-            case .failure(let error): print(error.localizedDescription)
-            }
-        }
+        motivoText.inputView = motivoPickerView
+        motivoText.inputAccessoryView = motivoPickerView.toolbar
+        tipo_servicioText.inputView = servicioPickerView
+        tipo_servicioText.inputAccessoryView = servicioPickerView.toolbar
+        tipo_intervencionText.inputView = intervencionPickerView
+        tipo_intervencionText.inputAccessoryView = intervencionPickerView.toolbar
+        herramientaText.inputView = herramientaPickerView
+        herramientaText.inputAccessoryView = herramientaPickerView.toolbar
+        
+        motivoPickerView.delegate = self
+        motivoPickerView.dataSource = self
+        motivoPickerView.toolbarDelegate = self
+        servicioPickerView.delegate = self
+        servicioPickerView.dataSource = self
+        servicioPickerView.toolbarDelegate = self
+        intervencionPickerView.delegate = self
+        intervencionPickerView.dataSource = self
+        intervencionPickerView.toolbarDelegate = self
+        herramientaPickerView.delegate = self
+        herramientaPickerView.dataSource = self
+        herramientaPickerView.toolbarDelegate = self
+        
+        motivoPickerView.tag = 1
+        servicioPickerView.tag = 2
+        intervencionPickerView.tag = 3
+        herramientaPickerView.tag = 4
+        
+        // End Inicializacion de picker views
+        
         self.userController.getLastID{ (result) in
             switch result{
             case .success(let lastID): self.id = lastID + 1
@@ -73,37 +113,70 @@ class EncuadreViewController: UIViewController {
         if let error = error {
             print(error)
         }else{
+            // Crear usuario
             let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
-            // Calcular edad---------------------------
+                // Calcular edad---------------------------
             let now = Date()
             let calendar = Calendar.current
             let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
             self.edad = ageComponents.year!
-            // End Calcular edad-----------------------
-            let newUser:Usuario = Usuario(id: self.id!, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoField.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserID!, fecha_nacimiento: fechaNacimientoTimestamp)
+                // End Calcular edad-----------------------
+            let newUser:Usuario = Usuario(id: self.id!, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoField.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp)
             
             userController.insertUsuario(nuevoUsuario: newUser){(result) in
                 switch result{
-                case .success(let retorno):print(retorno)
-                case.failure(let error):print(error)
+                case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertó el usuario a la base de datos")
+                case.failure(let error):self.displayError(error, title: "No se guardó el usuario")
                 }
             }
+            // End Crear usuario
+            
+            // Crear sesion
+            let cuotaRecuperacionFloat = Float(cuota_recuperacionText.text!)
+            
+            let newSesion:Sesion = Sesion(usuarioID: id!, numero_sesion: 1, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
+            
+            sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
+                switch result{
+                case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertó la sesión a la base de datos")
+                case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+                }
+            }
+            // End crear sesion
         }
     }
     
-    func validateData() -> String? {
+    func validateData() -> Error? {
         if (nombreText.text!.isEmpty) || (paternoText.text!.isEmpty) || (maternoField.text!.isEmpty) || (religionText.text!.isEmpty) || (procedenciaText.text!.isEmpty) || (domicilioText.text!.isEmpty) || (tel_casaText.text!.isEmpty) || (celularText.text!.isEmpty) || (estado_civilText.text!.isEmpty) || (fecha_nacimientoText.text!.isEmpty) || (sexoText.text!.isEmpty) || (referido_porText.text!.isEmpty) || (problemaText.text!.isEmpty) || (indicador_actitudinalText.text!.isEmpty) || (ekrText.text!.isEmpty) {
-            return "Los datos del usuario no pueden estar vacíos"
+            return CustomError.emptyUserFields
         }
         if (motivoText.text!.isEmpty || tipo_servicioText.text!.isEmpty || tipo_intervencionText.text!.isEmpty || herramientaText.text!.isEmpty || evaluacion_sesionText.text!.isEmpty || cuota_recuperacionText.text!.isEmpty){
-            return "Los datos de la sesión no pueden estar vacíos"
+            return CustomError.emptySesionFields
+        }
+        
+        if terminosCondicionesSwitch.isOn == false{
+            return CustomError.uncheckedPrivacyNotice
         }
         return nil
     }
     
+    func displayError(_ error: Error, title:String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func displayExito(title : String, detalle : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     
     // Date picker view -------------------------------
-    
     func createDatePickerView() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -131,4 +204,62 @@ class EncuadreViewController: UIViewController {
         self.view.endEditing(true)
     }
      // End Date picker view --------------------------
+}
+
+extension EncuadreViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView.tag{
+        case 1:
+            return self.motivos.count
+        case 2:
+            return self.servicios.count
+        case 3:
+            return self.intervenciones.count
+        case 4:
+            return self.herramientas.count
+        default:
+            return 1
+        }
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView.tag{
+        case 1:
+            return self.motivos[row]
+        case 2:
+            return self.servicios[row]
+        case 3:
+            return self.intervenciones[row]
+        case 4:
+            return self.herramientas[row]
+        default:
+            return "No hay datos"
+        }
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView.tag{
+        case 1:
+            motivoText.text! = motivos[row]
+        case 2:
+            tipo_servicioText.text! = servicios[row]
+        case 3:
+            tipo_intervencionText.text! = intervenciones[row]
+        case 4:
+            herramientaText.text! = herramientas[row]
+        default:
+            return
+        }
+    }
+}
+
+extension EncuadreViewController : ToolbarPickerViewDelegate{
+    func didTapDone() {
+        self.view.endEditing(true)
+    }
 }

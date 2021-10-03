@@ -46,7 +46,7 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
         }
     }
     func getUsuarios(cetacUserUID : String){
-        self.userController.fetchUsuariosFromCetacUser(cetacUID: cetacUserUID){ (result) in
+        self.userController.fetchUsuariosFromCetacUser{ (result) in
             switch result{
             case .success(let usuarios): self.updateUI(with: usuarios)
             case .failure(let error): print(error.localizedDescription)
@@ -85,7 +85,14 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as! UsuarioCollectionViewCell
-        cell.userImageView.image = UIImage(named: imagesName[Int.random(in: 0..<imagesName.count)])
+        let laps = (ceil(Double(indexPath.row)/Double(imagesName.count))) - 1
+        if indexPath.row > imagesName.count{
+            let index = (indexPath.row - (Int(laps) * imagesName.count)) - 1
+            cell.userImageView.image = UIImage(named: imagesName[index])
+        }else{
+            cell.userImageView.image = UIImage(named: imagesName[indexPath.row])
+        }
+        
         cell.userLabel.text = users[indexPath.row].nombre
         //cell.user = users[indexPath.row]
         // Configure the cell

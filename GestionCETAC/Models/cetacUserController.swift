@@ -11,19 +11,17 @@ import Firebase
 class cetacUserController {
     let db = Firestore.firestore()
     
+    let currentUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     var currentUser:cetacUser?
     
     func getUserInfo(completion: @escaping (Result<cetacUser, Error>) -> Void) {
-        let user = Auth.auth().currentUser
-        if let user = user {
-            db.collection("cetacUsers").whereField("uid", isEqualTo: user.uid).getDocuments { (querySnapshot, error) in
-                if let error = error{
-                    completion(.failure(error))
-                }else{
-                    for document in querySnapshot!.documents{
-                        self.currentUser = cetacUser(aDoc: document)
-                        completion(.success(self.currentUser!))
-                    }
+        db.collection("cetacUsers").whereField("uid", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    self.currentUser = cetacUser(aDoc: document)
+                    completion(.success(self.currentUser!))
                 }
             }
         }
