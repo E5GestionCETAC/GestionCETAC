@@ -21,8 +21,8 @@ class cetacUserController {
             }else{
                 for document in querySnapshot!.documents{
                     self.currentUser = cetacUser(aDoc: document)
-                    completion(.success(self.currentUser!))
                 }
+                completion(.success(self.currentUser!))
             }
         }
     }

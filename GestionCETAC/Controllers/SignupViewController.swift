@@ -17,7 +17,6 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var password1TextField: UITextField!
     @IBOutlet weak var password2TextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var rolTextField: UITextField!
     // End Datos de Miembro CETAC
     
@@ -28,8 +27,6 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        errorLabel.alpha = 0
-        
         // Picker view
         rolTextField.inputView = rolPickerView
         rolTextField.inputAccessoryView = rolPickerView.toolbar
@@ -55,7 +52,6 @@ class SignupViewController: UIViewController {
             let password = password1TextField.text!
             let rol = rolTextField.text!
             //Crear usuario
-            
             Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
                 if let error = error{
                     self.displayError(error, title: "No se pudo crear un usuario")
@@ -67,6 +63,8 @@ class SignupViewController: UIViewController {
                             self.displayError(error!, title: "No se pudieron guardar la información personal")
                         }
                     }
+                    UserDefaults.standard.set(result!.user.uid, forKey: "currentCetacUserUID")
+                    UserDefaults.standard.set(rol, forKey: "currentCetacUserRol")
                     self.transitionToGestionCETAC()
                 }
             }
@@ -151,6 +149,9 @@ enum CustomError:Error{
     case emptyUserFields
     case emptySesionFields
     case uncheckedPrivacyNotice
+    case noPrivileges
+    case noNumber
+    case noMatchCuota
     case unexpected(code:Int)
 }
 
@@ -177,7 +178,13 @@ extension CustomError : LocalizedError{
         case .emptySesionFields:
             return NSLocalizedString("Los datos de la sesión no pueden estar vacíos", comment: "Campos de la sesión vacíos")
         case .uncheckedPrivacyNotice:
-            return NSLocalizedString("No se han aceptado los Términos y Condiciones", comment: "No se aceptaron las políticas")
+            return NSLocalizedString("No se han aceptado los Términos y Condiciones del servicio", comment: "No se aceptaron las políticas")
+        case .noPrivileges:
+            return NSLocalizedString("No cuenta con los privilegios para realizar esta acción", comment: "No tiene privilegios para esta acción")
+        case .noNumber:
+            return NSLocalizedString("El valor deber ser un número", comment: "El tipo de valor no es el esperado")
+        case .noMatchCuota:
+            return NSLocalizedString("El valor de Cuota de recuperación deber ser un número", comment: "El tipo de valor no es el esperado")
         case .unexpected(_):
             return NSLocalizedString("Error inesperado", comment: "Error inesperado")
         }

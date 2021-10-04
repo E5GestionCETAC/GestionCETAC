@@ -15,17 +15,27 @@ class HomeGestionCETACViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tabBarController?.tabBar.isHidden = true
-        let UID = UserDefaults.standard.string(forKey: "currentCetacUserUID") ?? "Usuario desconocido"
-        print(UID)
         currentUserController.getUserInfo{ (result) in
             switch result{
-            case .success(let user):self.setName(username: user.nombre)
-            case .failure(let error): print(error.localizedDescription)
+            case .success(let user):self.setCurrentUserInfo(user)
+            case .failure(let error): self.displayError(error, title: "No se pudo obtener datos del usuario")
             }
         }
         // Do any additional setup after loading the view.
     }
-    func setName(username : String) {
-        self.welcomeLabel.text! = "¡Bienvenido \(username)!"
+    
+    func setCurrentUserInfo(_ currentUser : cetacUser) {
+        self.welcomeLabel.text! = "¡Bienvenido \(currentUser.rol) \(currentUser.nombre)!"
+        UserDefaults.standard.set(currentUser.rol, forKey: "currentCetacUserRol")
     }
+    
+    func displayError(_ error: Error, title:String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func unwindToHome( _ segue: UIStoryboardSegue) {}
 }

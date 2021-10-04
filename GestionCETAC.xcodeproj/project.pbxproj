@@ -13,7 +13,6 @@
 		C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */; };
 		C25EF308270980EA0046EA18 /* encuadre_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF306270980E50046EA18 /* encuadre_header.png */; };
 		C25EF30B270982AF0046EA18 /* seguimiento_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF30A270982AF0046EA18 /* seguimiento_header.png */; };
-		C25EF30D270987090046EA18 /* SeguimientoSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30C270987080046EA18 /* SeguimientoSesionViewController.swift */; };
 		C26378CD2703B68A00900453 /* mis_sesiones.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CA2703B68800900453 /* mis_sesiones.png */; };
 		C26378CE2703B68A00900453 /* mis_usuarios.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C26378CB2703B68900900453 /* mis_usuarios.jpeg */; };
 		C26378CF2703B68A00900453 /* indicadores.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378CC2703B68A00900453 /* indicadores.png */; };
@@ -31,6 +30,7 @@
 		C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */; };
 		C2761D8B27073EAD000C65A2 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = C2761D8A27073EAD000C65A2 /* Icons */; };
 		C2761D8F2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */; };
+		C2AEE9BC270A8255004FD450 /* InformacionUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AEE9BB270A8255004FD450 /* InformacionUsuarioViewController.swift */; };
 		C2BF29F52704E63800621763 /* usuarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF29F42704E63800621763 /* usuarioController.swift */; };
 		C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF29F62705069B00621763 /* EncuadreViewController.swift */; };
 		C2C870EA26FD0823008E77C2 /* gus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C870E926FD0823008E77C2 /* gus.storyboard */; };
@@ -62,7 +62,6 @@
 		C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarPickerViewUtility.swift; sourceTree = "<group>"; };
 		C25EF306270980E50046EA18 /* encuadre_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encuadre_header.png; sourceTree = "<group>"; };
 		C25EF30A270982AF0046EA18 /* seguimiento_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seguimiento_header.png; sourceTree = "<group>"; };
-		C25EF30C270987080046EA18 /* SeguimientoSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguimientoSesionViewController.swift; sourceTree = "<group>"; };
 		C26378CA2703B68800900453 /* mis_sesiones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mis_sesiones.png; sourceTree = "<group>"; };
 		C26378CB2703B68900900453 /* mis_usuarios.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mis_usuarios.jpeg; sourceTree = "<group>"; };
 		C26378CC2703B68A00900453 /* indicadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indicadores.png; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioCollectionViewCell.swift; sourceTree = "<group>"; };
 		C2761D8A27073EAD000C65A2 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisUsuariosCollectionViewController.swift; sourceTree = "<group>"; };
+		C2AEE9BB270A8255004FD450 /* InformacionUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformacionUsuarioViewController.swift; sourceTree = "<group>"; };
 		C2BF29F42704E63800621763 /* usuarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuarioController.swift; sourceTree = "<group>"; };
 		C2BF29F62705069B00621763 /* EncuadreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncuadreViewController.swift; sourceTree = "<group>"; };
 		C2C870E926FD0823008E77C2 /* gus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = gus.storyboard; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				C2BF29F62705069B00621763 /* EncuadreViewController.swift */,
 				C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */,
 				C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */,
-				C25EF30C270987080046EA18 /* SeguimientoSesionViewController.swift */,
+				C2AEE9BB270A8255004FD450 /* InformacionUsuarioViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -383,13 +383,13 @@
 				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
 				C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */,
+				C2AEE9BC270A8255004FD450 /* InformacionUsuarioViewController.swift in Sources */,
 				C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */,
 				C274AFDE27026129003DC50F /* LoginiViewController.swift in Sources */,
 				C26378D72704B21100900453 /* Hijo.swift in Sources */,
 				80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */,
 				C26378D52704B0B400900453 /* Usuario.swift in Sources */,
 				C274AFE82702622D003DC50F /* cetacUser.swift in Sources */,
-				C25EF30D270987090046EA18 /* SeguimientoSesionViewController.swift in Sources */,
 				C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */,
 				EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */,
 				80C752A32707E18000BABE56 /* sesionController.swift in Sources */,

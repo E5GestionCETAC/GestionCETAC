@@ -11,6 +11,4 @@ class UsuarioCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userLabel: UILabel!
-    
-    //var user:Usuario?
 }

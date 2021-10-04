@@ -9,24 +9,39 @@ import UIKit
 
 class MisUsuariosCollectionViewController: UICollectionViewController {
     
+    // Images name
     let imagesName:[String] = ["caballo","aguila","antilope","arana","cerdo","cheeta","conejo","dalmata","delfin","elefante","gato","gato2","gorila","guacamaya","jirafa","kanguro","labrador","lobo","mariposa","mono","murcielago","orca","paloma","panda","panda2","perezoso","perro","pez","pinguino","pinguino2","pug","raton","sabueso","serpiente","tigre_blanco","tigre","zebra","zorro"]
-
-    var userController = usuarioController()
-    var currentUserController = cetacUserController()
-    var users = [Usuario]()
-    var cetacUID:String?
+    // End Images name
     
-    /*
+    var userController = usuarioController()
+    var users = [Usuario]()
+    let currentCetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
+    let currentCetacUserRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
+    
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        currentUserController.getUserInfo{ (result) in
-            switch result{
-            case .success(let user):self.getUsuarios(cetacUserUID: user.uid)
-            case .failure(let error): print(error.localizedDescription)
+        if currentCetacUserRol == "Soporte Admon"{
+            self.addButton.isEnabled = false
+            self.addButton.tintColor = UIColor.clear
+        }
+        if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
+            self.userController.fetchUsuarios{(result) in
+                switch result{
+                case .success(let usuarios): self.updateUI(with: usuarios)
+                case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
+                }
+            }
+        }else if currentCetacUserRol == "Tanatólogo"{
+            self.userController.fetchUsuariosFromCetacUser{ (result) in
+                switch result{
+                case .success(let usuarios): self.updateUI(with: usuarios)
+                case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
+                }
             }
         }
     }
-    */
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +53,23 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
         /*self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
          */
         // Do any additional setup after loading the view.
-        currentUserController.getUserInfo{ (result) in
-            switch result{
-            case .success(let user):self.getUsuarios(cetacUserUID: user.uid)
-            case .failure(let error): print(error.localizedDescription)
-            }
+        if currentCetacUserRol == "Soporte Admon"{
+            self.addButton.isEnabled = false
+            self.addButton.tintColor = UIColor.clear
         }
-    }
-    func getUsuarios(cetacUserUID : String){
-        self.userController.fetchUsuariosFromCetacUser{ (result) in
-            switch result{
-            case .success(let usuarios): self.updateUI(with: usuarios)
-            case .failure(let error): print(error.localizedDescription)
+        if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
+            self.userController.fetchUsuarios{(result) in
+                switch result{
+                case .success(let usuarios): self.updateUI(with: usuarios)
+                case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
+                }
+            }
+        }else if currentCetacUserRol == "Tanatólogo"{
+            self.userController.fetchUsuariosFromCetacUser{ (result) in
+                switch result{
+                case .success(let usuarios): self.updateUI(with: usuarios)
+                case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
+                }
             }
         }
     }
@@ -58,6 +78,14 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
         DispatchQueue.main.async {
             self.users = usuarios
             self.collectionView.reloadData()
+        }
+    }
+    
+    func displayError(_ error: Error, title:String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     /*
@@ -94,40 +122,22 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
         }
         
         cell.userLabel.text = users[indexPath.row].nombre
-        //cell.user = users[indexPath.row]
         // Configure the cell
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedItem = sender as? Usuario else {return}
+        
+        if segue.identifier == "userInfo"{
+            guard let destinationVC = segue.destination as? InformacionUsuarioViewController else {return}
+            destinationVC.currentUser = selectedItem
+        }
     }
-    */
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedUser = users[indexPath.item]
+        self.performSegue(withIdentifier: "userInfo", sender: selectedUser)
+    }
 
 }

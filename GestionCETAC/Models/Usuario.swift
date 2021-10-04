@@ -10,34 +10,13 @@ import Firebase
 
 struct Usuario {
     let id, edad : Int
-    let nombre, apellido_paterno, apellido_materno, ocupacion, religion, tel_casa, celular, estado_civil, problema, sexo, ekr, indicador_actitudinal,domicilio, procedencia, referido_por, cetacUserID : String
+    let usuarioID, nombre, apellido_paterno, apellido_materno, ocupacion, religion, tel_casa, celular, estado_civil, problema, sexo, ekr, indicador_actitudinal,domicilio, procedencia, referido_por, cetacUserID : String
     let fecha_nacimiento : Timestamp
+    let activo:Bool
     var hijos:[Hijo]?
     
-    init() {
-        self.id = 0
-        self.edad = 0
-        self.nombre = ""
-        self.apellido_paterno = ""
-        self.apellido_materno = ""
-        self.ocupacion = ""
-        self.religion = ""
-        self.tel_casa = ""
-        self.celular = ""
-        self.problema = ""
-        self.estado_civil = ""
-        self.sexo = ""
-        self.ekr = ""
-        self.indicador_actitudinal = ""
-        self.domicilio = ""
-        self.procedencia = ""
-        self.referido_por = ""
-        self.cetacUserID = ""
-        self.fecha_nacimiento = Timestamp()
-        self.hijos = nil
-    }
-    
-    init(id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp) {
+    init(id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp, activo:Bool) {
+        self.usuarioID = "0"
         self.id = id
         self.edad = edad
         self.nombre = nombre
@@ -57,10 +36,37 @@ struct Usuario {
         self.referido_por = referido_por
         self.cetacUserID = cetacUserID
         self.fecha_nacimiento = fecha_nacimiento
+        self.activo = true
+        self.hijos = nil
+    }
+    
+    init(usuarioID:String, id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp, activo:Bool) {
+        self.usuarioID = usuarioID
+        self.id = id
+        self.edad = edad
+        self.nombre = nombre
+        self.apellido_paterno = apellido_paterno
+        self.apellido_materno = apellido_materno
+        self.ocupacion = ocupacion
+        self.religion = religion
+        self.tel_casa = tel_casa
+        self.celular = celular
+        self.problema = problema
+        self.estado_civil = estado_civil
+        self.sexo = sexo
+        self.ekr = ekr
+        self.indicador_actitudinal = indicador_actitudinal
+        self.domicilio = domicilio
+        self.procedencia = procedencia
+        self.referido_por = referido_por
+        self.cetacUserID = cetacUserID
+        self.fecha_nacimiento = fecha_nacimiento
+        self.activo = activo
         self.hijos = nil
     }
     
     init(aDoc : DocumentSnapshot) {
+        self.usuarioID = aDoc.documentID
         self.id = aDoc.get("id") as? Int ?? 0
         self.edad = aDoc.get("edad") as? Int ?? 0
         self.nombre = aDoc.get("nombre") as? String ?? ""
@@ -80,6 +86,7 @@ struct Usuario {
         self.referido_por = aDoc.get("referido_por") as? String ?? ""
         self.cetacUserID = aDoc.get("cetacUserID") as? String ?? ""
         self.fecha_nacimiento = aDoc.get("fecha_nacimiento") as? Timestamp ?? Timestamp()
+        self.activo = aDoc.get("activo") as? Bool ?? true
         self.hijos = nil
     }
     
