@@ -26,16 +26,12 @@ class EncuadreViewController: UIViewController {
     // Controladores
     var userController = usuarioController()
     var sesionControlador = sesionController()
-    
-    var id:Int?
-    let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
-    var fechaNacimientoDate:Date?
-    var edad:Int?
+    // End Controladores
     
     // Datos de usuario--------------------------------
     @IBOutlet weak var nombreText: UITextField!
     @IBOutlet weak var paternoText: UITextField!
-    @IBOutlet weak var maternoField: UITextField!
+    @IBOutlet weak var maternoText: UITextField!
     @IBOutlet weak var religionText: UITextField!
     @IBOutlet weak var ocupacionText: UITextField!
     @IBOutlet weak var procedenciaText: UITextField!
@@ -64,6 +60,15 @@ class EncuadreViewController: UIViewController {
     @IBOutlet weak var abrirExpedienteSwitch: UISwitch!
     @IBOutlet weak var terminosCondicionesSwitch: UISwitch!
     // End Switches
+    
+    // Otras Variable
+    var id:Int?
+    let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
+    let currentRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
+    var fechaNacimientoDate:Date?
+    var edad:Int?
+    var alreadySentData:Bool = false
+    // End Otras Variable
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,7 +106,7 @@ class EncuadreViewController: UIViewController {
         self.userController.getLastID{ (result) in
             switch result{
             case .success(let lastID): self.id = lastID + 1
-            case .failure(let error): print(error.localizedDescription)
+            case .failure(let error): self.displayError(error, title: "No se encontró el último ID")
             }
         }
         
@@ -109,55 +114,80 @@ class EncuadreViewController: UIViewController {
     }
     
     @IBAction func encuadre(_ sender: Any) {
-        let error = validateData()
-        if let error = error {
-            print(error)
-        }else{
-            // Crear usuario
-            let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
+        if alreadySentData == false{
+            let error = validateData()
+            if let error = error {
+                displayError(error, title: "Error")
+            }else{
+                // Crear usuario
+                let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
                 // Calcular edad---------------------------
-            let now = Date()
-            let calendar = Calendar.current
-            let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
-            self.edad = ageComponents.year!
+                let now = Date()
+                let calendar = Calendar.current
+                let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
+                self.edad = ageComponents.year!
                 // End Calcular edad-----------------------
-            let newUser:Usuario = Usuario(id: self.id!, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoField.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp)
-            
-            userController.insertUsuario(nuevoUsuario: newUser){(result) in
-                switch result{
-                case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertó el usuario a la base de datos")
-                case.failure(let error):self.displayError(error, title: "No se guardó el usuario")
+                let newUser:Usuario = Usuario(id: self.id!, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true)
+                
+                userController.insertUsuario(nuevoUsuario: newUser){(result) in
+                    switch result{
+                    case .success(let retorno):print(retorno)
+                    case.failure(let error):self.displayError(error, title: "No se guardó el usuario")
+                    }
                 }
-            }
-            // End Crear usuario
-            
-            // Crear sesion
-            let cuotaRecuperacionFloat = Float(cuota_recuperacionText.text!)
-            
-            let newSesion:Sesion = Sesion(usuarioID: id!, numero_sesion: 1, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
-            
-            sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
-                switch result{
-                case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertó la sesión a la base de datos")
-                case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+                // End Crear usuario
+                
+                // Crear sesion
+                let cuotaRecuperacionFloat = Float(cuota_recuperacionText.text!)
+                
+                let newSesion:Sesion = Sesion(usuarioID: id!, numero_sesion: 1, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, tipo_intervencion: tipo_intervencionText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
+                
+                sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
+                    switch result{
+                    case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertaron los datos correctamente")
+                    case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+                    }
                 }
+                // End crear sesion
+                alreadySentData = true
             }
-            // End crear sesion
         }
+        else{
+            self.displayMessage(title: "Ya se ha registrado un usuario", detalle: "Si quiere editar la información seleccione el usuario en la pantalla de Mis Usuarios")
+        }
+        
     }
     
     func validateData() -> Error? {
-        if (nombreText.text!.isEmpty) || (paternoText.text!.isEmpty) || (maternoField.text!.isEmpty) || (religionText.text!.isEmpty) || (procedenciaText.text!.isEmpty) || (domicilioText.text!.isEmpty) || (tel_casaText.text!.isEmpty) || (celularText.text!.isEmpty) || (estado_civilText.text!.isEmpty) || (fecha_nacimientoText.text!.isEmpty) || (sexoText.text!.isEmpty) || (referido_porText.text!.isEmpty) || (problemaText.text!.isEmpty) || (indicador_actitudinalText.text!.isEmpty) || (ekrText.text!.isEmpty) {
+        if (nombreText.text!.isEmpty) || (paternoText.text!.isEmpty) || (maternoText.text!.isEmpty) || (religionText.text!.isEmpty) || (procedenciaText.text!.isEmpty) || (domicilioText.text!.isEmpty) || (tel_casaText.text!.isEmpty) || (celularText.text!.isEmpty) || (estado_civilText.text!.isEmpty) || (fecha_nacimientoText.text!.isEmpty) || (sexoText.text!.isEmpty) || (referido_porText.text!.isEmpty) || (problemaText.text!.isEmpty) || (indicador_actitudinalText.text!.isEmpty) || (ekrText.text!.isEmpty) {
             return CustomError.emptyUserFields
         }
         if (motivoText.text!.isEmpty || tipo_servicioText.text!.isEmpty || tipo_intervencionText.text!.isEmpty || herramientaText.text!.isEmpty || evaluacion_sesionText.text!.isEmpty || cuota_recuperacionText.text!.isEmpty){
             return CustomError.emptySesionFields
         }
-        
+        if isNumber(cuota_recuperacionText.text!) == false{
+            return CustomError.noMatchCuota
+        }
         if terminosCondicionesSwitch.isOn == false{
             return CustomError.uncheckedPrivacyNotice
         }
         return nil
+    }
+    
+    func isNumber(_ cuotaRecuperacion:String) -> Bool{
+        let floatNumberRegex = "^\\d*\\.?\\d*$"
+        let floatNumberTest = NSPredicate(format: "SELF MATCHES %@", floatNumberRegex)
+        return floatNumberTest.evaluate(with: cuotaRecuperacion)
+    }
+    
+    func displayExito(title : String, detalle : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                self.performSegue(withIdentifier: "unwindToHome", sender: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func displayError(_ error: Error, title:String){
@@ -168,7 +198,7 @@ class EncuadreViewController: UIViewController {
         }
     }
     
-    func displayExito(title : String, detalle : String){
+    func displayMessage(title : String, detalle : String){
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

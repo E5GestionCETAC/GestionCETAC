@@ -73,6 +73,21 @@ class sesionController{
             }
         }
     }
+
+    //Busca una sesion con un numero de sesion particular y un usuario
+    func getSesionNumber(userID:Int, sesionNumber:Int, completion: @escaping (Result<Sesion, Error>) -> Void){
+        var sesion:Sesion?
+        db.collection("sesiones").whereField("usuarioID", isEqualTo: userID).whereField("numero_sesion", isEqualTo: sesionNumber).limit(to: 1).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    sesion = Sesion(aDoc: document)
+                }
+                completion(.success(sesion!))
+            }
+        }
+    }
     
     func insertSesion(nuevaSesion:Sesion, completion: @escaping (Result<String, Error>) -> Void){
         var ref: DocumentReference? = nil
@@ -83,6 +98,7 @@ class sesionController{
             "tanatologoUID" : nuevaSesion.tanatologoUID,
             "motivo" : nuevaSesion.motivo,
             "tipo_servicio" : nuevaSesion.tipo_servicio,
+            "tipo_intervencion" : nuevaSesion.tipo_intervencion,
             "herramienta" : nuevaSesion.herramienta,
             "evaluacion_sesion" : nuevaSesion.evaluacion_sesion,
             "fecha" : nuevaSesion.fecha
@@ -92,6 +108,26 @@ class sesionController{
                 completion(.failure(err))
             }else{
                 completion(.success("Documento ID: \(ref!.documentID)"))
+            }
+        }
+    }
+    
+    func updateSesion(updateSesion:Sesion, completion: @escaping (Result<String, Error>) -> Void){
+        db.collection("sesiones").document(updateSesion.sesionID).updateData(["usuarioID" : updateSesion.usuarioID ,
+            "numero_sesion" : updateSesion.numero_sesion,
+            "cuota_recuperacion" : updateSesion.cuota_recuperacion,
+            "tanatologoUID" : updateSesion.tanatologoUID,
+            "motivo" : updateSesion.motivo,
+            "tipo_servicio" : updateSesion.tipo_servicio,
+            "tipo_intervencion" : updateSesion.tipo_intervencion,
+            "herramienta" : updateSesion.herramienta,
+            "evaluacion_sesion" : updateSesion.evaluacion_sesion,
+            "fecha" : updateSesion.fecha
+        ]){ err in
+            if let err = err{
+                completion(.failure(err))
+            }else{
+                completion(.success("Datos actualizados correctamente"))
             }
         }
     }

@@ -14,7 +14,7 @@ class usuarioController{
     
     func fetchUsuarios(completion: @escaping (Result<Usuarios, Error>) -> Void){
         var usuarios = [Usuario]()
-        db.collection("usuarios").getDocuments { (querySnapshot, error) in
+        db.collection("usuarios").whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
@@ -28,7 +28,7 @@ class usuarioController{
     }
     func fetchUsuariosFromCetacUser(completion: @escaping (Result<Usuarios, Error>) -> Void){
         var usuarios = [Usuario]()
-        db.collection("usuarios").whereField("cetacUserID", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
+        db.collection("usuarios").whereField("cetacUserID", isEqualTo: currentUserUID).whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
@@ -61,6 +61,7 @@ class usuarioController{
             "id" : nuevoUsuario.id,
             "edad" : nuevoUsuario.edad,
             "fecha_nacimiento" : nuevoUsuario.fecha_nacimiento,
+            "activo" : nuevoUsuario.activo,
             "nombre" : nuevoUsuario.nombre,
             "apellido_paterno" : nuevoUsuario.apellido_paterno,
             "apellido_materno" : nuevoUsuario.apellido_materno,
@@ -83,6 +84,49 @@ class usuarioController{
                 completion(.failure(err))
             }else{
                 completion(.success("Documento agregado ID: \(ref!.documentID)"))
+            }
+        }
+    }
+    
+    func updateUsuario(updateUsuario:Usuario, completion: @escaping (Result<String, Error>) -> Void){
+        db.collection("usuarios").document(updateUsuario.usuarioID).updateData([
+            "id" : updateUsuario.id,
+            "edad" : updateUsuario.edad,
+            "fecha_nacimiento" : updateUsuario.fecha_nacimiento,
+            "activo" : updateUsuario.activo,
+            "nombre" : updateUsuario.nombre,
+            "apellido_paterno" : updateUsuario.apellido_paterno,
+            "apellido_materno" : updateUsuario.apellido_materno,
+            "ocupacion" : updateUsuario.ocupacion,
+            "religion" : updateUsuario.religion,
+            "tel_casa" : updateUsuario.tel_casa,
+            "celular" : updateUsuario.celular,
+            "estado_civil" : updateUsuario.estado_civil,
+            "problema" : updateUsuario.problema,
+            "sexo" : updateUsuario.sexo,
+            "ekr" : updateUsuario.ekr,
+            "indicador_actitudinal" : updateUsuario.indicador_actitudinal,
+            "domicilio" : updateUsuario.domicilio,
+            "procedencia" : updateUsuario.procedencia,
+            "referido_por" : updateUsuario.referido_por,
+            "cetacUserID" : updateUsuario.cetacUserID
+        ]){ err in
+            if let err = err{
+                print("Error loading document: \(err)")
+                completion(.failure(err))
+            }else{
+                completion(.success("Datos del usuario actualizados correctamente"))
+            }
+        }
+    }
+    
+    func deleteUsuario(deleteUsuario:Usuario, completion: @escaping (Result<String, Error>) -> Void){
+        db.collection("usuarios").document(deleteUsuario.usuarioID).delete(){ err in
+            if let err = err{
+                print("Error loading document: \(err)")
+                completion(.failure(err))
+            }else{
+                completion(.success("Usuario eliminado correctamente"))
             }
         }
     }
