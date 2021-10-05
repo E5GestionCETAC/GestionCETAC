@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
+		800EB1C0270BD62000315934 /* SesionInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */; };
+		800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */; };
 		80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7529F2707CFDC00BABE56 /* Sesion.swift */; };
 		80C752A32707E18000BABE56 /* sesionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C752A22707E18000BABE56 /* sesionController.swift */; };
 		C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
+		800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisSesionesCollectionViewController.swift; sourceTree = "<group>"; };
 		80C7529F2707CFDC00BABE56 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
 		80C752A22707E18000BABE56 /* sesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sesionController.swift; sourceTree = "<group>"; };
 		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				C2761D8827073C3F000C65A2 /* UsuarioCollectionViewCell.swift */,
 				C2761D8E2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift */,
 				C2AEE9BB270A8255004FD450 /* InformacionUsuarioViewController.swift */,
+				800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */,
+				800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -389,11 +395,13 @@
 				C26378D72704B21100900453 /* Hijo.swift in Sources */,
 				80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */,
 				C26378D52704B0B400900453 /* Usuario.swift in Sources */,
+				800EB1C0270BD62000315934 /* SesionInfoCollectionViewCell.swift in Sources */,
 				C274AFE82702622D003DC50F /* cetacUser.swift in Sources */,
 				C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */,
 				EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */,
 				80C752A32707E18000BABE56 /* sesionController.swift in Sources */,
 				C2BF29F52704E63800621763 /* usuarioController.swift in Sources */,
+				800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */,
 				C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */,
 				C26378D32703C41500900453 /* cetacUserController.swift in Sources */,
 			);
