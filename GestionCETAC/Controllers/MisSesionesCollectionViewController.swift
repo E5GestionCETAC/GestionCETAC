@@ -11,7 +11,10 @@ import Firebase
 class MisSesionesCollectionViewController: UICollectionViewController {
     
     var sesionControlador = sesionController()
+    var usuarioControlador = usuarioController()
     var sesiones = [Sesion]()
+    var usuarios = [Usuario]()
+    var usersDictionary : [Int:String] = [:]
     let currentCetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     let currentCetacUserRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
 
@@ -27,6 +30,28 @@ class MisSesionesCollectionViewController: UICollectionViewController {
         if currentCetacUserRol == "Soporte Admon"{
             self.addButton.isEnabled = false
             self.addButton.tintColor = UIColor.clear
+        }
+        if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
+            self.usuarioControlador.fetchUsuarios{ (result) in
+                switch result{
+                case .success(let users):self.setSesionInfo(users)
+                case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
+                }
+            }
+        }else if currentCetacUserRol == "Tanatólogo"{
+            self.usuarioControlador.fetchUsuariosFromCetacUser{(result) in
+                switch result{
+                case .success(let users):self.setSesionInfo(users)
+                case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
+                }
+        }
+        
+    }
+}
+    func setSesionInfo(_ users:Usuarios){
+        self.usuarios = users
+        for user in users{
+            usersDictionary[user.id] = user.nombre
         }
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
             self.sesionControlador.fetchSesiones{(result) in
@@ -51,6 +76,7 @@ class MisSesionesCollectionViewController: UICollectionViewController {
             self.collectionView.reloadData()
         }
     }
+        
     func displayError(_ error: Error, title:String){
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
@@ -84,7 +110,7 @@ class MisSesionesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sesionCell", for: indexPath) as! SesionInfoCollectionViewCell
         cell.numeroSesionText.text = String(sesiones[indexPath.row].numero_sesion)
-        cell.nombreSesionText.text = String(sesiones[indexPath.row].usuarioID)
+        cell.nombreSesionText.text = usersDictionary[sesiones[indexPath.row].usuarioID]
         
         let fechaDate:Date = sesiones[indexPath.row].fecha.dateValue()
         let dateFormatter = DateFormatter()

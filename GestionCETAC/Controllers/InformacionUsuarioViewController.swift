@@ -244,7 +244,7 @@ class InformacionUsuarioViewController: UIViewController {
         if cetacUserRol == "Tanatólogo" || cetacUserRol == "Administrador"{
             self.editingMode = true
             setStateTextFields()
-            displayMessage(title: "Tiene permiso para editar", detalle: "Se ha dado acceso a la edición de la información personal del usuario y su primera sesión")
+            displayMessage(title: "Acceso concedido", detalle: "Se ha dado acceso a la edición de la información personal del usuario y su primera sesión")
         }
         else{
             editingMode = false
@@ -266,7 +266,7 @@ class InformacionUsuarioViewController: UIViewController {
                 let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
                 self.edad = ageComponents.year!
                 // End Calcular edad-----------------------
-                let newUser:Usuario = Usuario(usuarioID:self.currentUser!.usuarioID,id: self.currentUser!.id, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true)
+                let newUser:Usuario = Usuario(usuarioID:self.currentUser!.usuarioID,id: self.currentUser!.id, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.currentUser!.cetacUserID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true)
                 
                 usuarioControlador.updateUsuario(updateUsuario: newUser){(result) in
                     switch result{
