@@ -3049,7 +3049,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <!--Seguimiento de reportes-->
         <scene sceneID="DBj-bH-Shl">
             <objects>
-                <viewController id="fSv-oy-SAR" customClass="ReportesViewController" customModule="pruebaScroll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fSv-oy-SAR" customClass="ReportesInfoViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k20-Zl-FO6">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
