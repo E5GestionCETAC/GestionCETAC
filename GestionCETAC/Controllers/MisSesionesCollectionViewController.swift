@@ -68,7 +68,7 @@ class MisSesionesCollectionViewController: UICollectionViewController {
     func setSesionInfo(_ users:Usuarios){
         self.usuarios = users
         for user in users{
-            usersDictionary[user.id] = user.nombre
+            usersDictionary[user.id] = "\(user.nombre) \(user.apellido_paterno) \(user.apellido_materno)"
         }
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
             self.sesionControlador.fetchSesiones{(result) in
@@ -129,7 +129,7 @@ class MisSesionesCollectionViewController: UICollectionViewController {
         let fechaDate:Date = sesiones[indexPath.row].fecha.dateValue()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
+        dateFormatter.timeStyle = .short
         // End Fecha
         cell.fechaSesionText.text = dateFormatter.string(from: fechaDate)
         cell.motivoSesionText.text = sesiones[indexPath.row].motivo
