@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
-		798598C9270D81F80075F5D0 /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798598C8270D81F80075F5D0 /* ReportesViewController.swift */; };
 		79B981DA270E5206003085C6 /* ReportesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */; };
 		800EB1C0270BD62000315934 /* SesionInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */; };
 		800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */; };
@@ -61,7 +60,6 @@
 /* Begin PBXFileReference section */
 		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
-		798598C8270D81F80075F5D0 /* ReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
 		79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesInfoViewController.swift; sourceTree = "<group>"; };
 		800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisSesionesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -126,14 +124,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		79B981D6270E4C36003085C6 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				798598C8270D81F80075F5D0 /* ReportesViewController.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		C25EF30127091B160046EA18 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +398,6 @@
 				C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */,
 				C2AEE9BC270A8255004FD450 /* InformacionUsuarioViewController.swift in Sources */,
 				C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */,
-				798598C9270D81F80075F5D0 /* ReportesViewController.swift in Sources */,
 				C274AFDE27026129003DC50F /* LoginiViewController.swift in Sources */,
 				C26378D72704B21100900453 /* Hijo.swift in Sources */,
 				80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */,
