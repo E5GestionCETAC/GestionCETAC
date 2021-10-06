@@ -41,6 +41,20 @@ class usuarioController{
         }
     }
     
+    func getUser(userID:Int, completion: @escaping (Result<Usuario, Error>) -> Void){
+        var usuario:Usuario?
+        db.collection("usuarios").whereField("id", isEqualTo: userID).limit(to: 1).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    usuario = Usuario(aDoc: document)
+                }
+                completion(.success(usuario!))
+            }
+        }
+    }
+    
     func getLastID(completion: @escaping (Result<Int, Error>) -> Void){
         var usuario:Usuario?
         db.collection("usuarios").order(by: "id", descending: true).limit(to: 1).getDocuments { (querySnapshot, error) in
