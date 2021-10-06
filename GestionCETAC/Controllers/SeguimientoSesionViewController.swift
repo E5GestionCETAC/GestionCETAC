@@ -44,16 +44,18 @@ class SeguimientoSesionViewController: UIViewController {
     @IBOutlet weak var cerrarExpedienteSwitch: UISwitch!
     @IBOutlet weak var terminosCondicionesSwitch: UISwitch!
     // End Switches
-    var sesionId:Int?
-    var dictionaryUser:[String:Int] = [:]
+    
+    // Other variables
+    var sesionID:Int?
+    var dictionaryUser:[String:Int] = ["":0]
     var usuarios = [Usuario]()
     let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     let currentCetacUserRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
-    
+    //End other variables
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Picker Views
         motivoText.inputView = motivoPickerView
         motivoText.inputAccessoryView = motivoPickerView.toolbar
         usuarioText.inputView = usuarioPickerView
@@ -67,6 +69,7 @@ class SeguimientoSesionViewController: UIViewController {
         
         usuarioPickerView.delegate = self
         usuarioPickerView.dataSource = self
+        usuarioPickerView.toolbarDelegate = self
         motivoPickerView.delegate = self
         motivoPickerView.dataSource = self
         motivoPickerView.toolbarDelegate = self
@@ -85,7 +88,7 @@ class SeguimientoSesionViewController: UIViewController {
         servicioPickerView.tag = 2
         intervencionPickerView.tag = 3
         herramientaPickerView.tag = 4
-        
+        //Picker views
         
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
             self.usuarioControlador.fetchUsuarios{ (result) in
@@ -100,9 +103,8 @@ class SeguimientoSesionViewController: UIViewController {
                 case .success(let users):self.setUsuarios(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
                 }
-        }
-        // Do any additional setup after loading the view.
             }
+        }
     }
     
     @IBAction func seguimientoSesion(_ sender: Any) {
@@ -111,32 +113,40 @@ class SeguimientoSesionViewController: UIViewController {
             displayError(error, title: "Error")
         }else{
             let id = dictionaryUser.index(forKey:usuarioText.text!)
-
-                
-                        // Crear sesion
-            let cuotaRecuperacionFloat = Float(cuota_recuperacionText.text!)
-            
-            let newSesion:Sesion = Sesion(usuarioID: dictionaryUser[id!].value, numero_sesion: 1, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, tipo_intervencion: tipo_intervencionText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
-            
-            sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
-                switch result{
-                case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertaron los datos correctamente")
-                case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+            sesionControlador.getLastSesion(userID: dictionaryUser[id!].value){
+                (result) in
+                switch result
+                {
+                case .success(let numero_sesion):self.sendSesion(numero_sesion)
+                case .failure(let error): self.displayError(error, title: "No se obtuvo el id de la sesion")
                 }
             }
-            // End crear sesion
+
         }
     }
     func setUsuarios(_ users:Usuarios){
         self.usuarios = users
-        print(users.count)
         for user in users{
             dictionaryUser["\(user.nombre) \(user.apellido_paterno) \(user.apellido_materno)"] = user.id
         }
-        print(dictionaryUser.count)
     }
+    
+    func sendSesion(_ numero_sesion:Int){
+        let id = dictionaryUser.index(forKey:usuarioText.text!)
+        // Crear sesion
+        let cuotaRecuperacionFloat = Float(cuota_recuperacionText.text!)
+        let newSesion:Sesion = Sesion(usuarioID: dictionaryUser[id!].value, numero_sesion: numero_sesion + 1, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, tipo_intervencion: tipo_intervencionText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
+        sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
+            switch result{
+            case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertaron los datos correctamente")
+            case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+            }
+        }
+        // End crear sesion
+    }
+    
     func validateData() -> Error? {
-        if (motivoText.text!.isEmpty || tipo_servicioText.text!.isEmpty || tipo_intervencionText.text!.isEmpty || herramientaText.text!.isEmpty || evaluacion_sesionText.text!.isEmpty || cuota_recuperacionText.text!.isEmpty){
+        if (motivoText.text!.isEmpty || tipo_servicioText.text!.isEmpty || tipo_intervencionText.text!.isEmpty || herramientaText.text!.isEmpty || evaluacion_sesionText.text!.isEmpty || cuota_recuperacionText.text!.isEmpty || usuarioText.text!.isEmpty){
             return CustomError.emptySesionFields
         }
         if isNumber(cuota_recuperacionText.text!) == false{
@@ -144,15 +154,6 @@ class SeguimientoSesionViewController: UIViewController {
         }
         if terminosCondicionesSwitch.isOn == false{
             return CustomError.uncheckedPrivacyNotice
-        }
-        let id = dictionaryUser.index(forKey:usuarioText.text!)
-        sesionControlador.getLastSesion(userID: dictionaryUser[id!].value){
-            (result) in
-            switch result
-            {
-            case .success(let id): self.sesionId = id+1
-            case .failure(let error): self.displayError(error, title: "No se obtuvo el id de la sesion")
-            }
         }
         return nil
     }
@@ -224,7 +225,7 @@ extension SeguimientoSesionViewController: UIPickerViewDelegate, UIPickerViewDat
         case 4:
             return self.herramientas[row]
         case 5:
-            return self.dictionaryUser.key(from: row+1)
+            return self.dictionaryUser.key(from: row)
         default:
             return "No hay datos"
         }
@@ -241,7 +242,7 @@ extension SeguimientoSesionViewController: UIPickerViewDelegate, UIPickerViewDat
         case 4:
             herramientaText.text! = herramientas[row]
         case 5:
-            usuarioText.text! = dictionaryUser.key(from: row+1)!
+            usuarioText.text! = dictionaryUser.key(from: row)!
         default:
             return
         }
