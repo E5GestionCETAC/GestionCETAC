@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
 		798598C9270D81F80075F5D0 /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798598C8270D81F80075F5D0 /* ReportesViewController.swift */; };
+		79B981D8270E4F66003085C6 /* ReportesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B981D7270E4F66003085C6 /* ReportesViewController.swift */; };
 		800EB1C0270BD62000315934 /* SesionInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */; };
 		800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */; };
 		80BF227E270D1F270049BAAB /* SeguimientoSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */; };
@@ -61,6 +62,7 @@
 		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
 		798598C8270D81F80075F5D0 /* ReportesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesViewController.swift; sourceTree = "<group>"; };
+		79B981D7270E4F66003085C6 /* ReportesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportesViewController.swift; path = ../../../../../Desktop/ReportesViewController.swift; sourceTree = "<group>"; };
 		800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisSesionesCollectionViewController.swift; sourceTree = "<group>"; };
 		80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguimientoSesionViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79B981D6270E4C36003085C6 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				798598C8270D81F80075F5D0 /* ReportesViewController.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		C25EF30127091B160046EA18 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		C274AFDC27026104003DC50F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				79B981D7270E4F66003085C6 /* ReportesViewController.swift */,
 				C274AFDD27026129003DC50F /* LoginiViewController.swift */,
 				C274AFE02702614B003DC50F /* SignupViewController.swift */,
 				C274AFE327026185003DC50F /* HomeGestionCETACViewController.swift */,
@@ -145,7 +156,6 @@
 				800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */,
 				800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */,
 				80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */,
-
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +235,7 @@
 				EA9EA45126FBE33C00B5B565 /* Products */,
 				E44B2443FC6CE32860AC1E53 /* Pods */,
 				DCAFF387FADCB99D53157FD7 /* Frameworks */,
+				79B981D6270E4C36003085C6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -391,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2761D8F2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift in Sources */,
+				79B981D8270E4F66003085C6 /* ReportesViewController.swift in Sources */,
 				EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */,
 				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
