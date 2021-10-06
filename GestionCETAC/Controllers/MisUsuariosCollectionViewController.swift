@@ -45,14 +45,6 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        /*self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-         */
-        // Do any additional setup after loading the view.
         if currentCetacUserRol == "Soporte Admon"{
             self.addButton.isEnabled = false
             self.addButton.tintColor = UIColor.clear
@@ -88,26 +80,22 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        guard let selectedItem = sender as? Usuario else {return}
+        
+        if segue.identifier == "userInfo"{
+            guard let destinationVC = segue.destination as? InformacionUsuarioViewController else {return}
+            destinationVC.currentUser = selectedItem
+        }
     }
-    */
-
-    // MARK: UICollectionViewDataSource
-
+    // Collection view configuration
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return users.count
     }
 
@@ -120,24 +108,13 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
         }else{
             cell.userImageView.image = UIImage(named: imagesName[indexPath.row])
         }
-        
         cell.userLabel.text = users[indexPath.row].nombre
-        // Configure the cell
         return cell
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selectedItem = sender as? Usuario else {return}
-        
-        if segue.identifier == "userInfo"{
-            guard let destinationVC = segue.destination as? InformacionUsuarioViewController else {return}
-            destinationVC.currentUser = selectedItem
-        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedUser = users[indexPath.item]
         self.performSegue(withIdentifier: "userInfo", sender: selectedUser)
     }
-
+    // End Configuration view configuration
 }
