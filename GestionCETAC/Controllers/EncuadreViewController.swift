@@ -26,6 +26,7 @@ class EncuadreViewController: UIViewController {
     // Controladores
     var userController = usuarioController()
     var sesionControlador = sesionController()
+    var hijoControlador = hijoController()
     // End Controladores
     
     // Datos de usuario--------------------------------
@@ -41,6 +42,9 @@ class EncuadreViewController: UIViewController {
     @IBOutlet weak var estado_civilText: UITextField!
     @IBOutlet weak var fecha_nacimientoText: UITextField!
     @IBOutlet weak var sexoText: UITextField!
+    @IBOutlet weak var numeroHijosText: UITextField!
+    @IBOutlet weak var sexoHijosText: UITextField!
+    @IBOutlet weak var edadesHijosText: UITextField!
     @IBOutlet weak var referido_porText: UITextField!
     @IBOutlet weak var problemaText: UITextView!
     @IBOutlet weak var indicador_actitudinalText: UITextView!
@@ -67,6 +71,9 @@ class EncuadreViewController: UIViewController {
     let currentRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
     var fechaNacimientoDate:Date?
     var edad:Int?
+    var edadesHijos = [Int]()
+    var sexoHijos = [String]()
+    var documentID:String?
     // End Otras Variable
     
     override func viewDidLoad() {
@@ -118,6 +125,7 @@ class EncuadreViewController: UIViewController {
             displayError(error, title: "Error")
         }else{
             // Crear usuario
+            let numeroHijosInt = Int(numeroHijosText.text!)
             let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
             // Calcular edad---------------------------
             let now = Date()
@@ -125,11 +133,11 @@ class EncuadreViewController: UIViewController {
             let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
             self.edad = ageComponents.year!
             // End Calcular edad-----------------------
-            let newUser:Usuario = Usuario(id: self.id!, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true)
+            let newUser:Usuario = Usuario(id: self.id!, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true, numeroHijos: numeroHijosInt!)
             
             userController.insertUsuario(nuevoUsuario: newUser){(result) in
                 switch result{
-                case .success(let retorno):print(retorno)
+                case .success(let retorno):self.addHijo(retorno)
                 case.failure(let error):self.displayError(error, title: "No se guardó el usuario")
                 }
             }
@@ -147,12 +155,28 @@ class EncuadreViewController: UIViewController {
                 }
             }
             // End crear sesion
-        }
+            }
     }
     
     func validateData() -> Error? {
-        if (nombreText.text!.isEmpty) || (paternoText.text!.isEmpty) || (maternoText.text!.isEmpty) || (religionText.text!.isEmpty) || (procedenciaText.text!.isEmpty) || (domicilioText.text!.isEmpty) || (tel_casaText.text!.isEmpty) || (celularText.text!.isEmpty) || (estado_civilText.text!.isEmpty) || (fecha_nacimientoText.text!.isEmpty) || (sexoText.text!.isEmpty) || (referido_porText.text!.isEmpty) || (problemaText.text!.isEmpty) || (indicador_actitudinalText.text!.isEmpty) || (ekrText.text!.isEmpty) {
+        if (nombreText.text!.isEmpty) || (paternoText.text!.isEmpty) || (maternoText.text!.isEmpty) || (religionText.text!.isEmpty) || (procedenciaText.text!.isEmpty) || (domicilioText.text!.isEmpty) || (tel_casaText.text!.isEmpty) || (celularText.text!.isEmpty) || (estado_civilText.text!.isEmpty) || (fecha_nacimientoText.text!.isEmpty) || (sexoText.text!.isEmpty) || (referido_porText.text!.isEmpty) || (problemaText.text!.isEmpty) || (indicador_actitudinalText.text!.isEmpty) || (ekrText.text!.isEmpty) || (numeroHijosText.text!.isEmpty) {
             return CustomError.emptyUserFields
+        }
+        if isNumber(numeroHijosText.text!) == false{
+            return CustomError.emptyHijoFields
+        }
+        if isNumber(numeroHijosText.text!) == true{
+            if Int(numeroHijosText.text!)! > 0{
+                if sexoHijosText.text!.isEmpty || edadesHijosText.text!.isEmpty{
+                    return CustomError.emptyHijoFields
+                }else{
+                    setHijoInfo()
+                    if edadesHijos.count != Int(numeroHijosText.text!)! || sexoHijos.count != Int(numeroHijosText.text!)!{
+                        return CustomError.noMatchHijoInfo
+                    }
+                }
+            }
+    
         }
         if (motivoText.text!.isEmpty || tipo_servicioText.text!.isEmpty || tipo_intervencionText.text!.isEmpty || herramientaText.text!.isEmpty || evaluacion_sesionText.text!.isEmpty || cuota_recuperacionText.text!.isEmpty){
             return CustomError.emptySesionFields
@@ -166,10 +190,39 @@ class EncuadreViewController: UIViewController {
         return nil
     }
     
-    func isNumber(_ cuotaRecuperacion:String) -> Bool{
+    func addHijo(_ documentID:String){
+        self.documentID = documentID
+        //Crear hijos
+        let numeroHijosInt = Int(numeroHijosText.text!)!
+        if  numeroHijosInt > 0{
+            for i in 0..<numeroHijosInt{
+                let newHijo = Hijo(id: i+1, edad: edadesHijos[i], sexo: sexoHijos[i])
+                self.hijoControlador.insertHijo(usuarioDocumentID: documentID, nuevoHijo: newHijo){
+                    (result) in
+                    switch result{
+                    case .success(let retorno):print(retorno)
+                    case .failure(let error): self.displayError(error, title: "No se insertó el hijo \(i+1)")
+                    }
+                }
+            }
+        }
+        // End Crear hijos
+    }
+    
+    func setHijoInfo(){
+        self.sexoHijos = sexoHijosText.text!.components(separatedBy: " ")
+        let edadesHijosString = edadesHijosText.text!.components(separatedBy: " ")
+        for edadHijo in edadesHijosString{
+            if isNumber(edadHijo){
+                self.edadesHijos.append(Int(edadHijo)!)
+            }
+        }
+    }
+    
+    func isNumber(_ numero:String) -> Bool{
         let floatNumberRegex = "^\\d*\\.?\\d*$"
         let floatNumberTest = NSPredicate(format: "SELF MATCHES %@", floatNumberRegex)
-        return floatNumberTest.evaluate(with: cuotaRecuperacion)
+        return floatNumberTest.evaluate(with: numero)
     }
     
     func displayExito(title : String, detalle : String){
@@ -187,6 +240,16 @@ class EncuadreViewController: UIViewController {
             let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func displayMessageHijo(title : String, detalle : String, _ numeroHijo:Int){
+        if Int(numeroHijosText.text!)! == numeroHijo{
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
