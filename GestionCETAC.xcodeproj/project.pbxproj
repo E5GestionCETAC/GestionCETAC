@@ -49,6 +49,8 @@
 		C2C99E7B26FE4E11008FBDF1 /* holisticos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */; };
 		C2C99E7C26FE4E11008FBDF1 /* objetivos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E7326FE4E11008FBDF1 /* objetivos.jpeg */; };
 		C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */; };
+		C2E97685270E858D001C5E44 /* ReporteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97684270E858D001C5E44 /* ReporteCollectionViewCell.swift */; };
+		C2E97687270E8706001C5E44 /* MisReportesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */; };
 		EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */; };
 		EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */; };
 		EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45726FBE33C00B5B565 /* ViewController.swift */; };
@@ -102,6 +104,8 @@
 		C2C99E7226FE4E11008FBDF1 /* holisticos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holisticos.jpeg; sourceTree = "<group>"; };
 		C2C99E7326FE4E11008FBDF1 /* objetivos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = objetivos.jpeg; sourceTree = "<group>"; };
 		C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alternativos.jpeg; sourceTree = "<group>"; };
+		C2E97684270E858D001C5E44 /* ReporteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporteCollectionViewCell.swift; sourceTree = "<group>"; };
+		C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisReportesCollectionViewController.swift; sourceTree = "<group>"; };
 		EA9EA45026FBE33C00B5B565 /* GestionCETAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestionCETAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */,
 				80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */,
 				79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */,
+				C2E97684270E858D001C5E44 /* ReporteCollectionViewCell.swift */,
+				C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,7 +231,6 @@
 				EA9EA45126FBE33C00B5B565 /* Products */,
 				E44B2443FC6CE32860AC1E53 /* Pods */,
 				DCAFF387FADCB99D53157FD7 /* Frameworks */,
-				79B981D6270E4C36003085C6 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -395,9 +400,11 @@
 				EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */,
 				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
+				C2E97687270E8706001C5E44 /* MisReportesCollectionViewController.swift in Sources */,
 				C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */,
 				C2AEE9BC270A8255004FD450 /* InformacionUsuarioViewController.swift in Sources */,
 				C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */,
+				C2E97685270E858D001C5E44 /* ReporteCollectionViewCell.swift in Sources */,
 				C274AFDE27026129003DC50F /* LoginiViewController.swift in Sources */,
 				C26378D72704B21100900453 /* Hijo.swift in Sources */,
 				80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */,

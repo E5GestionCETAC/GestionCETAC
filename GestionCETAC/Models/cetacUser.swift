@@ -10,14 +10,6 @@ import Firebase
 
 struct cetacUser:Codable{
     let nombre, apellidos, uid, rol, email, docID :String
-    init() {
-        self.nombre = ""
-        self.apellidos = ""
-        self.uid = ""
-        self.rol = ""
-        self.email = ""
-        self.docID = ""
-    }
     init(nombre:String, apellidos :String, uid:String, rol:String, email:String) {
         self.nombre = nombre
         self.apellidos = apellidos
@@ -35,3 +27,4 @@ struct cetacUser:Codable{
         self.email = aDoc.get("email") as? String ?? ""
     }
 }
+typealias CetacUsuarios = [cetacUser]
