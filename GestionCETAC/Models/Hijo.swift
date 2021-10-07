@@ -9,19 +9,26 @@ import Foundation
 import Firebase
 
 struct Hijo {
-    let nombre,sexo:String
-    let edad:Int
+    let documentID,sexo:String
+    let id,edad:Int
     
-    init(sexo:String, edad:Int, nombre:String) {
+    init(id:Int, edad:Int, sexo:String) {
+        self.documentID = "0"
+        self.id = id
         self.sexo = sexo
         self.edad = edad
-        self.nombre = nombre
     }
-    
+    init(id:Int, edad:Int, sexo:String, documentID:String) {
+        self.documentID = documentID
+        self.id = id
+        self.sexo = sexo
+        self.edad = edad
+    }
     init(aDoc : DocumentSnapshot) {
+        self.documentID = aDoc.documentID
+        self.id = aDoc.get("id") as? Int ?? 0
         self.sexo = aDoc.get("sexo") as? String ?? ""
         self.edad = aDoc.get("edad") as? Int ?? 0
-        self.nombre = aDoc.get("nombre") as? String ?? ""
     }
 }
 typealias Hijos = [Hijo]

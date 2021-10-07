@@ -91,13 +91,14 @@ class usuarioController{
             "domicilio" : nuevoUsuario.domicilio,
             "procedencia" : nuevoUsuario.procedencia,
             "referido_por" : nuevoUsuario.referido_por,
-            "cetacUserID" : nuevoUsuario.cetacUserID
+            "cetacUserID" : nuevoUsuario.cetacUserID,
+            "numeroHijos" : nuevoUsuario.numeroHijos
         ]){ err in
             if let err = err{
                 print("Error loading document: \(err)")
                 completion(.failure(err))
             }else{
-                completion(.success("Documento agregado ID: \(ref!.documentID)"))
+                completion(.success(ref!.documentID))
             }
         }
     }
@@ -123,7 +124,8 @@ class usuarioController{
             "domicilio" : updateUsuario.domicilio,
             "procedencia" : updateUsuario.procedencia,
             "referido_por" : updateUsuario.referido_por,
-            "cetacUserID" : updateUsuario.cetacUserID
+            "cetacUserID" : updateUsuario.cetacUserID,
+            "numeroHijos" : updateUsuario.numeroHijos
         ]){ err in
             if let err = err{
                 print("Error loading document: \(err)")

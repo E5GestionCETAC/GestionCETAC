@@ -51,6 +51,7 @@
 		C2C99E8226FE5A0E008FBDF1 /* alternativos.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */; };
 		C2E97685270E858D001C5E44 /* ReporteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97684270E858D001C5E44 /* ReporteCollectionViewCell.swift */; };
 		C2E97687270E8706001C5E44 /* MisReportesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */; };
+		C2E97689270F5D90001C5E44 /* hijoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E97688270F5D90001C5E44 /* hijoController.swift */; };
 		EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */; };
 		EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */; };
 		EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45726FBE33C00B5B565 /* ViewController.swift */; };
@@ -106,6 +107,7 @@
 		C2C99E8126FE5A0E008FBDF1 /* alternativos.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alternativos.jpeg; sourceTree = "<group>"; };
 		C2E97684270E858D001C5E44 /* ReporteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporteCollectionViewCell.swift; sourceTree = "<group>"; };
 		C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisReportesCollectionViewController.swift; sourceTree = "<group>"; };
+		C2E97688270F5D90001C5E44 /* hijoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hijoController.swift; sourceTree = "<group>"; };
 		EA9EA45026FBE33C00B5B565 /* GestionCETAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestionCETAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				C26378D62704B21100900453 /* Hijo.swift */,
 				C2BF29F42704E63800621763 /* usuarioController.swift */,
 				80C752A22707E18000BABE56 /* sesionController.swift */,
+				C2E97688270F5D90001C5E44 /* hijoController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				C2761D8F2707A62A000C65A2 /* MisUsuariosCollectionViewController.swift in Sources */,
 				EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */,
 				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
+				C2E97689270F5D90001C5E44 /* hijoController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
 				C2E97687270E8706001C5E44 /* MisReportesCollectionViewController.swift in Sources */,
 				C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */,
