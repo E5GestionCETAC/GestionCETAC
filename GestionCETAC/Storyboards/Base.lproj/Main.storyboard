@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1p-3W-6dS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1p-3W-6dS">
     <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwT-gc-ZeV" userLabel="Arriba">
-                                <rect key="frame" x="0.0" y="20" width="810" height="205"/>
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="225"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="xJA-G2-aFL">
-                                        <rect key="frame" x="0.0" y="26" width="329" height="159"/>
+                                        <rect key="frame" x="0.0" y="26" width="329" height="179"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="329" id="5Mi-KL-Cfd"/>
                                         </constraints>
@@ -305,14 +304,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dB9-Vy-sFH" userLabel="AcompanamientoView">
-                                <rect key="frame" x="130" y="285" width="250" height="230"/>
+                                <rect key="frame" x="130" y="265" width="250" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acompanamiento" translatesAutoresizingMaskIntoConstraints="NO" id="tfL-7D-zh7">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <rect key="contentStretch" x="0.0" y="0.050000000000000003" width="1" height="1"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Acompañamiento" translatesAutoresizingMaskIntoConstraints="NO" id="dVa-x2-ptb">
-                                        <rect key="frame" x="0.0" y="180" width="250" height="50"/>
+                                        <rect key="frame" x="0.0" y="200" width="250" height="50"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HgX-Q3-rgG"/>
@@ -322,7 +321,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLd-EB-0lC">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <connections>
                                             <segue destination="5Oi-Hw-dGf" kind="show" id="CuZ-SP-lpq"/>
                                         </connections>
@@ -343,16 +342,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yuq-P4-YlK" userLabel="HolisticoView">
-                                <rect key="frame" x="430" y="285" width="250" height="230"/>
+                                <rect key="frame" x="430" y="265" width="250" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iJ-bN-GfH">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <connections>
                                             <segue destination="lzR-Hj-UsW" kind="show" id="UC6-RI-1XC"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holisticos" translatesAutoresizingMaskIntoConstraints="NO" id="N3v-On-AoE">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Holísticos" translatesAutoresizingMaskIntoConstraints="NO" id="zDY-DF-Etb">
@@ -447,7 +446,7 @@
             <objects>
                 <viewController id="5Oi-Hw-dGf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iyz-0v-yok">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ql-m1-ntU">
@@ -499,7 +498,7 @@ Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se compar
             <objects>
                 <viewController id="lzR-Hj-UsW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cFM-az-gtT">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holísticos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smg-hV-C80">
@@ -549,7 +548,7 @@ Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la par
             <objects>
                 <viewController id="eGW-Kq-aao" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3B-4U-mju">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeS-LC-68m">
@@ -599,7 +598,7 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             <objects>
                 <viewController id="BCa-qv-x4b" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="10v-zX-cHG">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87I-jW-BMg">
@@ -647,7 +646,7 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             <objects>
                 <viewController id="Soe-Np-4DE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWS-E7-eYZ">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPW-6r-YdC">
@@ -695,7 +694,7 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             <objects>
                 <viewController id="vuc-VN-tdL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XVf-JU-fAa">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPW-rV-sVe">
@@ -751,7 +750,7 @@ Humildad: Tener la sabiduría de reconocer y respetar las habilidades, cualidade
             <objects>
                 <viewController id="BvC-bb-mPR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="txB-NQ-V70">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-wN-7BA">
@@ -984,7 +983,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 </subviews>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-GI-8nO">
-                                <rect key="frame" x="80" y="172" width="650" height="0.0"/>
+                                <rect key="frame" x="80" y="152" width="650" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="650" id="P4r-br-GE2"/>
                                 </constraints>
@@ -1472,7 +1471,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zmx-fA-iN6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="JeI-Hn-c2U">
-                        <rect key="frame" x="0.0" y="20" width="810" height="102"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1494,7 +1493,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" id="VdO-Xe-Btx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="buF-A0-2so">
-                        <rect key="frame" x="0.0" y="20" width="810" height="102"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1515,7 +1514,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-2m-vvA">
-                                <rect key="frame" x="0.0" y="70" width="810" height="1010"/>
+                                <rect key="frame" x="0.0" y="102" width="810" height="978"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-TZ-Psx">
                                         <rect key="frame" x="0.0" y="6" width="810" height="1850"/>
@@ -1732,19 +1731,19 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 <rect key="frame" x="100" y="1470" width="610" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firma de consentimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU3-Rh-kri">
-                                                        <rect key="frame" x="0.0" y="0.0" width="610" height="78"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="610" height="30.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bDi-yL-VIf">
-                                                        <rect key="frame" x="0.0" y="78" width="610" height="72"/>
+                                                        <rect key="frame" x="0.0" y="30.5" width="610" height="119.5"/>
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-9q-qnF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="72"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="292" height="119.5"/>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7E-oO-m4e">
-                                                                <rect key="frame" x="79" y="0.0" width="531" height="72"/>
+                                                                <rect key="frame" x="320" y="0.0" width="290" height="119.5"/>
                                                                 <string key="text">Acepto las Condiciones del servicio y la Política de privacidad de Centro Tanatológico y Traslado en Ambulancia con Calidad Humana A.C.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
@@ -1842,7 +1841,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-qN-yRS">
-                                <rect key="frame" x="0.0" y="70" width="810" height="1010"/>
+                                <rect key="frame" x="0.0" y="102" width="810" height="978"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2wl-Yt-gOJ">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="4070"/>
@@ -2425,10 +2424,10 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         <rect key="frame" x="0.0" y="78" width="610" height="72"/>
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-Be-KAN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="72"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="292" height="72"/>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFx-GM-jRN">
-                                                                <rect key="frame" x="79" y="0.0" width="531" height="72"/>
+                                                                <rect key="frame" x="320" y="0.0" width="290" height="72"/>
                                                                 <string key="text">Acepto las Condiciones del servicio y la Política de privacidad de Centro Tanatológico y Traslado en Ambulancia con Calidad Humana A.C.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
@@ -2544,7 +2543,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XES-od-sz4">
-                                <rect key="frame" x="0.0" y="122" width="810" height="958"/>
+                                <rect key="frame" x="0.0" y="102" width="810" height="978"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-q1-9js">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="3660"/>
@@ -3196,7 +3195,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znl-yI-Qws">
-                                <rect key="frame" x="0.0" y="122" width="810" height="958"/>
+                                <rect key="frame" x="0.0" y="102" width="810" height="978"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HkK-oE-lKg">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="1850"/>
@@ -3513,7 +3512,11 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                     <action selector="editUser:" destination="fSv-oy-SAR" id="7zk-s0-asW"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Guardar" id="7pB-Yz-NJM"/>
+                            <barButtonItem title="Guardar" id="7pB-Yz-NJM">
+                                <connections>
+                                    <action selector="saveUser:" destination="fSv-oy-SAR" id="Fvp-oC-wxR"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -3531,11 +3534,13 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="sesionID" destination="c2k-oE-6a6" id="CYR-nJ-fUi"/>
                         <outlet property="tanaText" destination="Vb4-wJ-yh0" id="hWz-XS-0fp"/>
                         <outlet property="usuarioText" destination="ccl-cE-sNR" id="p36-jr-j3P"/>
+                        <segue destination="uoD-SB-CyI" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="IVa-yZ-1dC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PX1-wf-xlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uoD-SB-CyI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4215" y="3419"/>
+            <point key="canvasLocation" x="4339" y="3475"/>
         </scene>
     </scenes>
     <resources>

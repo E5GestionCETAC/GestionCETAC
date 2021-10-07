@@ -26,6 +26,7 @@ class ReportesInfoViewController: UIViewController {
     // Controladores
     let sesionControlador = sesionController()
     let usuarioControlador = usuarioController()
+    var tanaControlador = cetacUserController()
 
     @IBOutlet weak var expedienteID: UITextField!
     @IBOutlet weak var sesionID: UITextField!
@@ -45,7 +46,7 @@ class ReportesInfoViewController: UIViewController {
     @IBOutlet var deleteButton: UIBarButtonItem!
     
     var currentUser:Usuario?
-    var firstSesion:Sesion?
+    var currentSesion:Sesion?
     var editingMode:Bool = false
     let cetacUserRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
     let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
@@ -86,7 +87,7 @@ class ReportesInfoViewController: UIViewController {
         intervencionPickerView.tag = 3
         herramientaPickerView.tag = 4
         
-        usuarioControlador.getUser(userID: 1){ (result) in
+        usuarioControlador.getUser(userID: currentSesion!.usuarioID){ (result) in
             switch result{
             case .success(let usuariod): self.setUserInfo(usuariod)
             case .failure(let error):self.displayError(error, title: "No se pudo obtener el usuario")
@@ -94,14 +95,21 @@ class ReportesInfoViewController: UIViewController {
             
         }
         
+        tanaControlador.fetchCetacUsuarioWithUID(cetacUserUID: currentSesion!.tanatologoUID){ (result) in
+            switch result{
+            case .success(let tanatologo): self.setTana(tanatologo)
+            case .failure(let error):self.displayError(error, title: "No se pudo obtener el tanatologo")
+            }
+        }
+        
         //usuarioText.text = "Hola"
         
-        sesionControlador.getSesionNumber(userID: 2, sesionNumber: 1){ (result) in
+        /*sesionControlador.getSesionNumber(userID: 2, sesionNumber: 1){ (result) in
             switch result{
             case .success(let firstSesion):self.setUserData(firstSesion)
             case .failure(let error):self.displayError(error, title: "No se pudo obtener la primera sesión del usuario")
             }
-        }
+        }*/
 
         // Do any additional setup after loading the view.
     }
@@ -109,44 +117,41 @@ class ReportesInfoViewController: UIViewController {
     func setUserInfo(_ currentUser:Usuario){
         self.currentUser = currentUser
         expedienteID.text = String(currentUser.id)
-        usuarioText.text = currentUser.nombre
-    }
-    
-    func setUserData(_ firstSesion:Sesion){
-        self.firstSesion = firstSesion
-        // Datos de usuario
-        sesionID.text = String(firstSesion.numero_sesion)
-        
+        usuarioText.text = "\(currentUser.nombre)\(" ")\(currentUser.apellido_paterno)\(" ")\(currentUser.apellido_materno)"
+        sesionID.text = String(currentSesion!.numero_sesion)
+        //tanaText.text = firstSesion!.tanatologoUID
     
         //usuarioText.text = "Hola"
         
-        let fecha_sesion:Date = firstSesion.fecha.dateValue()
+        let fecha_sesion:Date = currentSesion!.fecha.dateValue()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         fechaText.text = dateFormatter.string(from: fecha_sesion)
         
         
-        motivoText.text = firstSesion.motivo
-        servicioText.text = firstSesion.tipo_servicio
-        intervencionText.text = firstSesion.tipo_intervencion
-        herramientaText.text = firstSesion.herramienta
-        evaluacionText.text = firstSesion.evaluacion_sesion
-        cuotaText.text = firstSesion.cuota_recuperacion.description
-        
-        
+        motivoText.text = currentSesion!.motivo
+        servicioText.text = currentSesion!.tipo_servicio
+        intervencionText.text = currentSesion!.tipo_intervencion
+        herramientaText.text = currentSesion!.herramienta
+        evaluacionText.text = currentSesion!.evaluacion_sesion
+        cuotaText.text = currentSesion!.cuota_recuperacion.description
+    }
+    
+    func setTana(_ tana:cetacUser){
+        tanaText.text = "\(tana.nombre)\(" ")\(tana.apellidos)"
     }
     
     func setStateTextFields(){
+        sesionID.isUserInteractionEnabled = false
+        expedienteID.isUserInteractionEnabled = false
+        tanaText.isUserInteractionEnabled = false
+        usuarioText.isUserInteractionEnabled = false
+        
         if editingMode == false{
             // Unable text fields and text views
-            expedienteID.isUserInteractionEnabled = false
-            usuarioText.isUserInteractionEnabled = false
-            usuarioText.isUserInteractionEnabled = false
-            
-            sesionID.isUserInteractionEnabled = false
             fechaText.isUserInteractionEnabled = false
-    
+            
             motivoText.isUserInteractionEnabled = false
             servicioText.isUserInteractionEnabled = false
             intervencionText.isUserInteractionEnabled = false
@@ -157,14 +162,8 @@ class ReportesInfoViewController: UIViewController {
         }
         else{
             // Enable text fields and text views
-            
-            expedienteID.isUserInteractionEnabled = true
-            usuarioText.isUserInteractionEnabled = true
-            usuarioText.isUserInteractionEnabled = true
-            
-            sesionID.isUserInteractionEnabled = true
             fechaText.isUserInteractionEnabled = true
-    
+            
             motivoText.isUserInteractionEnabled = true
             servicioText.isUserInteractionEnabled = true
             intervencionText.isUserInteractionEnabled = true
@@ -174,6 +173,8 @@ class ReportesInfoViewController: UIViewController {
             // End Enable text fields and text views
         }
     }
+    
+
     
     func setStateButtons(){
         if cetacUserRol == "Administrador"{
@@ -213,6 +214,88 @@ class ReportesInfoViewController: UIViewController {
         else{
             editingMode = false
             setStateTextFields()
+        }
+    }
+    
+    @IBAction func saveUser(_ sender: Any) {
+        if editingMode == true{
+            let error = validateData()
+            if let error = error {
+                displayError(error, title: "Error")
+            }else{
+                // Crear usuario
+                /*let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
+                // Calcular edad---------------------------
+                let now = Date()
+                let calendar = Calendar.current
+                let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
+                self.edad = ageComponents.year!
+                // End Calcular edad-----------------------
+                let newUser:Usuario = Usuario(usuarioID:self.currentUser!.usuarioID,id: self.currentUser!.id, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.currentUser!.cetacUserID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true)
+                
+                usuarioControlador.updateUsuario(updateUsuario: newUser){(result) in
+                    switch result{
+                    case .success(_):print("Exito actualizando usuario")
+                    case.failure(let error):self.displayError(error, title: "No se pudieron actualizar los datos del usuario")
+                    }
+                }*/
+                // End Crear usuario
+                
+                // Crear sesion
+                let cuotaRecuperacionFloat = Float(cuotaText.text!)
+                
+                let newSesion:Sesion = Sesion(sesionID:self.currentSesion!.sesionID,usuarioID: self.currentUser!.id, numero_sesion: self.currentSesion!.numero_sesion, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: self.currentSesion!.tanatologoUID, motivo: motivoText.text!, tipo_servicio: servicioText.text!, tipo_intervencion: intervencionText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacionText.text!, fecha: Timestamp())
+                
+                sesionControlador.updateSesion(updateSesion: newSesion){ (result) in
+                    switch result{
+                    case .success(_):self.displayExito(title: "Éxito", detalle: "Se actualizaron los datos del usuario")
+                    case .failure(let error):self.displayError(error, title: "No se pudieron actualizar los datos del usuario")
+                    }
+                }
+                // End crear sesion
+                editingMode = false
+                setStateTextFields()
+            }
+        }
+        else{
+            displayMessage(title: "Modo edición no activado", detalle: "Active el modo de edición y actualice los campos que necesite")
+        }
+    }
+    
+    func validateData() -> Error? {
+        if (usuarioText.text!.isEmpty) {
+            return CustomError.emptyUserFields
+        }
+        if (fechaText.text!.isEmpty || motivoText.text!.isEmpty || servicioText.text!.isEmpty || intervencionText.text!.isEmpty || herramientaText.text!.isEmpty || evaluacionText.text!.isEmpty || cuotaText.text!.isEmpty){
+            return CustomError.emptySesionFields
+        }
+        if isNumber(cuotaText.text!) == false{
+            return CustomError.noMatchCuota
+        }
+        return nil
+    }
+    
+    func isNumber(_ cuotaRecuperacion:String) -> Bool{
+        let floatNumberRegex = "^\\d*\\.?\\d*$"
+        let floatNumberTest = NSPredicate(format: "SELF MATCHES %@", floatNumberRegex)
+        return floatNumberTest.evaluate(with: cuotaRecuperacion)
+    }
+    
+    func displayExito(title : String, detalle : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                self.performSegue(withIdentifier: "unwindToHome", sender: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func displayMessage(title : String, detalle : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
