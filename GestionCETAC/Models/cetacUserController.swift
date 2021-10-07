@@ -44,6 +44,20 @@ class cetacUserController {
         }
     }
     
+    func fetchCetacUsuarioWithUID(cetacUserUID:String,completion: @escaping (Result<cetacUser, Error>) -> Void){
+        var cetacuser:cetacUser?
+        db.collection("cetacUsers").whereField("uid", isEqualTo: cetacUserUID).limit(to: 1).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    cetacuser = cetacUser(aDoc: document)
+                }
+                completion(.success(cetacuser!))
+            }
+        }
+    }
+    
     func getUserInfo(completion: @escaping (Result<cetacUser, Error>) -> Void) {
         db.collection("cetacUsers").whereField("uid", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
             if let error = error{

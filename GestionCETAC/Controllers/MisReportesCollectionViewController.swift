@@ -108,11 +108,11 @@ class MisReportesCollectionViewController: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selectedItem = sender as? Usuario else {return}
+        guard let selectedItem = sender as? Sesion else {return}
         
         if segue.identifier == "reporteInfo"{
             guard let destinationVC = segue.destination as? ReportesInfoViewController else {return}
-            destinationVC.currentUser = selectedItem
+            destinationVC.currentSesion = selectedItem
         }
     }
     
