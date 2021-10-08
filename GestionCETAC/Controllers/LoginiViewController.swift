@@ -63,8 +63,7 @@ class LoginiViewController: UIViewController {
     }
     
     func transitionToGestionCETAC() {
-        let HomeGestionCETAC = self.storyboard?.instantiateViewController(withIdentifier: "homeGestionCETAC") as? HomeGestionCETACViewController
-        self.navigationController?.pushViewController(HomeGestionCETAC!, animated: true)
+        performSegue(withIdentifier: "goToHome", sender: self)
     }
     func displayError(_ error: Error, title:String){
         DispatchQueue.main.async {

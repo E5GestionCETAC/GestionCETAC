@@ -11,7 +11,7 @@ class HomeGestionCETACViewController: UIViewController {
     
     var currentUserController = cetacUserController()
     @IBOutlet weak var welcomeLabel: UILabel!
-    
+    let currentCetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tabBarController?.tabBar.isHidden = true
@@ -36,6 +36,4 @@ class HomeGestionCETACViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-    @IBAction func unwindToHome( _ segue: UIStoryboardSegue) {}
 }

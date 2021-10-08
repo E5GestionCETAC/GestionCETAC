@@ -324,6 +324,9 @@ class InformacionUsuarioViewController: UIViewController {
                 }
             }
         }
+        else{
+            displayExito(title: "Éxito", detalle: "Se ha guardado la información del usuario correctamente")
+        }
         // End Crear hijos
     }
     
