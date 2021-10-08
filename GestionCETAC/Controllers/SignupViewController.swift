@@ -25,6 +25,16 @@ class SignupViewController: UIViewController {
     fileprivate let rolPickerView = ToolbarPickerView()
     // End ToolBarPickerView
     
+    override func viewDidAppear(_ animated: Bool) {
+        nombreTextField.text = ""
+        apellidoTextField.text = ""
+        emailTextField.text = ""
+        password1TextField.text = ""
+        password2TextField.text = ""
+        rolTextField.text = ""
+        resignFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Picker view
@@ -101,8 +111,7 @@ class SignupViewController: UIViewController {
     }
     
     func transitionToGestionCETAC() {
-        let HomeGestionCETAC = self.storyboard?.instantiateViewController(withIdentifier: "homeGestionCETAC") as? HomeGestionCETACViewController
-        self.navigationController?.pushViewController(HomeGestionCETAC!, animated: true)
+        performSegue(withIdentifier: "goToHome", sender: self)
     }
     
     func displayError(_ error: Error, title:String){
