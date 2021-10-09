@@ -18,7 +18,7 @@ class HomeGestionCETACViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         addButton.isEnabled = false
         addButton.tintColor = UIColor.clear
-        currentUserController.getUserInfo{ (result) in
+        currentUserController.getUserInfo(currentUserUID: self.currentCetacUserUID){ (result) in
             switch result{
             case .success(let user):self.setCurrentUserInfo(user)
             case .failure(let error): self.displayError(error, title: "No se pudo obtener datos del usuario")

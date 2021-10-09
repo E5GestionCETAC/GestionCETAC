@@ -11,9 +11,6 @@ import Firebase
 class cetacUserController {
     let db = Firestore.firestore()
     
-    let currentUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
-    var currentUser:cetacUser?
-    
     func fetchCetacUsuarios(completion: @escaping (Result<CetacUsuarios, Error>) -> Void){
         var usuarios = [cetacUser]()
         db.collection("cetacUsers").getDocuments { (querySnapshot, error) in
@@ -58,15 +55,34 @@ class cetacUserController {
         }
     }
     
-    func getUserInfo(completion: @escaping (Result<cetacUser, Error>) -> Void) {
+    func getUserInfo(currentUserUID:String, completion: @escaping (Result<cetacUser, Error>) -> Void) {
+        var currentUser:cetacUser?
         db.collection("cetacUsers").whereField("uid", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
                 for document in querySnapshot!.documents{
-                    self.currentUser = cetacUser(aDoc: document)
+                    currentUser = cetacUser(aDoc: document)
                 }
-                completion(.success(self.currentUser!))
+                completion(.success(currentUser!))
+            }
+        }
+    }
+    
+    func createUser(user:cetacUser, completion: @escaping (Result<String, Error>) -> Void) {
+        Auth.auth().createUser(withEmail: user.email, password: user.password){ (result,error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                self.db.collection("cetacUsers").addDocument(data: ["nombre":user.nombre, "apellidos" : user.apellidos, "rol": user.rol, "uid": result!.user.uid, "email" : user.email]) { (error) in
+                    if let error = error{
+                        completion(.failure(error))
+                    }else{
+                        UserDefaults.standard.set(result!.user.uid, forKey: "currentCetacUserUID")
+                        UserDefaults.standard.set(user.rol, forKey: "currentCetacUserRol")
+                        completion(.success("Éxito"))
+                    }
+                }
             }
         }
     }
