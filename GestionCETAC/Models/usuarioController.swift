@@ -92,7 +92,8 @@ class usuarioController{
             "procedencia" : nuevoUsuario.procedencia,
             "referido_por" : nuevoUsuario.referido_por,
             "cetacUserID" : nuevoUsuario.cetacUserID,
-            "numeroHijos" : nuevoUsuario.numeroHijos
+            "numeroHijos" : nuevoUsuario.numeroHijos,
+            "detalleHijos" : nuevoUsuario.detalleHijos
         ]){ err in
             if let err = err{
                 print("Error loading document: \(err)")
@@ -125,7 +126,8 @@ class usuarioController{
             "procedencia" : updateUsuario.procedencia,
             "referido_por" : updateUsuario.referido_por,
             "cetacUserID" : updateUsuario.cetacUserID,
-            "numeroHijos" : updateUsuario.numeroHijos
+            "numeroHijos" : updateUsuario.numeroHijos,
+            "detalleHijos" : updateUsuario.detalleHijos
         ]){ err in
             if let err = err{
                 print("Error loading document: \(err)")

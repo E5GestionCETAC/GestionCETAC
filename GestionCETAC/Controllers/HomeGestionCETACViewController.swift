@@ -11,22 +11,29 @@ class HomeGestionCETACViewController: UIViewController {
     
     var currentUserController = cetacUserController()
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     let currentCetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+        addButton.isEnabled = false
+        addButton.tintColor = UIColor.clear
         currentUserController.getUserInfo{ (result) in
             switch result{
             case .success(let user):self.setCurrentUserInfo(user)
             case .failure(let error): self.displayError(error, title: "No se pudo obtener datos del usuario")
             }
         }
-        // Do any additional setup after loading the view.
     }
     
     func setCurrentUserInfo(_ currentUser : cetacUser) {
         self.welcomeLabel.text! = "¡Bienvenido \(currentUser.rol) \(currentUser.nombre)!"
         UserDefaults.standard.set(currentUser.rol, forKey: "currentCetacUserRol")
+        if currentUser.rol == "Administrador"{
+            addButton.tintColor = .systemBlue
+            addButton.isEnabled = true
+            
+        }
     }
     
     func displayError(_ error: Error, title:String){
@@ -36,4 +43,5 @@ class HomeGestionCETACViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    @IBAction func unwindToHome(segue : UIStoryboardSegue){}
 }

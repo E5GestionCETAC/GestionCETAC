@@ -30,7 +30,7 @@ class sesionController{
     // Obtiene todas las sesiones de un miembro de Cetac
     func fetchSesionesFromCetacUser(completion: @escaping (Result<Sesiones, Error>) -> Void){
         var sesiones = [Sesion]()
-        db.collection("sesiones").whereField("cetacUserID", isEqualTo: currentUserUID).order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+        db.collection("sesiones").whereField("tanatologoUID", isEqualTo: currentUserUID).order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
