@@ -11,6 +11,8 @@ import Firebase
 
 class SignupViewController: UIViewController {
     
+    let cetacUsuarioControlador = cetacUserController()
+    
     // Datos de Miembro CETAC
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var apellidoTextField: UITextField!
@@ -55,29 +57,15 @@ class SignupViewController: UIViewController {
             displayError(error!, title: "Datos inválidos")
         }
         else{
-            //Cleaned versions of data
-            let nombre = nombreTextField.text!
-            let apellidos = apellidoTextField.text!
-            let email = emailTextField.text!
-            let password = password1TextField.text!
-            let rol = rolTextField.text!
             //Crear usuario
-            Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-                if let error = error{
-                    self.displayError(error, title: "No se pudo crear un usuario")
-                }else{
-                    //Registrar usuario a la base de datos
-                    let db = Firestore.firestore()
-                    db.collection("cetacUsers").addDocument(data: ["nombre":nombre, "apellidos" : apellidos, "rol": rol, "uid": result!.user.uid]) { (error) in
-                        if error != nil{
-                            self.displayError(error!, title: "No se pudieron guardar la información personal")
-                        }
-                    }
-                    UserDefaults.standard.set(result!.user.uid, forKey: "currentCetacUserUID")
-                    UserDefaults.standard.set(rol, forKey: "currentCetacUserRol")
-                    self.transitionToGestionCETAC()
+            let newUser = cetacUser(nombre: nombreTextField.text!, apellidos: apellidoTextField.text!, rol: rolTextField.text!, email: emailTextField.text!, password: password1TextField.text!)
+            cetacUsuarioControlador.createUser(user: newUser){ (result) in
+                switch result{
+                case .success(_): self.transitionToGestionCETAC()
+                case .failure(let error): self.displayError(error, title: "No se pudo crear el usuario")
                 }
             }
+            // End crear usuario
         }
     }
     
