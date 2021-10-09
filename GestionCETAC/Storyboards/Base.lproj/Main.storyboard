@@ -796,12 +796,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="9hc-GG-Hvf" appends="YES" id="HJ7-Lb-QuV"/>
-                                </connections>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-hp-PhO">
-                                <rect key="frame" x="245" y="395.5" width="320" height="289.5"/>
+                                <rect key="frame" x="245" y="430.5" width="320" height="219.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Correo Electrónico" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-HW-tGo">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
@@ -829,16 +826,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                             <action selector="LogIn:" destination="v4W-4u-Iqx" eventType="touchUpInside" id="XSg-VM-rUa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-x0-HCg">
-                                        <rect key="frame" x="0.0" y="259.5" width="320" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Registrarse">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="DRW-tQ-Gki" kind="show" id="2I0-NW-Rkn"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Hmj-Gi-MSl"/>
@@ -853,7 +840,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio de sesión" id="xD4-Lz-jFX">
-                        <barButtonItem key="backBarButtonItem" title="Inicio sesión" id="r9K-pD-aUD"/>
+                        <barButtonItem key="backBarButtonItem" title="Inicio de sesión" id="r9K-pD-aUD"/>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="0Eo-HW-tGo" id="Pvh-L5-bHB"/>
@@ -862,11 +849,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcv-cK-Ziu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9hc-GG-Hvf">
-                    <connections>
-                        <action selector="ocultarTeclado:" destination="v4W-4u-Iqx" id="LsV-rF-cAo"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1481" y="2073"/>
         </scene>
@@ -998,8 +980,15 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="IdO-au-nJs">
                         <barButtonItem key="backBarButtonItem" title="Gestión CETAC" id="fcM-Ge-TYz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="riL-kz-WnE">
+                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="DRW-tQ-Gki" kind="show" id="QI3-gj-L82"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="riL-kz-WnE" id="Oa7-ne-jEG"/>
                         <outlet property="welcomeLabel" destination="ujl-GI-8nO" id="icT-He-IP5"/>
                     </connections>
                 </viewController>
@@ -1457,7 +1446,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Registro" id="X94-oW-dGp">
-                        <barButtonItem key="backBarButtonItem" title="Inicio de sesión" image="backward" catalog="system" id="tbH-cY-x3N"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Z2I-cL-hUW"/>
                     </navigationItem>
                     <connections>
                         <outlet property="apellidoTextField" destination="P0U-XX-hQy" id="Juv-QZ-uzu"/>
@@ -1466,12 +1455,11 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="password1TextField" destination="dF4-e0-8zf" id="rQo-8Y-Iuf"/>
                         <outlet property="password2TextField" destination="WKc-R7-WEa" id="lIo-ze-qxT"/>
                         <outlet property="rolTextField" destination="D6J-Zm-7if" id="s9n-DW-Yl0"/>
-                        <segue destination="lee-K9-xKk" kind="show" identifier="goToHome" id="z3P-7Q-gHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-3c-GJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="2756"/>
+            <point key="canvasLocation" x="2860" y="2737"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="Orr-bx-WTO">
@@ -1760,7 +1748,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or1-ho-n5F">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="100"/>
-                                                        <color key="backgroundColor" red="1" green="0.68235294120000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.81960784310000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <state key="normal" title="Enviar">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1831,7 +1819,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 <rect key="frame" x="0.0" y="70" width="810" height="960"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2wl-Yt-gOJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="810" height="4430"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="810" height="4410"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gEP-7g-s6n">
                                                 <rect key="frame" x="100" y="20" width="610" height="150"/>
@@ -2176,52 +2164,32 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                     <constraint firstAttribute="height" constant="100" id="BrK-ld-N29"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pDF-N7-8Xy">
-                                                <rect key="frame" x="100" y="2090" width="610" height="100"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6fp-f0-Wn5">
+                                                <rect key="frame" x="100" y="2090" width="610" height="200"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo de los hijos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-2Z-quZ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle hijo(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-mS-OOK">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="LJT-B9-yai">
-                                                        <rect key="frame" x="0.0" y="40" width="610" height="60"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27H-ud-jHj">
+                                                        <rect key="frame" x="0.0" y="40" width="610" height="160"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="ssL-vg-7JN"/>
+                                                            <constraint firstAttribute="height" constant="160" id="1Nb-So-B14"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                    </textField>
+                                                    </textView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="TNY-dT-bxE"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s4W-JC-EBJ">
-                                                <rect key="frame" x="100" y="2210" width="610" height="100"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edades de los hijos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmk-Zv-9n7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="9iX-6c-U98">
-                                                        <rect key="frame" x="0.0" y="40" width="610" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="ou9-E1-oPN"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="7vu-qm-o7J"/>
+                                                    <constraint firstAttribute="height" constant="200" id="yjK-32-wSs"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cLM-m1-BuD">
-                                                <rect key="frame" x="100" y="2330" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="2310" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Por quién fue referido?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Od-Eq-43H">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2243,7 +2211,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o3N-8g-pgN">
-                                                <rect key="frame" x="100" y="2450" width="610" height="200"/>
+                                                <rect key="frame" x="100" y="2430" width="610" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivo de la consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfY-Jv-oxv">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2267,7 +2235,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8e9-VP-zZA">
-                                                <rect key="frame" x="100" y="2670" width="610" height="200"/>
+                                                <rect key="frame" x="100" y="2650" width="610" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identitifiación de la respuesta actitudinal según etapas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Np-aB-xnz">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2291,7 +2259,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eAj-Lh-MRd">
-                                                <rect key="frame" x="100" y="2890" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="2870" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EKR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pd-ds-guu">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2313,7 +2281,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iVZ-fe-chY">
-                                                <rect key="frame" x="100" y="3010" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="2990" width="610" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tr4-SE-Db7">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="10"/>
@@ -2334,7 +2302,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1br-3m-fYq">
-                                                <rect key="frame" x="100" y="3130" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="3110" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFH-Jb-Xvw">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2356,7 +2324,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CYa-hy-0bI">
-                                                <rect key="frame" x="100" y="3250" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="3230" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de servicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r24-gq-XwK">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2378,7 +2346,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-Rj-1mi">
-                                                <rect key="frame" x="100" y="3370" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="3350" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de intervención" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFY-bE-Sb5">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2400,7 +2368,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-2M-WBg">
-                                                <rect key="frame" x="100" y="3490" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="3470" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Herramienta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xw-m6-7uB">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2422,7 +2390,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-ow-LFx">
-                                                <rect key="frame" x="100" y="3610" width="610" height="300"/>
+                                                <rect key="frame" x="100" y="3590" width="610" height="300"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluación de sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE6-Sp-OIe">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2443,7 +2411,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BaG-U8-1jc">
-                                                <rect key="frame" x="100" y="3930" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="3910" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuota de recuperación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJH-fO-Qma">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2465,7 +2433,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C2f-pk-lN8">
-                                                <rect key="frame" x="100" y="4050" width="610" height="150"/>
+                                                <rect key="frame" x="100" y="4030" width="610" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firma de consentimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfG-GC-f6V">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="68"/>
@@ -2494,7 +2462,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-N8-RIr">
-                                                <rect key="frame" x="100" y="4220" width="610" height="50"/>
+                                                <rect key="frame" x="100" y="4200" width="610" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsn-Of-ZCj">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="50"/>
@@ -2507,7 +2475,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="xDf-Of-bpb">
-                                                <rect key="frame" x="100" y="4290" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="4270" width="610" height="100"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQZ-UO-Blb">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="100"/>
@@ -2555,8 +2523,8 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="abrirExpedienteSwitch" destination="AjD-MJ-YOw" id="T6Q-Xl-PRx"/>
                         <outlet property="celularText" destination="R1e-zp-lYN" id="7Fp-oY-wTj"/>
                         <outlet property="cuota_recuperacionText" destination="3cG-YU-Ens" id="po4-mo-zEA"/>
+                        <outlet property="detalleHijosText" destination="27H-ud-jHj" id="vhJ-in-IEq"/>
                         <outlet property="domicilioText" destination="bmw-c8-1y0" id="pn7-5u-lTP"/>
-                        <outlet property="edadesHijosText" destination="9iX-6c-U98" id="u2I-Ve-kHh"/>
                         <outlet property="ekrText" destination="ehu-3k-FfV" id="gE3-LA-sgj"/>
                         <outlet property="estado_civilText" destination="LTn-97-mnw" id="Tbc-Ag-jKi"/>
                         <outlet property="evaluacion_sesionText" destination="maC-00-VzG" id="5yl-Aj-RgF"/>
@@ -2573,7 +2541,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="procedenciaText" destination="xf0-MK-44n" id="z1Q-pB-U8G"/>
                         <outlet property="referido_porText" destination="Flu-I7-cTu" id="J2e-aD-ppl"/>
                         <outlet property="religionText" destination="zIK-So-edc" id="4mc-jM-TXv"/>
-                        <outlet property="sexoHijosText" destination="LJT-B9-yai" id="SsP-Kg-HdJ"/>
                         <outlet property="sexoText" destination="3kE-UK-b5i" id="WR7-x5-AXy"/>
                         <outlet property="tel_casaText" destination="uaw-hF-OLp" id="tj5-gp-37G"/>
                         <outlet property="terminosCondicionesSwitch" destination="fqy-Be-KAN" id="3kd-bp-jFe"/>
@@ -2596,10 +2563,10 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XES-od-sz4">
-                                <rect key="frame" x="0.0" y="122" width="810" height="908"/>
+                                <rect key="frame" x="0.0" y="70" width="810" height="960"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-q1-9js">
-                                        <rect key="frame" x="0.0" y="0.0" width="810" height="2910"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="810" height="2890"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pm3-lu-vEL">
                                                 <rect key="frame" x="100" y="20" width="610" height="150"/>
@@ -2924,52 +2891,32 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                     <constraint firstAttribute="height" constant="100" id="BOh-Rp-0xW"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cRG-mz-l5A">
-                                                <rect key="frame" x="100" y="1970" width="610" height="100"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-wS-7uy">
+                                                <rect key="frame" x="100" y="1970" width="610" height="200"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexo de los hijos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYu-g3-PXM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalle hijo(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuJ-d7-2ag">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="lkP-RY-QWE">
-                                                        <rect key="frame" x="0.0" y="40" width="610" height="60"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tdW-0G-Ym9">
+                                                        <rect key="frame" x="0.0" y="40" width="610" height="160"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="QqI-dx-cAo"/>
+                                                            <constraint firstAttribute="height" constant="160" id="E62-bc-X7R"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                    </textField>
+                                                    </textView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="VKn-MZ-i1o"/>
-                                                </constraints>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="idJ-nR-flo">
-                                                <rect key="frame" x="100" y="2090" width="610" height="100"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edades de los hijos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLn-vg-7HW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="gFz-ig-uVK">
-                                                        <rect key="frame" x="0.0" y="40" width="610" height="60"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="60" id="HWr-GM-j87"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                                    </textField>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="3aP-W3-hs5"/>
+                                                    <constraint firstAttribute="height" constant="200" id="ozv-Qu-Ifk"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EXE-y3-d3t">
-                                                <rect key="frame" x="100" y="2210" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="2190" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Por quién fue referido?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dax-96-qaF">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -2991,7 +2938,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GhZ-YB-Ear">
-                                                <rect key="frame" x="100" y="2330" width="610" height="200"/>
+                                                <rect key="frame" x="100" y="2310" width="610" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivo de la consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXI-XV-P5L">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -3015,7 +2962,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJw-ph-5fc">
-                                                <rect key="frame" x="100" y="2550" width="610" height="200"/>
+                                                <rect key="frame" x="100" y="2530" width="610" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identitifiación de la respuesta actitudinal según etapas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7d-SB-P4F">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -3039,7 +2986,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BsB-f5-dGZ">
-                                                <rect key="frame" x="100" y="2770" width="610" height="100"/>
+                                                <rect key="frame" x="100" y="2750" width="610" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EKR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbW-Y0-zxX">
                                                         <rect key="frame" x="0.0" y="0.0" width="610" height="30"/>
@@ -3087,13 +3034,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </view>
                     <navigationItem key="navigationItem" title="Información de usuario" id="dHn-M6-Kvb">
                         <rightBarButtonItems>
-                            <barButtonItem title="Delete" id="xkm-WP-gWa">
-                                <imageReference key="image" image="trash" catalog="system"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <connections>
-                                    <action selector="deleteUser:" destination="gBe-Ae-D5A" id="SeX-Cj-sdS"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem title="Editar" id="P6h-Ez-Hm7">
                                 <connections>
                                     <action selector="editUser:" destination="gBe-Ae-D5A" id="yrb-5N-QPf"/>
@@ -3108,9 +3048,8 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </navigationItem>
                     <connections>
                         <outlet property="celularText" destination="jyd-Fh-p34" id="7fb-4J-TzP"/>
-                        <outlet property="deleteButton" destination="xkm-WP-gWa" id="xoD-6v-IhQ"/>
+                        <outlet property="detalleHijosText" destination="tdW-0G-Ym9" id="Cg0-nf-04b"/>
                         <outlet property="domicilioText" destination="OoV-F3-d6o" id="XAO-x6-rN2"/>
-                        <outlet property="edadesHijosText" destination="gFz-ig-uVK" id="sXJ-zd-668"/>
                         <outlet property="editButton" destination="P6h-Ez-Hm7" id="7vB-QL-QxG"/>
                         <outlet property="ekrText" destination="Jhv-An-bVD" id="q64-LA-dnO"/>
                         <outlet property="estado_civilText" destination="4zd-CH-zUQ" id="IFB-iJ-iB3"/>
@@ -3126,10 +3065,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="referido_porText" destination="Gob-9O-iyg" id="QTE-IJ-HTc"/>
                         <outlet property="religionText" destination="hX9-7J-Eq4" id="cvx-5f-214"/>
                         <outlet property="saveButton" destination="ZvU-te-x29" id="ZCa-zf-j1c"/>
-                        <outlet property="sexoHijosText" destination="lkP-RY-QWE" id="siG-MX-q05"/>
                         <outlet property="sexoText" destination="2uG-Gt-zj5" id="1Xv-i6-qD8"/>
                         <outlet property="tel_casaText" destination="dZj-jN-F0H" id="Q2Q-sc-srs"/>
-                        <segue destination="f48-yA-zvc" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="YTI-Kq-2W0"/>
+                        <segue destination="f48-yA-zvc" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="8Fv-OS-cow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBe-f1-Igq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3428,7 +3366,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90494173769999997" green="0.73688638210000001" blue="0.76078468560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.81960784310000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <edgeInsets key="layoutMargins" top="20" left="100" bottom="40" right="100"/>
                                     </stackView>
                                 </subviews>
@@ -3444,7 +3382,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tdh-8a-mRo"/>
-                        <color key="backgroundColor" red="0.90494173769999997" green="0.73688638210000001" blue="0.76078468560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.81960784313725488" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="znl-yI-Qws" firstAttribute="trailing" secondItem="tdh-8a-mRo" secondAttribute="trailing" id="21w-OV-ui7"/>
                             <constraint firstItem="znl-yI-Qws" firstAttribute="top" secondItem="tdh-8a-mRo" secondAttribute="top" id="aAz-Zh-Bki"/>
@@ -3454,10 +3392,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </view>
                     <navigationItem key="navigationItem" title="Seguimiento de reportes" id="ZlH-e0-GSo">
                         <rightBarButtonItems>
-                            <barButtonItem title="Delete" id="zms-U0-1JN">
-                                <imageReference key="image" image="trash" catalog="system"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                            </barButtonItem>
                             <barButtonItem title="Editar" id="PNc-7P-7x6">
                                 <connections>
                                     <action selector="editUser:" destination="fSv-oy-SAR" id="7zk-s0-asW"/>
@@ -3472,7 +3406,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </navigationItem>
                     <connections>
                         <outlet property="cuotaText" destination="neS-Oy-svE" id="71U-oy-Off"/>
-                        <outlet property="deleteButton" destination="zms-U0-1JN" id="vKi-hb-ovJ"/>
                         <outlet property="editButton" destination="PNc-7P-7x6" id="9uu-3Q-a1a"/>
                         <outlet property="evaluacionText" destination="Esg-Zn-Toy" id="vgX-JV-3qD"/>
                         <outlet property="expedienteID" destination="plQ-EO-vLz" id="spK-ON-oUL"/>
@@ -3494,16 +3427,12 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
             <point key="canvasLocation" x="4215" y="3419"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="VxA-Rh-Jf3"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Inicio1" width="1202" height="792"/>
         <image name="Inicio2" width="1202" height="792"/>
         <image name="Logo" width="389" height="220"/>
         <image name="acompanamiento" width="1024" height="459"/>
         <image name="alternativos" width="1000" height="640"/>
-        <image name="backward" catalog="system" width="128" height="79"/>
         <image name="encuadre_header" width="1591" height="390"/>
         <image name="holisticos" width="800" height="400"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
@@ -3521,7 +3450,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <image name="reportes.png" width="120" height="120"/>
         <image name="seguimiento_header" width="1674" height="415"/>
         <image name="signupBackground" width="4667" height="7000"/>
-        <image name="trash" catalog="system" width="121" height="128"/>
         <image name="valores" width="1400" height="790"/>
         <image name="vision" width="1400" height="800"/>
         <systemColor name="labelColor">
@@ -3532,9 +3460,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

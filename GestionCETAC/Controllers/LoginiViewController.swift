@@ -21,7 +21,6 @@ class LoginiViewController: UIViewController {
         resignFirstResponder()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.tabBarController?.tabBar.isHidden = true
@@ -72,4 +71,5 @@ class LoginiViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
 }

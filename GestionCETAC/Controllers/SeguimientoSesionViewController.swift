@@ -167,7 +167,7 @@ class SeguimientoSesionViewController: UIViewController {
         DispatchQueue.main.async {
             let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
-                self.performSegue(withIdentifier: "unwindToHome", sender: nil)
+                self.performSegue(withIdentifier: "unwindToHome", sender: self)
             }))
             self.present(alert, animated: true, completion: nil)
         }

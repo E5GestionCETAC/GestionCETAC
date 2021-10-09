@@ -10,12 +10,11 @@ import Firebase
 
 struct Usuario {
     let id, edad, numeroHijos : Int
-    let usuarioID, nombre, apellido_paterno, apellido_materno, ocupacion, religion, tel_casa, celular, estado_civil, problema, sexo, ekr, indicador_actitudinal,domicilio, procedencia, referido_por, cetacUserID : String
+    let usuarioID, nombre, apellido_paterno, apellido_materno, ocupacion, religion, tel_casa, celular, estado_civil, problema, sexo, ekr, indicador_actitudinal,domicilio, procedencia, referido_por, cetacUserID, detalleHijos : String
     let fecha_nacimiento : Timestamp
     let activo:Bool
-    var hijos:[Hijo]?
     
-    init(id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp, activo:Bool, numeroHijos:Int) {
+    init(id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp, activo:Bool, numeroHijos:Int, detalleHijo:String) {
         self.usuarioID = "0"
         self.id = id
         self.edad = edad
@@ -38,10 +37,10 @@ struct Usuario {
         self.fecha_nacimiento = fecha_nacimiento
         self.activo = true
         self.numeroHijos = numeroHijos
-        self.hijos = nil
+        self.detalleHijos = detalleHijo
     }
     
-    init(usuarioID:String, id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp, activo:Bool, numeroHijos:Int) {
+    init(usuarioID:String, id : Int, edad : Int, nombre : String, apellido_paterno : String, apellido_materno : String, ocupacion : String, religion : String, tel_casa : String, celular : String, problema : String, estado_civil : String, sexo : String, ekr : String, indicador_actitudinal : String, domicilio : String, procedencia : String, referido_por : String, cetacUserID: String, fecha_nacimiento:Timestamp, activo:Bool, numeroHijos:Int, detalleHijo:String) {
         self.usuarioID = usuarioID
         self.id = id
         self.edad = edad
@@ -64,7 +63,7 @@ struct Usuario {
         self.fecha_nacimiento = fecha_nacimiento
         self.activo = activo
         self.numeroHijos = numeroHijos
-        self.hijos = nil
+        self.detalleHijos = detalleHijo
     }
     
     init(aDoc : DocumentSnapshot) {
@@ -90,11 +89,7 @@ struct Usuario {
         self.fecha_nacimiento = aDoc.get("fecha_nacimiento") as? Timestamp ?? Timestamp()
         self.activo = aDoc.get("activo") as? Bool ?? true
         self.numeroHijos = aDoc.get("numeroHijos") as? Int ?? 0
-        self.hijos = nil
-    }
-    
-    mutating func addHijos(hijos: [Hijo]) {
-        self.hijos = hijos
+        self.detalleHijos = aDoc.get("detalleHijos") as? String ?? ""
     }
 }
  typealias Usuarios = [Usuario]

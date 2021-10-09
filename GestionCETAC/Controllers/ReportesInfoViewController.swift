@@ -43,7 +43,6 @@ class ReportesInfoViewController: UIViewController {
     // Bar buttons
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var editButton: UIBarButtonItem!
-    @IBOutlet var deleteButton: UIBarButtonItem!
     
     var currentUser:Usuario?
     var currentSesion:Sesion?
@@ -101,17 +100,6 @@ class ReportesInfoViewController: UIViewController {
             case .failure(let error):self.displayError(error, title: "No se pudo obtener el tanatologo")
             }
         }
-        
-        //usuarioText.text = "Hola"
-        
-        /*sesionControlador.getSesionNumber(userID: 2, sesionNumber: 1){ (result) in
-            switch result{
-            case .success(let firstSesion):self.setUserData(firstSesion)
-            case .failure(let error):self.displayError(error, title: "No se pudo obtener la primera sesión del usuario")
-            }
-        }*/
-
-        // Do any additional setup after loading the view.
     }
     
     func setUserInfo(_ currentUser:Usuario){
@@ -120,15 +108,11 @@ class ReportesInfoViewController: UIViewController {
         usuarioText.text = "\(currentUser.nombre)\(" ")\(currentUser.apellido_paterno)\(" ")\(currentUser.apellido_materno)"
         sesionID.text = String(currentSesion!.numero_sesion)
         //tanaText.text = firstSesion!.tanatologoUID
-    
-        //usuarioText.text = "Hola"
-        
         let fecha_sesion:Date = currentSesion!.fecha.dateValue()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         fechaText.text = dateFormatter.string(from: fecha_sesion)
-        
         
         motivoText.text = currentSesion!.motivo
         servicioText.text = currentSesion!.tipo_servicio
@@ -177,17 +161,10 @@ class ReportesInfoViewController: UIViewController {
 
     
     func setStateButtons(){
-        if cetacUserRol == "Administrador"{
+        if cetacUserRol == "Administrador" || cetacUserRol == "Tanatólogo"{
             return
         }
-        else if cetacUserRol == "Tanatólogo"{
-            deleteButton.isEnabled = false
-            deleteButton.tintColor = UIColor.clear
-        }
         else if cetacUserRol == "Soporte Admon"{
-            deleteButton.isEnabled = false
-            deleteButton.tintColor = UIColor.clear
-            
             editButton.isEnabled = false
             editButton.tintColor = UIColor.clear
             
@@ -195,9 +172,6 @@ class ReportesInfoViewController: UIViewController {
             saveButton.tintColor = UIColor.clear
         }
         else{
-            deleteButton.isEnabled = false
-            deleteButton.tintColor = UIColor.clear
-            
             editButton.isEnabled = false
             editButton.tintColor = UIColor.clear
             
@@ -210,6 +184,7 @@ class ReportesInfoViewController: UIViewController {
         if cetacUserRol == "Tanatólogo" || cetacUserRol == "Administrador"{
             self.editingMode = true
             setStateTextFields()
+            displayMessage(title: "Accesi concedido", detalle: "Se ha dado acceso a la edición de la sesión del usuario")
         }
         else{
             editingMode = false
@@ -223,24 +198,6 @@ class ReportesInfoViewController: UIViewController {
             if let error = error {
                 displayError(error, title: "Error")
             }else{
-                // Crear usuario
-                /*let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
-                // Calcular edad---------------------------
-                let now = Date()
-                let calendar = Calendar.current
-                let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
-                self.edad = ageComponents.year!
-                // End Calcular edad-----------------------
-                let newUser:Usuario = Usuario(usuarioID:self.currentUser!.usuarioID,id: self.currentUser!.id, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.currentUser!.cetacUserID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true)
-                
-                usuarioControlador.updateUsuario(updateUsuario: newUser){(result) in
-                    switch result{
-                    case .success(_):print("Exito actualizando usuario")
-                    case.failure(let error):self.displayError(error, title: "No se pudieron actualizar los datos del usuario")
-                    }
-                }*/
-                // End Crear usuario
-                
                 // Crear sesion
                 let cuotaRecuperacionFloat = Float(cuotaText.text!)
                 
@@ -248,7 +205,7 @@ class ReportesInfoViewController: UIViewController {
                 
                 sesionControlador.updateSesion(updateSesion: newSesion){ (result) in
                     switch result{
-                    case .success(_):self.displayExito(title: "Éxito", detalle: "Se actualizaron los datos del usuario")
+                    case .success(_):self.displayExito(title: "Éxito", detalle: "Se actualizaron los datos de la sesión")
                     case .failure(let error):self.displayError(error, title: "No se pudieron actualizar los datos del usuario")
                     }
                 }
@@ -334,20 +291,6 @@ class ReportesInfoViewController: UIViewController {
         fechaNacimientoDate = datePicker.date
         self.view.endEditing(true)
     }
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ReportesInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource{
