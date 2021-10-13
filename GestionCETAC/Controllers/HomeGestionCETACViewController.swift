@@ -29,10 +29,9 @@ class HomeGestionCETACViewController: UIViewController {
     func setCurrentUserInfo(_ currentUser : cetacUser) {
         self.welcomeLabel.text! = "¡Bienvenido \(currentUser.rol) \(currentUser.nombre)!"
         UserDefaults.standard.set(currentUser.rol, forKey: "currentCetacUserRol")
-        if currentUser.rol == "Administrador"{
+        if canAddCETACUsers(rol: currentUser.rol) == true{
             addButton.tintColor = .systemBlue
             addButton.isEnabled = true
-            
         }
     }
     
@@ -41,6 +40,15 @@ class HomeGestionCETACViewController: UIViewController {
             let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func canAddCETACUsers(rol : String) -> Bool{
+        switch rol{
+        case "Administrador":
+            return true
+        default:
+            return false
         }
     }
     @IBAction func unwindToHome(segue : UIStoryboardSegue){}

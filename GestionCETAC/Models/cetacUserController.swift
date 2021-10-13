@@ -57,14 +57,18 @@ class cetacUserController {
     
     func getUserInfo(currentUserUID:String, completion: @escaping (Result<cetacUser, Error>) -> Void) {
         var currentUser:cetacUser?
-        db.collection("cetacUsers").whereField("uid", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
+        db.collection("cetacUsers").whereField("uid", isEqualTo: currentUserUID).limit(to: 1).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
                 for document in querySnapshot!.documents{
                     currentUser = cetacUser(aDoc: document)
                 }
-                completion(.success(currentUser!))
+                if currentUser != nil{
+                    completion(.success(currentUser!))
+                }else{
+                    completion(.failure(CustomError.notFound))
+                }
             }
         }
     }

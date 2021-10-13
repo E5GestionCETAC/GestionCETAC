@@ -60,7 +60,7 @@ class sesionController{
     }
     
     //Obtiene el ultimo numero de sesion de un usuario
-    func getLastSesion(userID:Int, completion: @escaping (Result<Int, Error>) -> Void){
+    func getLastSesion(userID:Int, completion: @escaping (Result<Sesion, Error>) -> Void){
         var sesion:Sesion?
         db.collection("sesiones").whereField("usuarioID", isEqualTo: userID).order(by: "numero_sesion", descending: true).limit(to: 1).getDocuments { (querySnapshot, error) in
             if let error = error{
@@ -69,7 +69,7 @@ class sesionController{
                 for document in querySnapshot!.documents{
                     sesion = Sesion(aDoc: document)
                 }
-                completion(.success(sesion!.numero_sesion))
+                completion(.success(sesion!))
             }
         }
     }
