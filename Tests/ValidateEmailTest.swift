@@ -9,38 +9,35 @@ import XCTest
 @testable import GestionCETAC
 class ValidateEmailTest: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    // Esta direccion de correo es invalida
     func testExample1() throws {
         let VC = LoginiViewController()
         let result = VC.isValidEmail("agus abreu")
         XCTAssertFalse(result)
     }
     
+    // Esta direccion de correo es invalida
     func testExample2() throws {
         let VC = LoginiViewController()
         let result = VC.isValidEmail("agus@abreu")
         XCTAssertFalse(result)
     }
     
+    // Esta direccion de correo es invalida
     func testExample3() throws {
         let VC = LoginiViewController()
         let result = VC.isValidEmail("agus@abreumx")
         XCTAssertFalse(result)
     }
     
+    // Esta direccion de correo es invalida
     func testExample4() throws {
         let VC = LoginiViewController()
         let result = VC.isValidEmail("agus abreu.com")
         XCTAssertFalse(result)
     }
     
+    // Esta direccion de correo es valida
     func testExample5() throws {
         let VC = LoginiViewController()
         let result = VC.isValidEmail("agus@abreu.com")

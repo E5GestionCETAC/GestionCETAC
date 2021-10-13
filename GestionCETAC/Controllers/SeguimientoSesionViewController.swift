@@ -117,7 +117,7 @@ class SeguimientoSesionViewController: UIViewController {
                 (result) in
                 switch result
                 {
-                case .success(let numero_sesion):self.sendSesion(numero_sesion)
+                case .success(let sesion):self.sendSesion(sesion.numero_sesion)
                 case .failure(let error): self.displayError(error, title: "No se obtuvo el id de la sesion")
                 }
             }

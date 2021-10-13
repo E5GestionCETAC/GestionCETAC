@@ -151,6 +151,7 @@ enum CustomError:Error{
     case noMatchCuota
     case emptyHijoFields
     case noMatchHijoInfo
+    case notFound
     case unexpected(code:Int)
 }
 
@@ -188,6 +189,8 @@ extension CustomError : LocalizedError{
             return NSLocalizedString("Introduza el número de hijos. Si no hay, introduzca 0", comment: "No hay número de hijos")
         case .noMatchHijoInfo:
             return NSLocalizedString("El número de elementos no coincide con el número de hijos", comment: "No coincide el número de hijos y el resto de la información")
+        case .notFound:
+            return NSLocalizedString("Información no encontrada", comment: "Info Not Found")
         case .unexpected(_):
             return NSLocalizedString("Error inesperado", comment: "Error inesperado")
         }

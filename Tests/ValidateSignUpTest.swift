@@ -13,15 +13,11 @@ class ValidateSignUpTest: XCTestCase {
     var usuario: cetacUser?
     var expec = XCTestExpectation()
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        self.usuario = cetacUser(nombre: "Juan", apellidos: "Calles", rol: "Administrador", email: "juan@test.com", password: "Hello$88")
+        self.usuario = cetacUser(nombre: "Rodrigo", apellidos: "Calles", rol: "Administrador", email: "rodrigo@test.com", password: "Hello$88")
         self.expec = expectation(description: "Test")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    // En este caso se busca insertar un usuario en la base de datos, este caso se inserta exitosamente el usuario
     func testExample1() throws {
         self.controlador.createUser(user: self.usuario!){ (result) in
             switch result{
@@ -33,6 +29,8 @@ class ValidateSignUpTest: XCTestCase {
         self.waitForExpectations(timeout: 10.0)
     }
 
+    
+    // En este caso se busca insertar el mismo usuario, pero en este caso la prueba fallara porque el email de este usuario ya ha sido registrado registrado
     func testExample2() throws {
         self.controlador.createUser(user: self.usuario!){ (result) in
             switch result{

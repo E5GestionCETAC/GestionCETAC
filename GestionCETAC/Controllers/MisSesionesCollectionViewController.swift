@@ -118,21 +118,29 @@ class MisSesionesCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sesiones.count
+        return sesiones.count + 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sesionCell", for: indexPath) as! SesionInfoCollectionViewCell
-        cell.numeroSesionText.text = String(sesiones[indexPath.row].numero_sesion)
-        cell.nombreSesionText.text = usersDictionary[sesiones[indexPath.row].usuarioID]
-        // Fecha
-        let fechaDate:Date = sesiones[indexPath.row].fecha.dateValue()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
-        // End Fecha
-        cell.fechaSesionText.text = dateFormatter.string(from: fechaDate)
-        cell.motivoSesionText.text = sesiones[indexPath.row].motivo
+        
+        if indexPath.row == 0{
+            cell.numeroSesionText.text = "Número de sesión"
+            cell.fechaSesionText.text = "Fecha de última sesión"
+            cell.nombreSesionText.text = "Nombre del usuario"
+            cell.motivoSesionText.text = "Motivo de sesión"
+        }else{
+            cell.numeroSesionText.text = String(sesiones[indexPath.row-1].numero_sesion)
+            cell.nombreSesionText.text = usersDictionary[sesiones[indexPath.row-1].usuarioID]
+            // Fecha
+            let fechaDate:Date = sesiones[indexPath.row-1].fecha.dateValue()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .short
+            // End Fecha
+            cell.fechaSesionText.text = dateFormatter.string(from: fechaDate)
+            cell.motivoSesionText.text = sesiones[indexPath.row-1].motivo
+        }
         return cell
     }
     /*
