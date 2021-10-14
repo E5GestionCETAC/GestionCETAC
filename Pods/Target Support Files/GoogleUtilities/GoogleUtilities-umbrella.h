@@ -11,6 +11,8 @@
 #endif
 
 #import "GULLoggerLevel.h"
+#import "GULOriginalIMPConvenienceMacros.h"
+#import "GULSwizzler.h"
 #import "GULLoggerCodes.h"
 #import "GULNSData+zlib.h"
 
