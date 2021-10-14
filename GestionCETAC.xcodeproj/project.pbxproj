@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */; };
 		79B981DA270E5206003085C6 /* ReportesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */; };
 		800EB1C0270BD62000315934 /* SesionInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */; };
 		800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */; };
@@ -58,6 +57,7 @@
 		C2FDADAB2712339A00DB7F19 /* ValidateEmailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDADAA2712339900DB7F19 /* ValidateEmailTest.swift */; };
 		C2FDADAD2712350700DB7F19 /* ValidateLogInTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDADAC2712350700DB7F19 /* ValidateLogInTest.swift */; };
 		C2FDADAF27123DAC00DB7F19 /* ValidateSignUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FDADAE27123DAC00DB7F19 /* ValidateSignUpTest.swift */; };
+		D00CBCE49F871D8F76C8C121 /* Pods_GestionCETAC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15904D38180C0302EF049C30 /* Pods_GestionCETAC.framework */; };
 		EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45326FBE33C00B5B565 /* AppDelegate.swift */; };
 		EA9EA45626FBE33C00B5B565 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45526FBE33C00B5B565 /* SceneDelegate.swift */; };
 		EA9EA45826FBE33C00B5B565 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9EA45726FBE33C00B5B565 /* ViewController.swift */; };
@@ -77,15 +77,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
+		15904D38180C0302EF049C30 /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C1238AFAE8C2D6EE94FCA1 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
 		79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesInfoViewController.swift; sourceTree = "<group>"; };
 		800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisSesionesCollectionViewController.swift; sourceTree = "<group>"; };
 		80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguimientoSesionViewController.swift; sourceTree = "<group>"; };
 		80C7529F2707CFDC00BABE56 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
 		80C752A22707E18000BABE56 /* sesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sesionController.swift; sourceTree = "<group>"; };
-		A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
 		C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionCollectionViewCell.swift; sourceTree = "<group>"; };
 		C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionesViewController.swift; sourceTree = "<group>"; };
 		C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarPickerViewUtility.swift; sourceTree = "<group>"; };
@@ -139,6 +138,7 @@
 		EA9EA45C26FBE34600B5B565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9EA45F26FBE34600B5B565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA9EA46126FBE34600B5B565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7A2E3CBEFAFAC09D3CE4643 /* Pods-GestionCETAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.debug.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073F72BE4679ACF2EF68FAB1 /* Pods_GestionCETAC.framework in Frameworks */,
+				D00CBCE49F871D8F76C8C121 /* Pods_GestionCETAC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +253,10 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		DCAFF387FADCB99D53157FD7 /* Frameworks */ = {
+		C52AA123230A8B6799B2E5DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5BC23AF53753E1E8F7A7D33C /* Pods_GestionCETAC.framework */,
+				15904D38180C0302EF049C30 /* Pods_GestionCETAC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,8 +264,8 @@
 		E44B2443FC6CE32860AC1E53 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */,
-				77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */,
+				F7A2E3CBEFAFAC09D3CE4643 /* Pods-GestionCETAC.debug.xcconfig */,
+				29C1238AFAE8C2D6EE94FCA1 /* Pods-GestionCETAC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				C2FDADA027122A9300DB7F19 /* Tests */,
 				EA9EA45126FBE33C00B5B565 /* Products */,
 				E44B2443FC6CE32860AC1E53 /* Pods */,
-				DCAFF387FADCB99D53157FD7 /* Frameworks */,
+				C52AA123230A8B6799B2E5DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -333,11 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA9EA46426FBE34600B5B565 /* Build configuration list for PBXNativeTarget "GestionCETAC" */;
 			buildPhases = (
-				8161BEF9A1A416C296ECA97D /* [CP] Check Pods Manifest.lock */,
+				B896C31396D399D6A7523DE7 /* [CP] Check Pods Manifest.lock */,
 				EA9EA44C26FBE33C00B5B565 /* Sources */,
 				EA9EA44D26FBE33C00B5B565 /* Frameworks */,
 				EA9EA44E26FBE33C00B5B565 /* Resources */,
-				99DF9F5F6745D67329C1DB01 /* [CP] Embed Pods Frameworks */,
+				48985FBE409125BA985B8F82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,7 +428,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8161BEF9A1A416C296ECA97D /* [CP] Check Pods Manifest.lock */ = {
+		48985FBE409125BA985B8F82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B896C31396D399D6A7523DE7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,23 +465,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99DF9F5F6745D67329C1DB01 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -713,7 +713,7 @@
 		};
 		EA9EA46526FBE34600B5B565 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A12B311DD72243E6C12B26AD /* Pods-GestionCETAC.debug.xcconfig */;
+			baseConfigurationReference = F7A2E3CBEFAFAC09D3CE4643 /* Pods-GestionCETAC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -732,7 +732,7 @@
 		};
 		EA9EA46626FBE34600B5B565 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77D059814BA4B09253427348 /* Pods-GestionCETAC.release.xcconfig */;
+			baseConfigurationReference = 29C1238AFAE8C2D6EE94FCA1 /* Pods-GestionCETAC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
