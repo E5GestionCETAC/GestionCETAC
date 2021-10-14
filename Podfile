@@ -5,7 +5,6 @@ target 'GestionCETAC' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for GestionCETAC
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
@@ -13,4 +12,5 @@ target 'GestionCETAC' do
   pod 'FirebaseFirestoreSwift'
   pod 'Charts'
   pod 'TinyConstraints'
+
 end
