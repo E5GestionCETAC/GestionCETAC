@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79964541271AC9C200F30ED4 /* pieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79964540271AC9C200F30ED4 /* pieViewController.swift */; };
 		79B981DA270E5206003085C6 /* ReportesInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */; };
 		800EB1C0270BD62000315934 /* SesionInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */; };
 		800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */; };
@@ -79,6 +80,7 @@
 /* Begin PBXFileReference section */
 		15904D38180C0302EF049C30 /* Pods_GestionCETAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GestionCETAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29C1238AFAE8C2D6EE94FCA1 /* Pods-GestionCETAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestionCETAC.release.xcconfig"; path = "Target Support Files/Pods-GestionCETAC/Pods-GestionCETAC.release.xcconfig"; sourceTree = "<group>"; };
+		79964540271AC9C200F30ED4 /* pieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pieViewController.swift; sourceTree = "<group>"; };
 		79B981D9270E5206003085C6 /* ReportesInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportesInfoViewController.swift; sourceTree = "<group>"; };
 		800EB1BF270BD62000315934 /* SesionInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		800EB1C2270BD7D700315934 /* MisSesionesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MisSesionesCollectionViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */,
 				C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */,
 				C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */,
+				79964540271AC9C200F30ED4 /* pieViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				80C752A32707E18000BABE56 /* sesionController.swift in Sources */,
 				C2BF29F52704E63800621763 /* usuarioController.swift in Sources */,
 				79B981DA270E5206003085C6 /* ReportesInfoViewController.swift in Sources */,
+				79964541271AC9C200F30ED4 /* pieViewController.swift in Sources */,
 				800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */,
 				C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */,
 				C26378D32703C41500900453 /* cetacUserController.swift in Sources */,
