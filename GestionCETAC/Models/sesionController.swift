@@ -27,6 +27,28 @@ class sesionController{
         }
     }
     
+    func fetchTopFiveMotivos(completion: @escaping (Result<[(key:String, value:Int)], Error>) -> Void){
+            var topFive : [String:Int] = [:]
+            db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+                if let error = error{
+                    completion(.failure(error))
+                }else{
+                    for document in querySnapshot!.documents{
+                        let s = Sesion(aDoc: document)
+                        let motivoExist = topFive[s.motivo] != nil
+                        if motivoExist{
+                            topFive[s.motivo]! += 1
+                        }
+                        else{
+                            topFive[s.motivo] = 1
+                        }
+                    }
+                    let retDic = topFive.sorted{ $0.value > $1.value }
+                    completion(.success(retDic))
+                }
+            }
+        }
+    
     // Obtiene todas las sesiones de un miembro de Cetac
     func fetchSesionesFromCetacUser(completion: @escaping (Result<Sesiones, Error>) -> Void){
         var sesiones = [Sesion]()

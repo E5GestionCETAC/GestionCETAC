@@ -13,6 +13,7 @@
 		80BF227E270D1F270049BAAB /* SeguimientoSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */; };
 		80C752A02707CFDC00BABE56 /* Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7529F2707CFDC00BABE56 /* Sesion.swift */; };
 		80C752A32707E18000BABE56 /* sesionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C752A22707E18000BABE56 /* sesionController.swift */; };
+		80D64B272718EE1B007B0A17 /* SesionGraficaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D64B262718EE1B007B0A17 /* SesionGraficaViewController.swift */; };
 		C21F162B27174833001B4186 /* FiltroSesionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */; };
 		C21F162F27174FA7001B4186 /* FiltroSesionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */; };
 		C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */; };
@@ -85,6 +86,7 @@
 		80BF227D270D1F270049BAAB /* SeguimientoSesionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguimientoSesionViewController.swift; sourceTree = "<group>"; };
 		80C7529F2707CFDC00BABE56 /* Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sesion.swift; sourceTree = "<group>"; };
 		80C752A22707E18000BABE56 /* sesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sesionController.swift; sourceTree = "<group>"; };
+		80D64B262718EE1B007B0A17 /* SesionGraficaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionGraficaViewController.swift; sourceTree = "<group>"; };
 		C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionCollectionViewCell.swift; sourceTree = "<group>"; };
 		C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionesViewController.swift; sourceTree = "<group>"; };
 		C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarPickerViewUtility.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				C2E97686270E8706001C5E44 /* MisReportesCollectionViewController.swift */,
 				C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */,
 				C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */,
+				80D64B262718EE1B007B0A17 /* SesionGraficaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				80C752A32707E18000BABE56 /* sesionController.swift in Sources */,
 				C2BF29F52704E63800621763 /* usuarioController.swift in Sources */,
 				79B981DA270E5206003085C6 /* ReportesInfoViewController.swift in Sources */,
+				80D64B272718EE1B007B0A17 /* SesionGraficaViewController.swift in Sources */,
 				800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */,
 				C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */,
 				C26378D32703C41500900453 /* cetacUserController.swift in Sources */,

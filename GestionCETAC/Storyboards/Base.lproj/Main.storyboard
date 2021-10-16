@@ -631,10 +631,10 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
             </objects>
             <point key="canvasLocation" x="1481" y="744"/>
         </scene>
-        <!--View Controller-->
+        <!--Sesion Grafica View Controller-->
         <scene sceneID="GN1-al-o5L">
             <objects>
-                <viewController id="Soe-Np-4DE" sceneMemberID="viewController">
+                <viewController id="Soe-Np-4DE" customClass="SesionGraficaViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wWS-E7-eYZ">
                         <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3540,6 +3540,32 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                 <exit id="uoD-SB-CyI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4887" y="3419"/>
+        </scene>
+        <!--Sesion Grafica View Controller-->
+        <scene sceneID="nSV-yr-9ua">
+            <objects>
+                <viewController id="3vR-GR-3xy" customClass="SesionGraficaViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ulN-Pa-4UH">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8JN-ZK-D9G">
+                                <rect key="frame" x="88" y="246" width="634" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZRc-to-voz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ce2-cF-W0j"/>
+                    <connections>
+                        <outlet property="pieVista" destination="8JN-ZK-D9G" id="lGY-AS-2z2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygR-m4-rlD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5768.8888888888887" y="3418.8888888888887"/>
         </scene>
     </scenes>
     <resources>
