@@ -69,6 +69,51 @@ class usuarioController{
         }
     }
     
+    func getMale(completion: @escaping (Result<Int, Error>) -> Void){
+        var usuarios = [Usuario]()
+        db.collection("usuarios").whereField("sexo", isEqualTo: "Masculino").getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let u = Usuario(aDoc: document)
+                    usuarios.append(u)
+                }
+                completion(.success(usuarios.count))
+            }
+        }
+    }
+    
+    func getFemale(completion: @escaping (Result<Int, Error>) -> Void){
+        var usuarios = [Usuario]()
+        db.collection("usuarios").whereField("sexo", isEqualTo: "Femenino").getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let u = Usuario(aDoc: document)
+                    usuarios.append(u)
+                }
+                completion(.success(usuarios.count))
+            }
+        }
+    }
+    
+    func getOtro(completion: @escaping (Result<Int, Error>) -> Void){
+        var usuarios = [Usuario]()
+        db.collection("usuarios").whereField("sexo", isEqualTo: "Otro").getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let u = Usuario(aDoc: document)
+                    usuarios.append(u)
+                }
+                completion(.success(usuarios.count))
+            }
+        }
+    }
+    
     func insertUsuario(nuevoUsuario:Usuario, completion: @escaping (Result<String, Error>) -> Void){
         var ref: DocumentReference? = nil
         ref = db.collection("usuarios").addDocument(data: [
