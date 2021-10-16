@@ -1396,9 +1396,11 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="password1TextField" destination="dF4-e0-8zf" id="rQo-8Y-Iuf"/>
                         <outlet property="password2TextField" destination="WKc-R7-WEa" id="lIo-ze-qxT"/>
                         <outlet property="rolTextField" destination="D6J-Zm-7if" id="s9n-DW-Yl0"/>
+                        <segue destination="Vlb-bc-e2I" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="JpV-a5-fCI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-3c-GJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Vlb-bc-e2I" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2860" y="2737"/>
         </scene>
