@@ -61,7 +61,7 @@ class SignupViewController: UIViewController {
             let newUser = cetacUser(nombre: nombreTextField.text!, apellidos: apellidoTextField.text!, rol: rolTextField.text!, email: emailTextField.text!, password: password1TextField.text!)
             cetacUsuarioControlador.createUser(user: newUser){ (result) in
                 switch result{
-                case .success(_): self.transitionToGestionCETAC()
+                case .success(_): self.displayExito(title: "Éxito", detalle: "Se ha registrado el usuario exitosamente")
                 case .failure(let error): self.displayError(error, title: "No se pudo crear el usuario")
                 }
             }
@@ -98,8 +98,14 @@ class SignupViewController: UIViewController {
         return passwordTest.evaluate(with: password)
     }
     
-    func transitionToGestionCETAC() {
-        performSegue(withIdentifier: "goToHome", sender: self)
+    func displayExito(title : String, detalle : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: detalle, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                self.performSegue(withIdentifier: "unwindToHome", sender: self)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func displayError(_ error: Error, title:String){

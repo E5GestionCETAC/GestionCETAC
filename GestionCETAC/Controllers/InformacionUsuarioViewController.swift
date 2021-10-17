@@ -9,7 +9,12 @@ import UIKit
 import Firebase
 
 class InformacionUsuarioViewController: UIViewController {
+    //Picker view
     var datePicker = UIDatePicker()
+    let generos:[String] = ["", "Maculino", "Femenino", "Otro"]
+    
+    fileprivate let generoPickerView = ToolbarPickerView()
+    //End picker view
     // Controladores
     let sesionControlador = sesionController()
     let usuarioControlador = usuarioController()
@@ -52,7 +57,18 @@ class InformacionUsuarioViewController: UIViewController {
     // End Otras variables
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Picker View
+        sexoText.inputView = generoPickerView
+        sexoText.inputAccessoryView = generoPickerView.toolbar
+        
+        generoPickerView.delegate = self
+        generoPickerView.dataSource = self
+        generoPickerView.toolbarDelegate = self
+        
+        generoPickerView.tag = 1
+        
         createDatePickerView()
+        //End Picker View
         setStateButtons()
         setStateTextFields()
         setUserData()
@@ -268,4 +284,44 @@ class InformacionUsuarioViewController: UIViewController {
         self.view.endEditing(true)
     }
     // End Date picker view --------------------------
+}
+
+extension InformacionUsuarioViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView.tag{
+        case 1:
+            return self.generos.count
+        default:
+            return 1
+        }
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView.tag{
+        case 1:
+            return self.generos[row]
+        default:
+            return "No hay datos"
+        }
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView.tag{
+        case 1:
+            sexoText.text! = generos[row]
+        default:
+            return
+        }
+    }
+}
+
+extension InformacionUsuarioViewController : ToolbarPickerViewDelegate{
+    func didTapDone() {
+        self.view.endEditing(true)
+    }
 }

@@ -16,11 +16,13 @@ class EncuadreViewController: UIViewController {
     let motivos:[String] = ["","Abuso","Adicción","Ansiedad","Baja autoestima","Codependencia","Comunicación familiar","Conflicto con hermano","Conflicto con madre","Conflicto con padre","Dependencia","Divorcio","Duelo","Duelo grupal","Enfermedad","Enfermedad crónico degenerativa","Heridas de la infancia","Identidad de género","Infertilidad","Infidelidad","Intento de suicidio","Miedo","Pérdida de bienes materiales","Pérdida de identidad","Pérdida laboral","Relación con los padres","Ruptura de Noviazgo","Stress","Trastorno Obsesivo","Violación","Violencia intrafamiliar","Violencia psicológica","Viudez","Otro"]
     let intervenciones:[String] = ["","Tanatología", "Acompañamiento Individual", "Acompañamiento Grupal", "Logoterapia", "Mindfulness", "Aromaterapia y Musicoterapia", "Cristaloterapia", "Reiki", "Biomagnetismo", "Angeloterapia", "Cama Térmica De Jade", "Flores De Bach", "Brisas Ambientales"]
     let herramientas:[String] = ["","Contención","Diálogo","Ejercicio","Encuadre","Infografía","Dinámica","Lectura","Meditación","Video","Otro"]
+    let generos:[String] = ["", "Maculino", "Femenino", "Otro"]
     
     fileprivate let servicioPickerView = ToolbarPickerView()
     fileprivate let motivoPickerView = ToolbarPickerView()
     fileprivate let intervencionPickerView = ToolbarPickerView()
     fileprivate let herramientaPickerView = ToolbarPickerView()
+    fileprivate let generoPickerView = ToolbarPickerView()
     // End Picker view
     
     // Controladores
@@ -83,6 +85,8 @@ class EncuadreViewController: UIViewController {
         tipo_intervencionText.inputAccessoryView = intervencionPickerView.toolbar
         herramientaText.inputView = herramientaPickerView
         herramientaText.inputAccessoryView = herramientaPickerView.toolbar
+        sexoText.inputView = generoPickerView
+        sexoText.inputAccessoryView = generoPickerView.toolbar
         
         motivoPickerView.delegate = self
         motivoPickerView.dataSource = self
@@ -96,12 +100,15 @@ class EncuadreViewController: UIViewController {
         herramientaPickerView.delegate = self
         herramientaPickerView.dataSource = self
         herramientaPickerView.toolbarDelegate = self
+        generoPickerView.delegate = self
+        generoPickerView.dataSource = self
+        generoPickerView.toolbarDelegate = self
         
         motivoPickerView.tag = 1
         servicioPickerView.tag = 2
         intervencionPickerView.tag = 3
         herramientaPickerView.tag = 4
-        
+        generoPickerView.tag = 5
         // End Inicializacion de picker views
         
         self.userController.getLastID{ (result) in
@@ -250,6 +257,8 @@ extension EncuadreViewController: UIPickerViewDelegate, UIPickerViewDataSource{
             return self.intervenciones.count
         case 4:
             return self.herramientas.count
+        case 5:
+            return self.generos.count
         default:
             return 1
         }
@@ -265,6 +274,8 @@ extension EncuadreViewController: UIPickerViewDelegate, UIPickerViewDataSource{
             return self.intervenciones[row]
         case 4:
             return self.herramientas[row]
+        case 5:
+            return self.generos[row]
         default:
             return "No hay datos"
         }
@@ -280,6 +291,8 @@ extension EncuadreViewController: UIPickerViewDelegate, UIPickerViewDataSource{
             tipo_intervencionText.text! = intervenciones[row]
         case 4:
             herramientaText.text! = herramientas[row]
+        case 5:
+            sexoText.text! = generos[row]
         default:
             return
         }
