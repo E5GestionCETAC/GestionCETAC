@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1p-3W-6dS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u1p-3W-6dS">
     <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -837,10 +837,14 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YVW-Fg-d88"/>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Wa4-hp-PhO" firstAttribute="centerX" secondItem="zOM-xB-p5y" secondAttribute="centerX" id="0WV-Tw-xFa"/>
                             <constraint firstItem="Wa4-hp-PhO" firstAttribute="centerY" secondItem="zOM-xB-p5y" secondAttribute="centerY" id="ocN-P4-LrS"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="J2c-l0-i67" appends="YES" id="tsA-R3-Gat"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio de sesión" id="xD4-Lz-jFX">
                         <barButtonItem key="backBarButtonItem" title="Inicio de sesión" id="r9K-pD-aUD"/>
@@ -852,6 +856,11 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcv-cK-Ziu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="J2c-l0-i67">
+                    <connections>
+                        <action selector="endEditing:" destination="v4W-4u-Iqx" id="4CP-hK-3pv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1481" y="2073"/>
         </scene>
@@ -920,7 +929,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-a1-NW8">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <segue destination="0Ut-zG-quR" kind="show" id="GGF-gm-9l3"/>
@@ -1000,7 +1009,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYN-N8-asY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="2073"/>
+            <point key="canvasLocation" x="2860" y="2072.7777777777778"/>
         </scene>
         <!--Mis usuarios-->
         <scene sceneID="C2X-RZ-lOP">
@@ -1237,7 +1246,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Alejandro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HC-zM-BbB">
                                                     <rect key="frame" x="125" y="0.0" width="193.5" height="80"/>
-                                                    <color key="backgroundColor" red="0.99215686270000003" green="0.81960784310000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.90980392156862744" green="0.87450980392156863" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="193.5" id="2rE-XB-TEU"/>
                                                     </constraints>
@@ -1247,7 +1256,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 9, 2021" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oeo-Ev-sfK">
                                                     <rect key="frame" x="343.5" y="0.0" width="180" height="80"/>
-                                                    <color key="backgroundColor" red="0.98431372549999996" green="0.92941176469999998" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.9882352941176471" green="0.88235294117647056" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="180" id="E3I-Oa-hRj"/>
                                                     </constraints>
@@ -1257,7 +1266,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enfermedad cronico degenerativa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-yl-pGN">
                                                     <rect key="frame" x="548.5" y="0.0" width="201.5" height="80"/>
-                                                    <color key="backgroundColor" red="0.83137254900000002" green="0.73333333329999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.9882352941176471" green="0.95686274509803915" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="201.5" id="0ru-gc-mjA"/>
                                                     </constraints>
@@ -1301,7 +1310,6 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </collectionView>
                     <navigationItem key="navigationItem" title="Mis Reportes" id="vTc-bv-KnZ">
                         <barButtonItem key="backBarButtonItem" title="Mis reportes" id="mPd-K1-Tw4"/>
-                        <barButtonItem key="rightBarButtonItem" title="Filtrar" id="58H-q8-ZYk"/>
                     </navigationItem>
                     <connections>
                         <segue destination="pdD-ig-q3u" kind="show" identifier="filtroSesion" id="YuT-Jn-RyL"/>
@@ -1384,10 +1392,14 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GfD-7d-MUr"/>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="VGu-6k-yn3" firstAttribute="centerX" secondItem="soZ-7W-q0x" secondAttribute="centerX" id="BG3-Ar-uuv"/>
                             <constraint firstItem="VGu-6k-yn3" firstAttribute="centerY" secondItem="soZ-7W-q0x" secondAttribute="centerY" id="BhG-8V-ShI"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cPg-fC-M3c" appends="YES" id="hyl-hH-Nc4"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Registro" id="X94-oW-dGp">
                         <barButtonItem key="backBarButtonItem" title=" " id="Z2I-cL-hUW"/>
@@ -1404,6 +1416,11 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dt1-3c-GJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Vlb-bc-e2I" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="cPg-fC-M3c">
+                    <connections>
+                        <action selector="endEditing:" destination="DRW-tQ-Gki" id="w87-GO-Lg6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2860" y="2737"/>
         </scene>
@@ -1435,7 +1452,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-2m-vvA">
-                                <rect key="frame" x="0.0" y="102" width="810" height="928"/>
+                                <rect key="frame" x="0.0" y="50" width="810" height="980"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-TZ-Psx">
                                         <rect key="frame" x="0.0" y="6" width="810" height="1850"/>
@@ -1652,19 +1669,22 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                 <rect key="frame" x="100" y="1470" width="610" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firma de consentimiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xU3-Rh-kri">
-                                                        <rect key="frame" x="0.0" y="0.0" width="610" height="30.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="610" height="78"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bDi-yL-VIf">
-                                                        <rect key="frame" x="0.0" y="30.5" width="610" height="119.5"/>
+                                                        <rect key="frame" x="0.0" y="78" width="610" height="72"/>
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-9q-qnF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="292" height="119.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="72"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="WKI-b4-nfV"/>
+                                                                </constraints>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7E-oO-m4e">
-                                                                <rect key="frame" x="320" y="0.0" width="290" height="119.5"/>
+                                                                <rect key="frame" x="90" y="0.0" width="520" height="72"/>
                                                                 <string key="text">Acepto las Condiciones del servicio y la Política de privacidad de Centro Tanatológico y Traslado en Ambulancia con Calidad Humana A.C.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
@@ -1727,12 +1747,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Aa3-lH-oBY"/>
                         <color key="backgroundColor" red="0.62745098040000002" green="0.90588235289999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="eyC-2m-vvA" firstAttribute="bottom" secondItem="Aa3-lH-oBY" secondAttribute="bottom" id="4MJ-X0-BdT"/>
                             <constraint firstItem="eyC-2m-vvA" firstAttribute="trailing" secondItem="Aa3-lH-oBY" secondAttribute="trailing" id="WSR-u0-Jvr"/>
                             <constraint firstItem="eyC-2m-vvA" firstAttribute="top" secondItem="Aa3-lH-oBY" secondAttribute="top" id="hJp-fk-aJb"/>
                             <constraint firstItem="eyC-2m-vvA" firstAttribute="leading" secondItem="Aa3-lH-oBY" secondAttribute="leading" id="vy5-eD-Zpo"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OEi-5o-5bF" appends="YES" id="hyz-Wf-FAN"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Seguimiento de sesión" id="jDe-eF-dgL"/>
                     <connections>
@@ -1745,11 +1769,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="tipo_intervencionText" destination="mMA-OY-C43" id="RmK-tn-V4l"/>
                         <outlet property="tipo_servicioText" destination="wO4-NS-LW4" id="rYq-1b-dop"/>
                         <outlet property="usuarioText" destination="9XM-Gg-fqR" id="KAx-bE-n7s"/>
-                        <segue destination="PAy-Ib-NO4" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="eTJ-OZ-zxR"/>
+                        <segue destination="PAy-Ib-NO4" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="H5M-JA-zAX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omg-75-Yw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="PAy-Ib-NO4" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="OEi-5o-5bF">
+                    <connections>
+                        <action selector="endEditing:" destination="g4B-6T-0Im" id="VBQ-24-FYt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4215" y="2737"/>
         </scene>
@@ -2391,10 +2420,13 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         <rect key="frame" x="0.0" y="78" width="610" height="72"/>
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-Be-KAN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="292" height="72"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="62" height="72"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="PX7-Vf-GU3"/>
+                                                                </constraints>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFx-GM-jRN">
-                                                                <rect key="frame" x="320" y="0.0" width="290" height="72"/>
+                                                                <rect key="frame" x="90" y="0.0" width="520" height="72"/>
                                                                 <string key="text">Acepto las Condiciones del servicio y la Política de privacidad de Centro Tanatológico y Traslado en Ambulancia con Calidad Humana A.C.</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                 <nil key="textColor"/>
@@ -2457,12 +2489,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WOh-m3-ZSj"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.92941176469999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="fvh-qN-yRS" firstAttribute="top" secondItem="WOh-m3-ZSj" secondAttribute="top" id="Mpz-PU-d9P"/>
                             <constraint firstItem="fvh-qN-yRS" firstAttribute="leading" secondItem="WOh-m3-ZSj" secondAttribute="leading" id="azH-eC-rPz"/>
                             <constraint firstItem="fvh-qN-yRS" firstAttribute="trailing" secondItem="WOh-m3-ZSj" secondAttribute="trailing" id="xwT-Pd-mxE"/>
                             <constraint firstItem="fvh-qN-yRS" firstAttribute="bottom" secondItem="WOh-m3-ZSj" secondAttribute="bottom" id="yD2-fA-L4I"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="46C-kV-0Sp" appends="YES" id="KX3-G7-OLi"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Encuadre" id="7F4-0v-PHZ"/>
                     <connections>
@@ -2492,11 +2528,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="terminosCondicionesSwitch" destination="fqy-Be-KAN" id="3kd-bp-jFe"/>
                         <outlet property="tipo_intervencionText" destination="TFe-xs-39F" id="1EX-UV-dwY"/>
                         <outlet property="tipo_servicioText" destination="EpW-tS-94K" id="87e-td-pds"/>
-                        <segue destination="Vju-RZ-bFJ" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="VLO-1i-PGy"/>
+                        <segue destination="Vju-RZ-bFJ" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="vVj-Sz-M4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-gF-Pfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Vju-RZ-bFJ" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="46C-kV-0Sp">
+                    <connections>
+                        <action selector="endEditing:" destination="i2S-En-gCx" id="vFh-I0-3II"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4215" y="2073"/>
         </scene>
@@ -2955,6 +2996,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.98431372549999996" green="0.92941176469999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <edgeInsets key="layoutMargins" top="20" left="100" bottom="40" right="100"/>
                                     </stackView>
                                 </subviews>
@@ -2971,12 +3013,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fTu-G1-ITp"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.92941176469999998" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="XES-od-sz4" firstAttribute="trailing" secondItem="fTu-G1-ITp" secondAttribute="trailing" id="40A-FT-VZX"/>
                             <constraint firstItem="XES-od-sz4" firstAttribute="bottom" secondItem="fTu-G1-ITp" secondAttribute="bottom" id="Heu-6S-pKh"/>
                             <constraint firstItem="XES-od-sz4" firstAttribute="top" secondItem="fTu-G1-ITp" secondAttribute="top" id="dJD-Pg-TPW"/>
                             <constraint firstItem="XES-od-sz4" firstAttribute="leading" secondItem="fTu-G1-ITp" secondAttribute="leading" id="z1v-DY-gcA"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qrR-xK-OFW" appends="YES" id="Yv3-0n-8bX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Información de usuario" id="dHn-M6-Kvb">
                         <rightBarButtonItems>
@@ -3013,11 +3059,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="saveButton" destination="ZvU-te-x29" id="ZCa-zf-j1c"/>
                         <outlet property="sexoText" destination="2uG-Gt-zj5" id="1Xv-i6-qD8"/>
                         <outlet property="tel_casaText" destination="dZj-jN-F0H" id="Q2Q-sc-srs"/>
-                        <segue destination="f48-yA-zvc" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="8Fv-OS-cow"/>
+                        <segue destination="f48-yA-zvc" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="k82-db-62m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kBe-f1-Igq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="f48-yA-zvc" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="qrR-xK-OFW">
+                    <connections>
+                        <action selector="endEditing:" destination="gBe-Ae-D5A" id="eos-Gu-jP4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4215" y="1403"/>
         </scene>
@@ -3094,7 +3145,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 9 2021" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWf-7b-sgt">
                                                             <rect key="frame" x="80" y="0.0" width="100" height="80"/>
-                                                            <color key="backgroundColor" red="0.99215686270000003" green="0.81960784310000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="0.90980392160000001" green="0.87450980389999999" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="5Kv-hH-SHX"/>
                                                             </constraints>
@@ -3104,7 +3155,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enfermedad cronico degenerativa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-MG-jUH">
                                                             <rect key="frame" x="200" y="0.0" width="134" height="80"/>
-                                                            <color key="backgroundColor" red="0.98431372549999996" green="0.92941176469999998" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="0.98823529409999999" green="0.88235294119999996" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="134" id="L4q-LI-rxs"/>
                                                             </constraints>
@@ -3114,7 +3165,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servicios Acompañamiento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMt-pV-mf0">
                                                             <rect key="frame" x="354" y="0.0" width="133.5" height="80"/>
-                                                            <color key="backgroundColor" red="0.83137254900000002" green="0.73333333329999995" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" red="0.98823529409999999" green="0.95686274510000002" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="133.5" id="5QL-ga-xN3"/>
                                                             </constraints>
@@ -3124,6 +3175,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aromaterapia y musicoterapia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6l-v4-Bxt">
                                                             <rect key="frame" x="507.5" y="0.0" width="122.5" height="80"/>
+                                                            <color key="backgroundColor" red="0.8666666666666667" green="0.92941176470588238" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="122.5" id="5uf-EV-V9t"/>
                                                             </constraints>
@@ -3133,6 +3185,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contención" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QJ-Tq-Gfm">
                                                             <rect key="frame" x="650" y="0.0" width="100" height="80"/>
+                                                            <color key="backgroundColor" red="0.85490196078431369" green="0.91764705882352937" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="WPf-xy-bSE"/>
                                                             </constraints>
@@ -3503,12 +3556,16 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tdh-8a-mRo"/>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.81960784313725488" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="znl-yI-Qws" firstAttribute="trailing" secondItem="tdh-8a-mRo" secondAttribute="trailing" id="21w-OV-ui7"/>
                             <constraint firstItem="znl-yI-Qws" firstAttribute="top" secondItem="tdh-8a-mRo" secondAttribute="top" id="aAz-Zh-Bki"/>
                             <constraint firstItem="znl-yI-Qws" firstAttribute="bottom" secondItem="tdh-8a-mRo" secondAttribute="bottom" id="q36-g2-hS3"/>
                             <constraint firstItem="znl-yI-Qws" firstAttribute="leading" secondItem="tdh-8a-mRo" secondAttribute="leading" id="qhj-HO-6N0"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pv9-rs-uQx" appends="YES" id="mHE-eM-FAQ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Información sesión" id="ZlH-e0-GSo">
                         <rightBarButtonItems>
@@ -3538,25 +3595,47 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <outlet property="sesionID" destination="c2k-oE-6a6" id="CYR-nJ-fUi"/>
                         <outlet property="tanaText" destination="Vb4-wJ-yh0" id="hWz-XS-0fp"/>
                         <outlet property="usuarioText" destination="ccl-cE-sNR" id="p36-jr-j3P"/>
-                        <segue destination="uoD-SB-CyI" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHome:" id="IVa-yZ-1dC"/>
+                        <segue destination="uoD-SB-CyI" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeWithSegue:" id="aKf-uX-yZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PX1-wf-xlK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="uoD-SB-CyI" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="pv9-rs-uQx">
+                    <connections>
+                        <action selector="endEditing:" destination="fSv-oy-SAR" id="c0E-Hd-LI1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4887" y="3419"/>
         </scene>
-        <!--View Controller-->
+        <!--Indicadores de la organización-->
         <scene sceneID="rNP-5A-hJV">
             <objects>
-                <viewController id="auD-ZK-Vrg" sceneMemberID="viewController">
+                <viewController id="auD-ZK-Vrg" customClass="CetacIndicadoresViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zis-c7-w7t">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdk-Xd-buR">
+                                <rect key="frame" x="55" y="190" width="700" height="700"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.99215686270000003" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="700" id="dtY-sK-PSA"/>
+                                    <constraint firstAttribute="height" constant="700" id="scc-0w-Vw4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SVB-6f-Vpa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cdk-Xd-buR" firstAttribute="centerX" secondItem="zis-c7-w7t" secondAttribute="centerX" id="fCj-Cm-oo3"/>
+                            <constraint firstItem="cdk-Xd-buR" firstAttribute="centerY" secondItem="zis-c7-w7t" secondAttribute="centerY" id="zFo-Dn-H7C"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q4h-ko-OCF"/>
+                    <navigationItem key="navigationItem" title="Indicadores de la organización" id="Q4h-ko-OCF"/>
+                    <connections>
+                        <outlet property="vistaBarras" destination="cdk-Xd-buR" id="Kl6-fb-xEj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JR9-wb-tUW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3571,24 +3650,23 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-uf-OPO" userLabel="AcompanamientoView">
-                                <rect key="frame" x="130" y="367" width="250" height="148"/>
+                                <rect key="frame" x="130" y="265" width="250" height="250"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acompanamiento" translatesAutoresizingMaskIntoConstraints="NO" id="myE-lk-9gO">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="148"/>
-                                        <rect key="contentStretch" x="0.0" y="0.050000000000000003" width="1" height="1"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicadores_organizacion" translatesAutoresizingMaskIntoConstraints="NO" id="myE-lk-9gO">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Acompañamiento" translatesAutoresizingMaskIntoConstraints="NO" id="0dL-Up-dZD">
-                                        <rect key="frame" x="0.0" y="98" width="250" height="50"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Organanización" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dL-Up-dZD">
+                                        <rect key="frame" x="0.0" y="200" width="250" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="GD3-gI-oUK"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfr-3x-Hkg">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <connections>
                                             <segue destination="auD-ZK-Vrg" kind="show" id="TMq-JO-pYB"/>
                                         </connections>
@@ -3609,25 +3687,24 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DKn-I3-ahu" userLabel="HolisticoView">
-                                <rect key="frame" x="430" y="367" width="250" height="148"/>
+                                <rect key="frame" x="430" y="265" width="250" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIk-nK-RVo">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                         <connections>
                                             <segue destination="iM2-pY-FVV" kind="show" id="xbx-D1-sQq"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holisticos" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-YY-0S4">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="148"/>
-                                        <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicadores_usuarios" translatesAutoresizingMaskIntoConstraints="NO" id="Pn2-YY-0S4">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Holísticos" translatesAutoresizingMaskIntoConstraints="NO" id="5oE-bR-mFT">
-                                        <rect key="frame" x="0.0" y="178" width="250" height="52"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Usuarios" translatesAutoresizingMaskIntoConstraints="NO" id="5oE-bR-mFT">
+                                        <rect key="frame" x="0.0" y="198" width="250" height="52"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="JlC-rY-UPz"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -3641,7 +3718,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                     <constraint firstItem="TIk-nK-RVo" firstAttribute="bottom" secondItem="Pn2-YY-0S4" secondAttribute="bottom" id="TRD-3o-IGz"/>
                                     <constraint firstItem="5oE-bR-mFT" firstAttribute="leading" secondItem="DKn-I3-ahu" secondAttribute="leading" id="VfP-qL-8Kt"/>
                                     <constraint firstItem="Pn2-YY-0S4" firstAttribute="top" secondItem="TIk-nK-RVo" secondAttribute="top" id="aho-Uj-G2r"/>
-                                    <constraint firstItem="5oE-bR-mFT" firstAttribute="top" secondItem="Pn2-YY-0S4" secondAttribute="top" constant="178" id="boa-fS-tSl"/>
+                                    <constraint firstItem="5oE-bR-mFT" firstAttribute="top" secondItem="Pn2-YY-0S4" secondAttribute="top" constant="198" id="boa-fS-tSl"/>
                                     <constraint firstItem="5oE-bR-mFT" firstAttribute="trailing" secondItem="Pn2-YY-0S4" secondAttribute="trailing" id="dSf-yN-OfS"/>
                                     <constraint firstItem="Pn2-YY-0S4" firstAttribute="centerY" secondItem="DKn-I3-ahu" secondAttribute="centerY" id="nfs-wO-M9a"/>
                                 </constraints>
@@ -3650,22 +3727,22 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                 <rect key="frame" x="130" y="565" width="550" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6F-TX-YXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="550" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="550" height="250"/>
                                         <connections>
                                             <segue destination="wLx-fS-82i" kind="show" id="wOT-En-VgQ"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alternativos" translatesAutoresizingMaskIntoConstraints="NO" id="R51-1j-SAL">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="indicadores_sesiones" translatesAutoresizingMaskIntoConstraints="NO" id="R51-1j-SAL">
                                         <rect key="frame" x="0.0" y="0.0" width="550" height="250"/>
                                         <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Alternativos" translatesAutoresizingMaskIntoConstraints="NO" id="nYW-AG-b0O">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sesiones" translatesAutoresizingMaskIntoConstraints="NO" id="nYW-AG-b0O">
                                         <rect key="frame" x="0.0" y="198" width="550" height="52"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="XRU-7x-evi"/>
                                         </constraints>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -3674,8 +3751,8 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                                     <constraint firstItem="nYW-AG-b0O" firstAttribute="trailing" secondItem="Qtt-yJ-3d6" secondAttribute="trailingMargin" constant="8" id="2q3-uT-cmN"/>
                                     <constraint firstItem="R51-1j-SAL" firstAttribute="centerX" secondItem="Qtt-yJ-3d6" secondAttribute="centerX" id="3fh-cb-Ws1"/>
                                     <constraint firstItem="p6F-TX-YXP" firstAttribute="top" secondItem="R51-1j-SAL" secondAttribute="top" id="7J5-3e-ROj"/>
-                                    <constraint firstItem="p6F-TX-YXP" firstAttribute="centerY" secondItem="Qtt-yJ-3d6" secondAttribute="centerY" constant="-25" id="8FO-dP-RBr"/>
-                                    <constraint firstItem="R51-1j-SAL" firstAttribute="bottom" secondItem="p6F-TX-YXP" secondAttribute="bottom" constant="50" id="MBg-UR-dkX"/>
+                                    <constraint firstItem="p6F-TX-YXP" firstAttribute="centerY" secondItem="Qtt-yJ-3d6" secondAttribute="centerY" id="8FO-dP-RBr"/>
+                                    <constraint firstItem="R51-1j-SAL" firstAttribute="bottom" secondItem="p6F-TX-YXP" secondAttribute="bottom" id="MBg-UR-dkX"/>
                                     <constraint firstItem="p6F-TX-YXP" firstAttribute="trailing" secondItem="R51-1j-SAL" secondAttribute="trailing" id="Nwz-op-tiD"/>
                                     <constraint firstItem="R51-1j-SAL" firstAttribute="top" secondItem="Qtt-yJ-3d6" secondAttribute="top" id="T8f-XV-Xhf"/>
                                     <constraint firstItem="R51-1j-SAL" firstAttribute="leading" secondItem="Qtt-yJ-3d6" secondAttribute="leading" id="Wtx-Dz-gJX"/>
@@ -3695,7 +3772,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                             <constraint firstItem="EBp-uf-OPO" firstAttribute="leading" secondItem="Qtt-yJ-3d6" secondAttribute="leading" id="Waj-0H-dp5"/>
                             <constraint firstItem="EBp-uf-OPO" firstAttribute="top" secondItem="DKn-I3-ahu" secondAttribute="top" id="Wj5-1K-a15"/>
                             <constraint firstItem="EBp-uf-OPO" firstAttribute="leading" secondItem="sIa-iL-Xl9" secondAttribute="leading" constant="130" id="nAE-br-avl"/>
-                            <constraint firstItem="EBp-uf-OPO" firstAttribute="top" secondItem="sIa-iL-Xl9" secondAttribute="top" constant="265" id="qj2-Xc-HRF"/>
+                            <constraint firstItem="EBp-uf-OPO" firstAttribute="top" secondItem="sIa-iL-Xl9" secondAttribute="top" constant="163" id="qj2-Xc-HRF"/>
                             <constraint firstItem="DKn-I3-ahu" firstAttribute="leading" secondItem="EBp-uf-OPO" secondAttribute="trailing" constant="50" id="ur2-Aq-bUP"/>
                             <constraint firstItem="Qtt-yJ-3d6" firstAttribute="top" secondItem="0pt-3e-FaW" secondAttribute="top" constant="565" id="xOc-AH-keb"/>
                             <constraint firstItem="sIa-iL-Xl9" firstAttribute="bottom" secondItem="Qtt-yJ-3d6" secondAttribute="bottom" constant="215" id="zEb-d4-dVL"/>
@@ -3703,13 +3780,15 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Servicios" image="pip" catalog="system" id="6Bh-pH-Qvw"/>
-                    <navigationItem key="navigationItem" id="27y-BZ-Xaj"/>
+                    <navigationItem key="navigationItem" title="Indicadores" id="27y-BZ-Xaj">
+                        <barButtonItem key="backBarButtonItem" title="Indicadores" id="Fd8-VF-Kp2"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3WH-94-y9h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="2908"/>
+            <point key="canvasLocation" x="1756.2962962962961" y="2907.7777777777778"/>
         </scene>
-        <!--Pie View Controller-->
+        <!--Indicadores de los usuarios-->
         <scene sceneID="OxM-AB-3c4">
             <objects>
                 <viewController id="iM2-pY-FVV" customClass="pieViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
@@ -3726,7 +3805,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <viewLayoutGuide key="safeArea" id="Fv5-jg-EXQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LT3-Ue-j9v"/>
+                    <navigationItem key="navigationItem" title="Indicadores de los usuarios" id="LT3-Ue-j9v"/>
                     <connections>
                         <outlet property="pieView" destination="a4s-eV-nni" id="a7B-lb-oyt"/>
                     </connections>
@@ -3735,7 +3814,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
             </objects>
             <point key="canvasLocation" x="992.5925925925925" y="3615.5555555555557"/>
         </scene>
-        <!--View Controller-->
+        <!--Indicadores de las sesiones-->
         <scene sceneID="YWJ-oC-Zbk">
             <objects>
                 <viewController id="wLx-fS-82i" sceneMemberID="viewController">
@@ -3745,7 +3824,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <viewLayoutGuide key="safeArea" id="fd5-1Q-xCY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Gmk-nh-TgH"/>
+                    <navigationItem key="navigationItem" title="Indicadores de las sesiones" id="Gmk-nh-TgH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ras-TN-gpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3762,6 +3841,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <image name="holisticos" width="800" height="400"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="indicadores" width="512" height="512"/>
+        <image name="indicadores_organizacion" width="3000" height="2741"/>
+        <image name="indicadores_sesiones" width="696" height="358"/>
+        <image name="indicadores_usuarios" width="489" height="511"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="loginBackground" width="3560" height="5360"/>
         <image name="mis_sesiones" width="499" height="345"/>

@@ -16,6 +16,7 @@
 		80C752A32707E18000BABE56 /* sesionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C752A22707E18000BABE56 /* sesionController.swift */; };
 		C21F162B27174833001B4186 /* FiltroSesionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */; };
 		C21F162F27174FA7001B4186 /* FiltroSesionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */; };
+		C21F174D271CC1F0001B4186 /* CetacIndicadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F174C271CC1F0001B4186 /* CetacIndicadoresViewController.swift */; };
 		C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */; };
 		C25EF308270980EA0046EA18 /* encuadre_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF306270980E50046EA18 /* encuadre_header.png */; };
 		C25EF30B270982AF0046EA18 /* seguimiento_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF30A270982AF0046EA18 /* seguimiento_header.png */; };
@@ -89,6 +90,7 @@
 		80C752A22707E18000BABE56 /* sesionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sesionController.swift; sourceTree = "<group>"; };
 		C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionCollectionViewCell.swift; sourceTree = "<group>"; };
 		C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionesViewController.swift; sourceTree = "<group>"; };
+		C21F174C271CC1F0001B4186 /* CetacIndicadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CetacIndicadoresViewController.swift; sourceTree = "<group>"; };
 		C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarPickerViewUtility.swift; sourceTree = "<group>"; };
 		C25EF306270980E50046EA18 /* encuadre_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encuadre_header.png; sourceTree = "<group>"; };
 		C25EF30A270982AF0046EA18 /* seguimiento_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seguimiento_header.png; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */,
 				C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */,
 				79964540271AC9C200F30ED4 /* pieViewController.swift */,
+				C21F174C271CC1F0001B4186 /* CetacIndicadoresViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				800EB1C3270BD7D700315934 /* MisSesionesCollectionViewController.swift in Sources */,
 				C2761D8927073C3F000C65A2 /* UsuarioCollectionViewCell.swift in Sources */,
 				C26378D32703C41500900453 /* cetacUserController.swift in Sources */,
+				C21F174D271CC1F0001B4186 /* CetacIndicadoresViewController.swift in Sources */,
 				C21F162B27174833001B4186 /* FiltroSesionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

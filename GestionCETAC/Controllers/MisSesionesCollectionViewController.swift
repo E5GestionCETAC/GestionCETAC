@@ -26,14 +26,14 @@ class MisSesionesCollectionViewController: UICollectionViewController {
             self.addButton.tintColor = UIColor.clear
         }
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
-            self.usuarioControlador.fetchUsuarios{ (result) in
+            self.usuarioControlador.fetchActiveUsuarios{ (result) in
                 switch result{
                 case .success(let users):self.setSesionInfo(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
                 }
             }
         }else if currentCetacUserRol == "Tanatólogo"{
-            self.usuarioControlador.fetchUsuariosFromCetacUser{(result) in
+            self.usuarioControlador.fetchActiveUsuariosFromCetacUser{(result) in
                 switch result{
                 case .success(let users):self.setSesionInfo(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
@@ -49,14 +49,14 @@ class MisSesionesCollectionViewController: UICollectionViewController {
             self.addButton.tintColor = UIColor.clear
         }
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
-            self.usuarioControlador.fetchUsuarios{ (result) in
+            self.usuarioControlador.fetchAllUsuarios{ (result) in
                 switch result{
                 case .success(let users):self.setSesionInfo(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
                 }
             }
         }else if currentCetacUserRol == "Tanatólogo"{
-            self.usuarioControlador.fetchUsuariosFromCetacUser{(result) in
+            self.usuarioControlador.fetchAllUsuariosFromCetacUser{(result) in
                 switch result{
                 case .success(let users):self.setSesionInfo(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
@@ -101,17 +101,7 @@ class MisSesionesCollectionViewController: UICollectionViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selectedItem = sender as? Sesion else {return}
-        
-        if segue.identifier == "sesionInfo"{
-            guard let destinationVC = segue.destination as? InformacionUsuarioViewController else {return}
-            destinationVC.currentUser = selectedItem
-        }
-    }
-    */
-    // Collection view configuration
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -143,11 +133,4 @@ class MisSesionesCollectionViewController: UICollectionViewController {
         }
         return cell
     }
-    /*
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedSesion = sesiones[indexPath.item]
-        self.performSegue(withIdentifier: "sesionInfo", sender: selectedSesion)
-    }
-     */
-    // End Collection view configuration
 }

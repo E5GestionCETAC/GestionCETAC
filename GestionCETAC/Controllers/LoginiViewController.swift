@@ -14,17 +14,18 @@ class LoginiViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     // End Datos del usuario CETAC
     
+    @IBAction func endEditing(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        emailTextField.text! = ""
+        emailTextField.text = ""
         passwordTextField.text = ""
         resignFirstResponder()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.tabBarController?.tabBar.isHidden = true
-
     }
     
     func validateFields() -> Error? {
@@ -39,7 +40,6 @@ class LoginiViewController: UIViewController {
 
     @IBAction func LogIn(_ sender: Any) {
         let error = validateFields()
-        
         if error != nil{
             displayError(error!, title: "Datos inválidos")
         }else{
