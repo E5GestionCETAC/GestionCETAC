@@ -41,14 +41,14 @@ class MisReportesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
-            self.usuarioControlador.fetchUsuarios{ (result) in
+            self.usuarioControlador.fetchActiveUsuarios{ (result) in
                 switch result{
                 case .success(let users):self.setSesionInfo(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
                 }
             }
         }else if currentCetacUserRol == "Tanatólogo"{
-            self.usuarioControlador.fetchUsuariosFromCetacUser{(result) in
+            self.usuarioControlador.fetchActiveUsuariosFromCetacUser{(result) in
                 switch result{
                 case .success(let users):self.setSesionInfo(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
@@ -148,8 +148,10 @@ class MisReportesCollectionViewController: UICollectionViewController {
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedUser = usuarios[indexPath.row-1]
-        self.performSegue(withIdentifier: "filtroSesion", sender: selectedUser)
+        if indexPath.row != 0{
+            let selectedUser = usuarios[indexPath.row-1]
+            self.performSegue(withIdentifier: "filtroSesion", sender: selectedUser)
+        }
     }
     // End Collection view
 }

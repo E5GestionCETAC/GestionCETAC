@@ -12,7 +12,7 @@ class usuarioController{
     let db = Firestore.firestore()
     let currentUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     
-    func fetchUsuarios(completion: @escaping (Result<Usuarios, Error>) -> Void){
+    func fetchActiveUsuarios(completion: @escaping (Result<Usuarios, Error>) -> Void){
         var usuarios = [Usuario]()
         db.collection("usuarios").whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
             if let error = error{
@@ -26,7 +26,23 @@ class usuarioController{
             }
         }
     }
-    func fetchUsuariosFromCetacUser(completion: @escaping (Result<Usuarios, Error>) -> Void){
+    
+    func fetchAllUsuarios(completion: @escaping (Result<Usuarios, Error>) -> Void){
+        var usuarios = [Usuario]()
+        db.collection("usuarios").getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let u = Usuario(aDoc: document)
+                    usuarios.append(u)
+                }
+                completion(.success(usuarios))
+            }
+        }
+    }
+    
+    func fetchActiveUsuariosFromCetacUser(completion: @escaping (Result<Usuarios, Error>) -> Void){
         var usuarios = [Usuario]()
         db.collection("usuarios").whereField("cetacUserID", isEqualTo: currentUserUID).whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
             if let error = error{
@@ -37,6 +53,35 @@ class usuarioController{
                     usuarios.append(u)
                 }
                 completion(.success(usuarios))
+            }
+        }
+    }
+    
+    func fetchAllUsuariosFromCetacUser(completion: @escaping (Result<Usuarios, Error>) -> Void){
+        var usuarios = [Usuario]()
+        db.collection("usuarios").whereField("cetacUserID", isEqualTo: currentUserUID).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let u = Usuario(aDoc: document)
+                    usuarios.append(u)
+                }
+                completion(.success(usuarios))
+            }
+        }
+    }
+    
+    func getLastID(completion: @escaping (Result<Int, Error>) -> Void){
+        var usuario:Usuario?
+        db.collection("usuarios").order(by: "id", descending: true).limit(to: 1).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    usuario = Usuario(aDoc: document)
+                }
+                completion(.success(usuario!.id))
             }
         }
     }
@@ -55,16 +100,24 @@ class usuarioController{
         }
     }
     
-    func getLastID(completion: @escaping (Result<Int, Error>) -> Void){
-        var usuario:Usuario?
-        db.collection("usuarios").order(by: "id", descending: true).limit(to: 1).getDocuments { (querySnapshot, error) in
+    // Indicadores
+    func fetchNumberOfUsersByTanatologo(completion: @escaping (Result<Dictionary<String, Int>, Error>) -> Void){
+        var dictionary:[String:Int] = [:]
+        db.collection("usuarios").whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
             if let error = error{
                 completion(.failure(error))
             }else{
                 for document in querySnapshot!.documents{
-                    usuario = Usuario(aDoc: document)
+                    let u = Usuario(aDoc: document)
+                    let tanatologoExist = dictionary[u.cetacUserID] != nil
+                    if tanatologoExist{
+                        dictionary[u.cetacUserID]! += 1
+                    }
+                    else{
+                        dictionary[u.cetacUserID] = 1
+                    }
                 }
-                completion(.success(usuario!.id))
+                completion(.success(dictionary))
             }
         }
     }
@@ -113,6 +166,7 @@ class usuarioController{
             }
         }
     }
+    // End Indicadores
     
     func insertUsuario(nuevoUsuario:Usuario, completion: @escaping (Result<String, Error>) -> Void){
         var ref: DocumentReference? = nil
@@ -141,7 +195,6 @@ class usuarioController{
             "detalleHijos" : nuevoUsuario.detalleHijos
         ]){ err in
             if let err = err{
-                print("Error loading document: \(err)")
                 completion(.failure(err))
             }else{
                 completion(.success(ref!.documentID))
@@ -175,7 +228,6 @@ class usuarioController{
             "detalleHijos" : updateUsuario.detalleHijos
         ]){ err in
             if let err = err{
-                print("Error loading document: \(err)")
                 completion(.failure(err))
             }else{
                 completion(.success("Datos del usuario actualizados correctamente"))
@@ -183,6 +235,25 @@ class usuarioController{
         }
     }
     
+    func searchUser(nombre:String, apellido_paterno:String, apellido_materno:String, completion: @escaping (Result<Usuario, Error>) -> Void){
+        var usuario:Usuario?
+        db.collection("usuarios").whereField("nombre", isEqualTo: nombre).whereField("apellido_paterno", isEqualTo: apellido_paterno).whereField("apellido_materno", isEqualTo: apellido_materno).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    usuario = Usuario(aDoc: document)
+                }
+                if usuario != nil{
+                    completion(.success(usuario!))
+                }else{
+                    completion(.failure(CustomError.notFound))
+                }
+            }
+        }
+    }
+    
+    /*
     func deleteUsuario(deleteUsuario:Usuario, completion: @escaping (Result<String, Error>) -> Void){
         db.collection("usuarios").document(deleteUsuario.usuarioID).delete(){ err in
             if let err = err{
@@ -190,6 +261,19 @@ class usuarioController{
                 completion(.failure(err))
             }else{
                 completion(.success("Usuario eliminado correctamente"))
+            }
+        }
+    }
+    */
+    
+    func setUserInactive(usuarioID:String, completion: @escaping (Result<String, Error>) -> Void){
+        db.collection("usuarios").document(usuarioID).updateData([
+            "activo" : false
+        ]){ err in
+            if let err = err{
+                completion(.failure(err))
+            }else{
+                completion(.success("Se ha puesto el usuario en inactivo"))
             }
         }
     }

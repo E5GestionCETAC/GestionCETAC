@@ -55,6 +55,11 @@ class InformacionUsuarioViewController: UIViewController {
     var fechaNacimientoDate:Date?
     var edad:Int?
     // End Otras variables
+    
+    
+    @IBAction func endEditing(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //Picker View

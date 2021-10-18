@@ -73,6 +73,10 @@ class EncuadreViewController: UIViewController {
     var edad:Int?
     // End Otras Variable
     
+    
+    @IBAction func endEditing(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Inicializacion de picker viewa
@@ -125,7 +129,17 @@ class EncuadreViewController: UIViewController {
         let error = validateData()
         if let error = error {
             displayError(error, title: "Error")
-        }else{
+        }
+        if abrirExpedienteSwitch.isOn
+        {
+            userController.searchUser(nombre: nombreText.text!, apellido_paterno: paternoText.text!, apellido_materno: maternoText.text!){ (result) in
+                switch result{
+                case .success(let user):self.getLastSesion(user)
+                case.failure(let error):self.displayError(error, title: "No se encontró ningún usuario con estos datos")
+                }
+            }
+        }
+        else{
             // Crear usuario
             let numeroHijosInt = Int(numeroHijosText.text!)
             let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
@@ -152,12 +166,55 @@ class EncuadreViewController: UIViewController {
             
             sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
                 switch result{
-                case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertaron los datos correctamente")
+                case .success(_):self.displayExito(title: "Éxito", detalle: "Se insertaron los datos correctamente")
                 case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
                 }
             }
             // End crear sesion
             }
+    }
+    
+    func getLastSesion(_ usuario:Usuario){
+        sesionControlador.getLastSesion(userID: usuario.id){(result) in
+            switch result{
+            case .success(let sesion):self.updateUsuario(usuario, sesion.numero_sesion+1)
+            case .failure(let error):self.displayError(error, title: "Error al obtener la última sesión")
+            }
+        }
+    }
+    
+    func updateUsuario(_ usuario:Usuario, _ sesionID:Int){
+        // Crear usuario
+        let numeroHijosInt = Int(numeroHijosText.text!)
+        let fechaNacimientoTimestamp = Timestamp(date: fechaNacimientoDate!)
+        // Calcular edad---------------------------
+        let now = Date()
+        let calendar = Calendar.current
+        let ageComponents = calendar.dateComponents([.year], from: fechaNacimientoDate!, to: now)
+        self.edad = ageComponents.year!
+        // End Calcular edad-----------------------
+        let newUser:Usuario = Usuario(usuarioID: usuario.usuarioID, id: usuario.id, edad: self.edad!, nombre: self.nombreText.text!, apellido_paterno: self.paternoText.text!, apellido_materno: self.maternoText.text!, ocupacion: self.ocupacionText.text!, religion: self.religionText.text!, tel_casa: self.tel_casaText.text!, celular: self.celularText.text!, problema: self.problemaText.text!, estado_civil: self.estado_civilText.text!, sexo: self.sexoText.text!, ekr: self.ekrText.text!, indicador_actitudinal: self.indicador_actitudinalText.text!, domicilio: self.domicilioText.text!, procedencia: self.procedenciaText.text!, referido_por: self.referido_porText.text!, cetacUserID: self.cetacUserUID, fecha_nacimiento: fechaNacimientoTimestamp, activo: true, numeroHijos: numeroHijosInt!, detalleHijo: detalleHijosText.text!)
+        
+        userController.updateUsuario(updateUsuario: newUser){(result) in
+            switch result{
+            case .success(let retorno):print(retorno)
+            case.failure(let error):self.displayError(error, title: "No se guardó el usuario")
+            }
+        }
+        // End Crear usuario
+        
+        // Crear sesion
+        let cuotaRecuperacionFloat = Float(cuota_recuperacionText.text!)
+        
+        let newSesion:Sesion = Sesion(usuarioID: usuario.id, numero_sesion: sesionID, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, tipo_intervencion: tipo_intervencionText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
+        
+        sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
+            switch result{
+            case .success(_):self.displayExito(title: "Éxito", detalle: "Se insertaron los datos correctamente")
+            case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+            }
+        }
+        // End crear sesion
     }
     
     func validateData() -> Error? {

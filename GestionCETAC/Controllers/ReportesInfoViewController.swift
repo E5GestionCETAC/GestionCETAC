@@ -52,6 +52,10 @@ class ReportesInfoViewController: UIViewController {
     var fechaNacimientoDate:Date?
     var edad:Int?
     
+    
+    @IBAction func endEditing(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -184,7 +188,7 @@ class ReportesInfoViewController: UIViewController {
         if cetacUserRol == "Tanatólogo" || cetacUserRol == "Administrador"{
             self.editingMode = true
             setStateTextFields()
-            displayMessage(title: "Accesi concedido", detalle: "Se ha dado acceso a la edición de la sesión del usuario")
+            displayMessage(title: "Acceso concedido", detalle: "Se ha dado acceso a la edición de la sesión del usuario")
         }
         else{
             editingMode = false
@@ -206,7 +210,7 @@ class ReportesInfoViewController: UIViewController {
                 sesionControlador.updateSesion(updateSesion: newSesion){ (result) in
                     switch result{
                     case .success(_):self.displayExito(title: "Éxito", detalle: "Se actualizaron los datos de la sesión")
-                    case .failure(let error):self.displayError(error, title: "No se pudieron actualizar los datos del usuario")
+                    case .failure(let error):self.displayError(error, title: "No se pudieron actualizar los datos de la sesión")
                     }
                 }
                 // End crear sesion
@@ -215,7 +219,7 @@ class ReportesInfoViewController: UIViewController {
             }
         }
         else{
-            displayMessage(title: "Modo edición no activado", detalle: "Active el modo de edición y actualice los campos que necesite")
+            displayMessage(title: "Modo edición no activado", detalle: "Active el modo de edición para poder editar los campos")
         }
     }
     

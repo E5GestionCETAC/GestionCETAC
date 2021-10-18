@@ -47,12 +47,17 @@ class SeguimientoSesionViewController: UIViewController {
     
     // Other variables
     var sesionID:Int?
-    var dictionaryUser:[String:Int] = ["":0]
+    var dictionaryUser:[String:Int] = [:]
     var usuarios = [Usuario]()
+    var currentUser:Usuario?
     let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     let currentCetacUserRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
     //End other variables
 
+    
+    @IBAction func endEditing(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Picker Views
@@ -91,14 +96,14 @@ class SeguimientoSesionViewController: UIViewController {
         //Picker views
         
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
-            self.usuarioControlador.fetchUsuarios{ (result) in
+            self.usuarioControlador.fetchActiveUsuarios{ (result) in
                 switch result{
                 case .success(let users):self.setUsuarios(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
                 }
             }
         }else if currentCetacUserRol == "Tanatólogo"{
-            self.usuarioControlador.fetchUsuariosFromCetacUser{(result) in
+            self.usuarioControlador.fetchActiveUsuariosFromCetacUser{(result) in
                 switch result{
                 case .success(let users):self.setUsuarios(users)
                 case .failure(let error):self.displayError(error, title: "No se obtuvieron los usuarios")
@@ -124,6 +129,7 @@ class SeguimientoSesionViewController: UIViewController {
 
         }
     }
+    
     func setUsuarios(_ users:Usuarios){
         self.usuarios = users
         for user in users{
@@ -138,8 +144,16 @@ class SeguimientoSesionViewController: UIViewController {
         let newSesion:Sesion = Sesion(usuarioID: dictionaryUser[id!].value, numero_sesion: numero_sesion + 1, cuota_recuperacion: cuotaRecuperacionFloat!, tanatologoUID: cetacUserUID, motivo: motivoText.text!, tipo_servicio: tipo_servicioText.text!, tipo_intervencion: tipo_intervencionText.text!, herramienta: herramientaText.text!, evaluacion_sesion: evaluacion_sesionText.text!, fecha: Timestamp())
         sesionControlador.insertSesion(nuevaSesion: newSesion){ (result) in
             switch result{
-            case .success(let retorno):self.displayExito(title: retorno, detalle: "Se insertaron los datos correctamente")
-            case .failure(let error):self.displayError(error, title: "No se guardó la sesión")
+            case .success(_):self.displayExito(title: "Éxito", detalle: "Se insertaron los datos correctamente")
+            case .failure(let error):self.displayError(error, title: "No pudo guardar la sesión")
+            }
+        }
+        if cerrarExpedienteSwitch.isOn {
+            usuarioControlador.setUserInactive(usuarioID: currentUser!.usuarioID){(result) in
+                switch result{
+                case.success(let retorno): print(retorno)
+                case .failure(let error): print(error)
+                }
             }
         }
         // End crear sesion
@@ -225,7 +239,7 @@ extension SeguimientoSesionViewController: UIPickerViewDelegate, UIPickerViewDat
         case 4:
             return self.herramientas[row]
         case 5:
-            return self.dictionaryUser.key(from: row)
+            return self.dictionaryUser.key(forValue: usuarios[row].id)!
         default:
             return "No hay datos"
         }
@@ -242,7 +256,8 @@ extension SeguimientoSesionViewController: UIPickerViewDelegate, UIPickerViewDat
         case 4:
             herramientaText.text! = herramientas[row]
         case 5:
-            usuarioText.text! = dictionaryUser.key(from: row)!
+            currentUser = usuarios[row]
+            usuarioText.text! = dictionaryUser.key(forValue: usuarios[row].id)!
         default:
             return
         }
@@ -255,7 +270,7 @@ extension SeguimientoSesionViewController : ToolbarPickerViewDelegate{
     }
 }
 extension Dictionary where Value: Equatable {
-    func key(from value: Value) -> Key? {
-        return self.first(where: { $0.value == value })?.key
+    func key(forValue val: Value) -> Key? {
+        return self.first(where: { $1 == val })?.key
     }
 }

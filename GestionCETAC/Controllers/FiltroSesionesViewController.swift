@@ -116,8 +116,10 @@ extension FiltroSesionesViewController : UICollectionViewDelegate, UICollectionV
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedSesion = sesiones[indexPath.row-1]
-        self.performSegue(withIdentifier: "sesionInfo", sender: selectedSesion)
+        if indexPath.row != 0{
+            let selectedSesion = sesiones[indexPath.row-1]
+            self.performSegue(withIdentifier: "sesionInfo", sender: selectedSesion)
+        }
     }
 
 }

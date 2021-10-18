@@ -27,6 +27,9 @@ class SignupViewController: UIViewController {
     fileprivate let rolPickerView = ToolbarPickerView()
     // End ToolBarPickerView
     
+    @IBAction func endEditing(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     override func viewDidAppear(_ animated: Bool) {
         nombreTextField.text = ""
         apellidoTextField.text = ""

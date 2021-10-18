@@ -27,14 +27,14 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
             self.addButton.tintColor = UIColor.clear
         }
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
-            self.userController.fetchUsuarios{(result) in
+            self.userController.fetchActiveUsuarios{(result) in
                 switch result{
                 case .success(let usuarios): self.updateUI(with: usuarios)
                 case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
                 }
             }
         }else if currentCetacUserRol == "Tanatólogo"{
-            self.userController.fetchUsuariosFromCetacUser{ (result) in
+            self.userController.fetchActiveUsuariosFromCetacUser{ (result) in
                 switch result{
                 case .success(let usuarios): self.updateUI(with: usuarios)
                 case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
@@ -50,14 +50,14 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
             self.addButton.tintColor = UIColor.clear
         }
         if currentCetacUserRol == "Administrador" || currentCetacUserRol == "Soporte Admon"{
-            self.userController.fetchUsuarios{(result) in
+            self.userController.fetchActiveUsuarios{(result) in
                 switch result{
                 case .success(let usuarios): self.updateUI(with: usuarios)
                 case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
                 }
             }
         }else if currentCetacUserRol == "Tanatólogo"{
-            self.userController.fetchUsuariosFromCetacUser{ (result) in
+            self.userController.fetchActiveUsuariosFromCetacUser{ (result) in
                 switch result{
                 case .success(let usuarios): self.updateUI(with: usuarios)
                 case .failure(let error): self.displayError(error, title: "No se pudieron obtener usuarios")
@@ -108,7 +108,7 @@ class MisUsuariosCollectionViewController: UICollectionViewController {
         }else{
             cell.userImageView.image = UIImage(named: imagesName[indexPath.row])
         }
-        cell.userLabel.text = users[indexPath.row].nombre
+        cell.userLabel.text = users[indexPath.row].nombre + " " + users[indexPath.row].apellido_paterno
         return cell
     }
 
