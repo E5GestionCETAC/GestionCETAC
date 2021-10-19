@@ -16,60 +16,102 @@ class pieViewController: UIViewController {
 
     @IBOutlet weak var pieView: UIView!
     
-    lazy var sesionesChart:PieChartView = {
+    @IBOutlet weak var edadView: UIView!
+    
+    
+    lazy var userSexoChart:PieChartView = {
+        let ChartView = PieChartView()
+        return ChartView
+    }()
+    
+    lazy var topFiveEdades: PieChartView = {
         let ChartView = PieChartView()
         return ChartView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pieView.addSubview(sesionesChart)
-        sesionesChart.center(in: pieView)
-        sesionesChart.width(to: pieView)
-        sesionesChart.heightToWidth(of: pieView)
+        pieView.addSubview(userSexoChart)
+        userSexoChart.center(in: pieView)
+        userSexoChart.width(to: pieView)
+        userSexoChart.heightToWidth(of: pieView)
+        
+        edadView.addSubview(topFiveEdades)
+        topFiveEdades.center(in: edadView)
+        topFiveEdades.width(to: edadView)
+        topFiveEdades.heightToWidth(of: edadView)
+        
+        
         
         usuarioControlador.getSexo(){ (result) in
             switch result{
-            case .success(let sexo): self.sesionesChartActualiza(sexo);
+            case .success(let sexos): self.userSexoChartActualiza(sexos);
                 
             case .failure(let error):self.displayError(error, title: "No se pudo obtener el usuario")
+            }
+        }
+        
+        usuarioControlador.fetchEdades(){(result) in
+            switch result{
+            case.success(let edades): self.topFiveEdades(edades);
+            case.failure(let error): print(error)
             }
         }
        
         // Do any additional setup after loading the view.
     }
     
-    func sesionesChartActualiza(_ variables:[Int]){
+    func userSexoChartActualiza(_ variables:[Int]){
 
         
         let punto1 = PieChartDataEntry(value:Double(variables[0]),label:"Masculino")
         let punto2 = PieChartDataEntry(value:Double(variables[1]),label:"Femenino")
         let punto3 = PieChartDataEntry(value:Double(variables[2]),label:"Otro")
         
-        var sesionesDataSet = PieChartDataSet(entries: [punto1,punto2,punto3])
+        var sesionesDataSet = PieChartDataSet(entries: [punto1,punto2,punto3],label: "Porcentaje de usuarios por sexo")
         var data = PieChartData(dataSet: sesionesDataSet)
         
-
         
-        var colors: [UIColor] = []
+        var colors: [NSUIColor] = []
 
-
-          
- 
-        let color1 = UIColor(red: CGFloat(50/255), green: CGFloat(255/255), blue: CGFloat(0/255), alpha: 1)
-        let color2 = UIColor(red: CGFloat(50/255), green: CGFloat(55/255), blue: CGFloat(255/255), alpha: 1)
-        let color3 = UIColor(red: CGFloat(255/255), green: CGFloat(0/255), blue: CGFloat(255/255), alpha: 1)
+        let color1 = NSUIColor(red: 255/255.0, green: 204/255.0, blue: 255/255.0, alpha: 1.0)
+        let color2 = NSUIColor(red: 0/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1.0)
+        let color3 = NSUIColor(red: 64/255.0, green: 89/255.0, blue: 128/255.0, alpha: 1.0)
+        
         colors.append(color1)
         colors.append(color2)
         colors.append(color3)
          
-        
         sesionesDataSet.colors = colors
         
-        sesionesChart.data = data
-        sesionesChart.chartDescription?.text = "Porcentaje de sexo de los usuarios"
-        sesionesChart.notifyDataSetChanged()
+        userSexoChart.data = data
+        userSexoChart.notifyDataSetChanged()
     }
+    
+    func topFiveEdades(_ motivos:[(key:Int, value:Int)]){
+        
+        var total = 0
+        let sliceOne = PieChartDataEntry(value: Double(motivos[0].value), label:String(motivos[0].key) )
+        let sliceTwo = PieChartDataEntry(value: Double(motivos[1].value), label:String(motivos[1].key ))
+        let sliceThree = PieChartDataEntry(value: Double(motivos[2].value), label:String(motivos[2].key))
+        let sliceFour = PieChartDataEntry(value: Double(motivos[3].value), label:String(motivos[3].key))
+        let sliceFive = PieChartDataEntry(value: Double(motivos[4].value), label:String(motivos[4].key))
+        for i in 5..<motivos.count{
+            total += motivos[i].value
+        }
+        
+        let sliceSix = PieChartDataEntry(value: Double(total), label:"Otros" )
+        let dataSet = PieChartDataSet(entries:[sliceOne,sliceTwo,sliceThree,sliceFour,sliceFive,sliceSix], label: "Top 5 Edades")
+        
+        dataSet.colors = ChartColorTemplates.pastel()
+        
+        let data = PieChartData(dataSet:dataSet)
+        topFiveEdades.data = data
+        topFiveEdades.notifyDataSetChanged()
+    }
+    
+    
+    
     
     func displayError(_ error: Error, title:String){
         DispatchQueue.main.async {
