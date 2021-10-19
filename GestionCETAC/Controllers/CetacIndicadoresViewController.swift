@@ -35,6 +35,8 @@ class CetacIndicadoresViewController: UIViewController {
         barChartView.leftAxis.granularity = 1
         barChartView.leftAxis.labelFont = .boldSystemFont(ofSize: 14)
         barChartView.leftAxis.drawGridLinesEnabled = false
+        barChartView.legend.enabled = false
+        barChartView.xAxis.labelPosition = .bottom
         return barChartView
     }()
     
@@ -46,7 +48,7 @@ class CetacIndicadoresViewController: UIViewController {
         lineChartView.rightAxis.enabled = false
         
         lineChartView.leftAxis.labelFont = .boldSystemFont(ofSize: 14)
-
+        lineChartView.legend.enabled = false
         return lineChartView
     }()
     
@@ -58,6 +60,8 @@ class CetacIndicadoresViewController: UIViewController {
         ChartViewIndicadores.leftAxis.granularity = 1
         ChartViewIndicadores.leftAxis.labelFont = .boldSystemFont(ofSize: 14)
         ChartViewIndicadores.leftAxis.drawGridLinesEnabled = false
+        ChartViewIndicadores.legend.enabled = false
+        ChartViewIndicadores.xAxis.labelPosition = .bottom
         return ChartViewIndicadores
     }()
     
@@ -69,7 +73,7 @@ class CetacIndicadoresViewController: UIViewController {
         lineChartView.rightAxis.enabled = false
 
         lineChartView.leftAxis.labelFont = .boldSystemFont(ofSize: 14)
-        
+        lineChartView.legend.enabled = false
         return lineChartView
     }()
     
@@ -135,7 +139,7 @@ class CetacIndicadoresViewController: UIViewController {
         }
         
         let dataset = LineChartDataSet(entries: entriesLineChart)
-        dataset.mode = .cubicBezier
+        //dataset.mode = .cubicBezier
         let color = NSUIColor(red: 232/255, green: 223/255, blue: 245/255, alpha: 1)
         dataset.lineWidth = 3
         dataset.setColor(color)
@@ -160,7 +164,7 @@ class CetacIndicadoresViewController: UIViewController {
         }
         
         let dataset = LineChartDataSet(entries: entriesLineChart)
-        dataset.mode = .cubicBezier
+        //dataset.mode = .cubicBezier
         let color = NSUIColor(red: 232/255, green: 223/255, blue: 245/255, alpha: 1)
         dataset.lineWidth = 3
         dataset.setColor(color)
