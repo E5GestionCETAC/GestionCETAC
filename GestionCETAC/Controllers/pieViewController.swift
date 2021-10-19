@@ -43,24 +43,24 @@ class pieViewController: UIViewController {
 
         let labels = ["Masculino","Femenino","Otro"]
         
-        /*let punto1 = PieChartDataEntry(value:Double(variables[0]))
+        let punto1 = PieChartDataEntry(value:Double(variables[0]))
         let punto2 = PieChartDataEntry(value:Double(variables[1]))
         let punto3 = PieChartDataEntry(value:Double(variables[2]))
         
         var sesionesDataSet = PieChartDataSet(entries: [punto1,punto2,punto3])
-        var data = PieChartData(dataSet: sesionesDataSet)*/
+        var data = PieChartData(dataSet: sesionesDataSet)
         
-        var entries = [PieChartDataEntry]()
+        /*var entries = [PieChartDataEntry]()
             for (index, value) in variables.enumerated() {
                 let entry = PieChartDataEntry()
                 entry.y = Double(value)
                 entry.label = labels[index]
                 entries.append( entry)
-            }
+            }*/
         
         var colors: [UIColor] = []
         
-        let sesionesDataSet = PieChartDataSet( values: entries, label: "Pie Chart")
+        //let sesionesDataSet = PieChartDataSet( values: entries, label: "Pie Chart")
 
             for _ in 0..<sesionesDataSet.count {
                 let red = Double(arc4random_uniform(256))
