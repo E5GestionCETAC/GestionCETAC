@@ -37,7 +37,7 @@ class FiltroSesionesViewController: UIViewController {
         expedienteText.text = "Numero de expediente: \(selectedUser!.id)"
         cetacUsuarioControlador.getUserInfo(currentUserUID: selectedUser!.cetacUserID){ (result) in
             switch result{
-            case .success(let selectedCetacUser): self.setTanatologoName(selectedCetacUser.nombre)
+            case .success(let selectedCetacUser): self.setTanatologoName(selectedCetacUser)
             case .failure(let error):self.displayError(error, title: "No se pudo obtener la información del tanatólogo")
             }
         }
@@ -49,8 +49,8 @@ class FiltroSesionesViewController: UIViewController {
         }
     }
     
-    func setTanatologoName(_ name:String){
-        self.nombreTanatologoText.text = "Tanatologo: " + name
+    func setTanatologoName(_ usuario:cetacUser){
+        self.nombreTanatologoText.text = "Tanatologo: \(usuario.nombre) \(usuario.apellidos)"
     }
     
     func updateUI(with sesiones:Sesiones){
