@@ -131,5 +131,103 @@ class sesionController{
             }
         }
     }
+    //Indicadores
+    
+    func fetchTopFiveMotivos(completion: @escaping (Result<[(key:String, value:Int)], Error>) -> Void){
+        var topFive : [String:Int] = [:]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    let motivoExist = topFive[s.motivo] != nil
+                    if motivoExist{
+                        topFive[s.motivo]! += 1
+                    }
+                    else{
+                        topFive[s.motivo] = 1
+                    }
+                }
+                let retDic = topFive.sorted{ $0.value > $1.value }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
+    func fetchTopFiveIntervenciones(completion: @escaping (Result<[(key:String, value:Int)], Error>) -> Void){
+        var topFive : [String:Int] = [:]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    let motivoExist = topFive[s.tipo_intervencion] != nil
+                    if motivoExist{
+                        topFive[s.tipo_intervencion]! += 1
+                    }
+                    else{
+                        topFive[s.tipo_intervencion] = 1
+                    }
+                }
+                let retDic = topFive.sorted{ $0.value > $1.value }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
+    func getCuotaRecuperacionByMonth(completion: @escaping (Result<[(key:String, value:Float)], Error>) -> Void){
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM"
+        var dictionary:[String:Float] = ["01":0,"02":0,"03":0,"04":0,"05":0,"06":0,"07":0,"08":0,"09":0,"10":0,"11":0,"12":0]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    let date = s.fecha.dateValue()
+                    let month = formatter.string(from: date)
+                        dictionary[month]! += s.cuota_recuperacion
+                }
+                let retDic = dictionary.sorted{ $0.key < $1.key }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
+    func getCuotaRecuperacionByLastWeek(completion: @escaping (Result<[(key:String, value:Float)], Error>) -> Void){
+        let formatterDay = DateFormatter()
+        formatterDay.dateFormat = "dd"
+        let formatterDate = DateFormatter()
+        formatterDate.dateFormat = "yyyy-MM-dd"
+        let day1 = Calendar.current.date(byAdding: .day, value: -7,to: Date())
+        let day2 = Calendar.current.date(byAdding: .day, value: -6,to: Date())
+        let day3 = Calendar.current.date(byAdding: .day, value: -5,to: Date())
+        let day4 = Calendar.current.date(byAdding: .day, value: -4,to: Date())
+        let day5 = Calendar.current.date(byAdding: .day, value: -3,to: Date())
+        let day6 = Calendar.current.date(byAdding: .day, value: -2,to: Date())
+        let day7 = Calendar.current.date(byAdding: .day, value: -1,to: Date())
+        let day8 = Date()
+        var dictionary:[String:Float] = [formatterDay.string(from: day1!):0,formatterDay.string(from: day2!):0,formatterDay.string(from: day3!):0,formatterDay.string(from: day4!):0,formatterDay.string(from: day5!):0,formatterDay.string(from: day6!):0,formatterDay.string(from: day7!):0,formatterDay.string(from: day8):0]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    let date = s.fecha.dateValue()
+                    if formatterDate.string(from: date) == formatterDate.string(from: day1!) || formatterDate.string(from: date) == formatterDate.string(from: day2!) || formatterDate.string(from: date) == formatterDate.string(from: day3!) || formatterDate.string(from: date) == formatterDate.string(from: day4!) || formatterDate.string(from: date) == formatterDate.string(from: day5!) || formatterDate.string(from: date) == formatterDate.string(from: day6!) || formatterDate.string(from: date) == formatterDate.string(from: day7!) || formatterDate.string(from: date) == formatterDate.string(from: day8){
+                        dictionary[formatterDay.string(from: date)]! += s.cuota_recuperacion
+                    }
+                }
+                let retDic = dictionary.sorted{ $0.key < $1.key }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
+    //End Indicadores
 }
 
