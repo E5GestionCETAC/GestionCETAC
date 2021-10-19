@@ -50,6 +50,7 @@ class SesionIndicadoresViewController: UIViewController
             case.failure(let error): print(error)
             }
         }
+        
         // Do any additional setup after loading the view.
     }
     
