@@ -177,6 +177,22 @@ class sesionController{
         }
     }
     
+    func fetchIndicadoresServicios(completion: @escaping (Result<[(key:String, value:Int)], Error>) -> Void){
+        var servicios : [String:Int] = ["Servicios Holísticos":0, "Servicios de Acompañamiento":0, "Herramientas Alternativas":0]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    servicios[s.tipo_servicio]! += 1
+                }
+                let retDic = servicios.sorted{ $0.value > $1.value }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
     func getCuotaRecuperacionByMonth(completion: @escaping (Result<[(key:String, value:Float)], Error>) -> Void){
         let formatter = DateFormatter()
         formatter.dateFormat = "MM"

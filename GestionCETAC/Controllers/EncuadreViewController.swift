@@ -66,6 +66,7 @@ class EncuadreViewController: UIViewController {
     // End Switches
     
     // Otras Variable
+    @IBOutlet weak var scrollView: UIScrollView!
     var id:Int?
     let cetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     let currentRol:String = UserDefaults.standard.string(forKey: "currentCetacUserRol")!
@@ -121,7 +122,7 @@ class EncuadreViewController: UIViewController {
             case .failure(let error): self.displayError(error, title: "No se encontró el último ID")
             }
         }
-        
+        registerForKeyboardNotifications()
         // Do any additional setup after loading the view.
     }
     
@@ -221,6 +222,9 @@ class EncuadreViewController: UIViewController {
         if (nombreText.text!.isEmpty) || (paternoText.text!.isEmpty) || (maternoText.text!.isEmpty) || (religionText.text!.isEmpty) || (procedenciaText.text!.isEmpty) || (domicilioText.text!.isEmpty) || (tel_casaText.text!.isEmpty) || (celularText.text!.isEmpty) || (estado_civilText.text!.isEmpty) || (fecha_nacimientoText.text!.isEmpty) || (sexoText.text!.isEmpty) || (referido_porText.text!.isEmpty) || (problemaText.text!.isEmpty) || (indicador_actitudinalText.text!.isEmpty) || (ekrText.text!.isEmpty) || (numeroHijosText.text!.isEmpty) {
             return CustomError.emptyUserFields
         }
+        if isPhoneNumber(tel_casaText.text!) == false || isPhoneNumber(celularText.text!) == false{
+            return CustomError.noNumber
+        }
         if isNumber(numeroHijosText.text!) == false{
             return CustomError.emptyHijoFields
         }
@@ -240,6 +244,12 @@ class EncuadreViewController: UIViewController {
         let floatNumberRegex = "^\\d*\\.?\\d*$"
         let floatNumberTest = NSPredicate(format: "SELF MATCHES %@", floatNumberRegex)
         return floatNumberTest.evaluate(with: numero)
+    }
+    
+    func isPhoneNumber(_ numero:String) -> Bool{
+        let phoneNumberRegex = "^\\d{10}$"
+        let phoneNumberTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
+        return phoneNumberTest.evaluate(with: numero)
     }
     
     func displayExito(title : String, detalle : String){
@@ -296,6 +306,27 @@ class EncuadreViewController: UIViewController {
         self.view.endEditing(true)
     }
      // End Date picker view --------------------------
+    
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWasShown(_ notification: NSNotification) {
+        guard let info = notification.userInfo,
+              let keyboardFrameValue = info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else { return }
+        
+        let keyboardFrame = keyboardFrameValue.cgRectValue
+        let keyboardSize = keyboardFrame.size
+        
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+        scrollView.contentInset = contentInsets
+    }
+    
+    @objc func keyboardWillBeHidden(_ notification: NSNotification) {
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
+    }
 }
 
 extension EncuadreViewController: UIPickerViewDelegate, UIPickerViewDataSource{
