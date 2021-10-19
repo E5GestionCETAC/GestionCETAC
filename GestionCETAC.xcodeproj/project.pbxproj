@@ -17,6 +17,7 @@
 		C21F162B27174833001B4186 /* FiltroSesionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */; };
 		C21F162F27174FA7001B4186 /* FiltroSesionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */; };
 		C21F174D271CC1F0001B4186 /* CetacIndicadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F174C271CC1F0001B4186 /* CetacIndicadoresViewController.swift */; };
+		C21F179A271E4412001B4186 /* SesionIndicadoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F1799271E4412001B4186 /* SesionIndicadoresViewController.swift */; };
 		C25EF30327091B400046EA18 /* ToolBarPickerViewUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */; };
 		C25EF308270980EA0046EA18 /* encuadre_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF306270980E50046EA18 /* encuadre_header.png */; };
 		C25EF30B270982AF0046EA18 /* seguimiento_header.png in Resources */ = {isa = PBXBuildFile; fileRef = C25EF30A270982AF0046EA18 /* seguimiento_header.png */; };
@@ -91,6 +92,7 @@
 		C21F162A27174833001B4186 /* FiltroSesionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionCollectionViewCell.swift; sourceTree = "<group>"; };
 		C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroSesionesViewController.swift; sourceTree = "<group>"; };
 		C21F174C271CC1F0001B4186 /* CetacIndicadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CetacIndicadoresViewController.swift; sourceTree = "<group>"; };
+		C21F1799271E4412001B4186 /* SesionIndicadoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionIndicadoresViewController.swift; sourceTree = "<group>"; };
 		C25EF30227091B400046EA18 /* ToolBarPickerViewUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarPickerViewUtility.swift; sourceTree = "<group>"; };
 		C25EF306270980E50046EA18 /* encuadre_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encuadre_header.png; sourceTree = "<group>"; };
 		C25EF30A270982AF0046EA18 /* seguimiento_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seguimiento_header.png; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				C21F162E27174FA7001B4186 /* FiltroSesionesViewController.swift */,
 				79964540271AC9C200F30ED4 /* pieViewController.swift */,
 				C21F174C271CC1F0001B4186 /* CetacIndicadoresViewController.swift */,
+				C21F1799271E4412001B4186 /* SesionIndicadoresViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				C2BF29F72705069B00621763 /* EncuadreViewController.swift in Sources */,
 				EA9EA45426FBE33C00B5B565 /* AppDelegate.swift in Sources */,
 				C2E97687270E8706001C5E44 /* MisReportesCollectionViewController.swift in Sources */,
+				C21F179A271E4412001B4186 /* SesionIndicadoresViewController.swift in Sources */,
 				C274AFE427026185003DC50F /* HomeGestionCETACViewController.swift in Sources */,
 				C2AEE9BC270A8255004FD450 /* InformacionUsuarioViewController.swift in Sources */,
 				C274AFE12702614B003DC50F /* SignupViewController.swift in Sources */,

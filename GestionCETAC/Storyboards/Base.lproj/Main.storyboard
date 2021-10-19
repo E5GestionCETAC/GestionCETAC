@@ -1452,7 +1452,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-2m-vvA">
-                                <rect key="frame" x="0.0" y="50" width="810" height="980"/>
+                                <rect key="frame" x="0.0" y="102" width="810" height="928"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LoW-TZ-Psx">
                                         <rect key="frame" x="0.0" y="6" width="810" height="1850"/>
@@ -3817,18 +3817,76 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         <!--Indicadores de las sesiones-->
         <scene sceneID="YWJ-oC-Zbk">
             <objects>
-                <viewController id="wLx-fS-82i" sceneMemberID="viewController">
+                <viewController id="wLx-fS-82i" customClass="SesionIndicadoresViewController" customModule="GestionCETAC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l5B-gN-78x">
                         <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="905-WJ-ikG">
+                                <rect key="frame" x="0.0" y="102" width="810" height="928"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-6O-AL8">
+                                        <rect key="frame" x="0.0" y="0.0" width="810" height="1506"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 5 Motivos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-S8-L2v">
+                                                <rect key="frame" x="55" y="8" width="700" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3E3-bB-DuR">
+                                                <rect key="frame" x="55" y="48" width="700" height="700"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="700" id="SJV-FI-Fy1"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 5 intervenciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-Mq-baS">
+                                                <rect key="frame" x="55" y="758" width="700" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7z-gA-uSX">
+                                                <rect key="frame" x="55" y="798" width="700" height="700"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="700" id="cVw-R6-Gcs"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="55" bottom="8" right="55"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aNX-6O-AL8" firstAttribute="leading" secondItem="tXf-Ad-3ZV" secondAttribute="leading" id="5lk-ry-YCI"/>
+                                    <constraint firstItem="aNX-6O-AL8" firstAttribute="trailing" secondItem="tXf-Ad-3ZV" secondAttribute="trailing" id="GnV-wp-fvn"/>
+                                    <constraint firstItem="aNX-6O-AL8" firstAttribute="bottom" secondItem="tXf-Ad-3ZV" secondAttribute="bottom" id="awr-KJ-vGH"/>
+                                    <constraint firstItem="aNX-6O-AL8" firstAttribute="top" secondItem="tXf-Ad-3ZV" secondAttribute="top" id="bR1-fh-aCQ"/>
+                                    <constraint firstItem="aNX-6O-AL8" firstAttribute="width" secondItem="j2X-tA-iq2" secondAttribute="width" id="xav-OD-tZZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="tXf-Ad-3ZV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="j2X-tA-iq2"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fd5-1Q-xCY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="905-WJ-ikG" firstAttribute="leading" secondItem="fd5-1Q-xCY" secondAttribute="leading" id="7Iz-gk-xwM"/>
+                            <constraint firstItem="905-WJ-ikG" firstAttribute="top" secondItem="fd5-1Q-xCY" secondAttribute="top" id="9WI-VP-nLn"/>
+                            <constraint firstItem="905-WJ-ikG" firstAttribute="bottom" secondItem="fd5-1Q-xCY" secondAttribute="bottom" id="uX3-aQ-uwo"/>
+                            <constraint firstItem="905-WJ-ikG" firstAttribute="trailing" secondItem="fd5-1Q-xCY" secondAttribute="trailing" id="yoc-kZ-vsg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Indicadores de las sesiones" id="Gmk-nh-TgH"/>
+                    <connections>
+                        <outlet property="pieVistaIntervenciones" destination="v7z-gA-uSX" id="oMC-lP-YLa"/>
+                        <outlet property="pieVistaMotivos" destination="3E3-bB-DuR" id="LMI-tc-hTf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ras-TN-gpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="3616"/>
+            <point key="canvasLocation" x="1781.4814814814813" y="3615.5555555555557"/>
         </scene>
     </scenes>
     <resources>

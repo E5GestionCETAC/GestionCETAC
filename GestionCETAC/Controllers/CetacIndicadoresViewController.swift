@@ -16,8 +16,7 @@ class CetacIndicadoresViewController: UIViewController {
     let cetacUsuariosControlador = cetacUserController()
     // End Controladores
     var cetacUsersID = [String]()
-    var nombresTanatologos = [String]()
-    var dataDictionary = Dictionary<String,Int>()
+    var dataDictionary:[String:Int] = [:]
     var entries = [BarChartDataEntry]()
     weak var axisFormatDelegate:IAxisValueFormatter?
     @IBOutlet weak var vistaBarras: UIView!
@@ -62,21 +61,20 @@ class CetacIndicadoresViewController: UIViewController {
     }
     
     func getCetacUsers(_ dictionary: Dictionary<String, Int>){
-        dataDictionary = dictionary
-        for (cetacUserID, _) in dictionary{
+        for (cetacUserID, value) in dictionary{
             cetacUsersID.append(cetacUserID)
             cetacUsuariosControlador.getUserInfo(currentUserUID: cetacUserID){(result) in
                 switch result{
-                case .success(let cetacUser): self.setInfo(cetacUser.nombre)
+                case .success(let cetacUser): self.setInfo(cetacUser.nombre, value)
                 case .failure(let error): print(error)
                 }
             }
         }
     }
     
-    func setInfo(_ name: String){
-        nombresTanatologos.append(name)
-        if cetacUsersID.count == nombresTanatologos.count {
+    func setInfo(_ name: String, _ value:Int){
+        dataDictionary[name] = value
+        if cetacUsersID.count == dataDictionary.count {
             setData()
         }
     }
@@ -94,6 +92,6 @@ class CetacIndicadoresViewController: UIViewController {
 
 extension CetacIndicadoresViewController: IAxisValueFormatter{
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        return nombresTanatologos[Int(value)]
+        return Array(dataDictionary)[Int(value)].key
     }
 }
