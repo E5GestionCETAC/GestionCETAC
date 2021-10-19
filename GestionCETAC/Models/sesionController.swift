@@ -131,5 +131,52 @@ class sesionController{
             }
         }
     }
+    //Indicadores
+    
+    func fetchTopFiveMotivos(completion: @escaping (Result<[(key:String, value:Int)], Error>) -> Void){
+        var topFive : [String:Int] = [:]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    let motivoExist = topFive[s.motivo] != nil
+                    if motivoExist{
+                        topFive[s.motivo]! += 1
+                    }
+                    else{
+                        topFive[s.motivo] = 1
+                    }
+                }
+                let retDic = topFive.sorted{ $0.value > $1.value }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
+    func fetchTopFiveIntervenciones(completion: @escaping (Result<[(key:String, value:Int)], Error>) -> Void){
+        var topFive : [String:Int] = [:]
+        db.collection("sesiones").order(by: "fecha", descending: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let s = Sesion(aDoc: document)
+                    let motivoExist = topFive[s.tipo_intervencion] != nil
+                    if motivoExist{
+                        topFive[s.tipo_intervencion]! += 1
+                    }
+                    else{
+                        topFive[s.tipo_intervencion] = 1
+                    }
+                }
+                let retDic = topFive.sorted{ $0.value > $1.value }
+                completion(.success(retDic))
+            }
+        }
+    }
+    
+    //End Indicadores
 }
 
