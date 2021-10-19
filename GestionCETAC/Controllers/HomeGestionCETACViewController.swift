@@ -15,7 +15,6 @@ class HomeGestionCETACViewController: UIViewController {
     let currentCetacUserUID:String = UserDefaults.standard.string(forKey: "currentCetacUserUID")!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = true
         addButton.isEnabled = false
         addButton.tintColor = UIColor.clear
         currentUserController.getUserInfo(currentUserUID: self.currentCetacUserUID){ (result) in
