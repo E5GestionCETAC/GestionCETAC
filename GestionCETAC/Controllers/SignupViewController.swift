@@ -191,7 +191,7 @@ extension CustomError : LocalizedError{
         case .noPrivileges:
             return NSLocalizedString("No cuenta con los privilegios para realizar esta acción", comment: "No tiene privilegios para esta acción")
         case .noNumber:
-            return NSLocalizedString("El valor deber ser un número", comment: "El tipo de valor no es el esperado")
+            return NSLocalizedString("El teléfono de casa y de casa debe tener solo 10 dígitos", comment: "El tipo de valor no es el esperado")
         case .noMatchCuota:
             return NSLocalizedString("El valor de Cuota de recuperación deber ser un número", comment: "El tipo de valor no es el esperado")
         case . emptyHijoFields:

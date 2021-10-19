@@ -44,6 +44,8 @@ class ReportesInfoViewController: UIViewController {
     @IBOutlet var saveButton: UIBarButtonItem!
     @IBOutlet var editButton: UIBarButtonItem!
     
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     var currentUser:Usuario?
     var currentSesion:Sesion?
     var editingMode:Bool = false
@@ -104,6 +106,8 @@ class ReportesInfoViewController: UIViewController {
             case .failure(let error):self.displayError(error, title: "No se pudo obtener el tanatologo")
             }
         }
+        
+        registerForKeyboardNotifications()
     }
     
     func setUserInfo(_ currentUser:Usuario){
@@ -294,6 +298,27 @@ class ReportesInfoViewController: UIViewController {
         fechaText.text = formatter.string(from: datePicker.date)
         fechaNacimientoDate = datePicker.date
         self.view.endEditing(true)
+    }
+    
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWasShown(_ notification: NSNotification) {
+        guard let info = notification.userInfo,
+              let keyboardFrameValue = info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue else { return }
+        
+        let keyboardFrame = keyboardFrameValue.cgRectValue
+        let keyboardSize = keyboardFrame.size
+        
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+        scrollView.contentInset = contentInsets
+    }
+    
+    @objc func keyboardWillBeHidden(_ notification: NSNotification) {
+        let contentInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInsets
     }
 }
 
