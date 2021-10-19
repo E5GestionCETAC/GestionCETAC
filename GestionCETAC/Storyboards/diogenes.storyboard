@@ -25,11 +25,16 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-8X-yV1">
                                 <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
-                                <string key="text">Tanatología: Proceso de encuentro personal en donde a través de un diálogo con la ayuda de técnicas y herramientas tanatológicas la persona identifica y reconoce sus emociones ante una pérdida.
+                                <mutableString key="text">Tanatología: Proceso de encuentro personal en donde a través de un diálogo con la ayuda de técnicas y herramientas tanatológicas la persona identifica y reconoce sus emociones ante una pérdida.
 
 Acompañamiento Individual: Proceso individual en donde se crea un vínculo de afecto y confianza, la persona se siente escuchada, comprendida, respetada y aceptada. Se busca resignificar su propia vida de alguna situación que está viviendo o vivió (miedos, violencia, dudas, inseguridades, bloqueos, vicios, etc.) con el fin de ayudarlos a desarrollar soluciones en su propio beneficio y vivir el aquí y el ahora.
 
-Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se comparten las experiencias que al mismo tiempo está siendo vivida por el resto de los participantes. Se crean lazos de confianza, compasión, empatía y aceptación en un espacio seguro en donde se es libre de comunicar y dar solución ante una situación.</string>
+Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se comparten las experiencias que al mismo tiempo está siendo vivida por el resto de los participantes. Se crean lazos de confianza, compasión, empatía y aceptación en un espacio seguro en donde se es libre de comunicar y dar solución ante una situación.
+
+Logoterapia: Proceso para guiar a la persona en su búsqueda del sentido de vida y permite descubrir la capacidad que tienen los humanos para superar los condicionamientos más difíciles “sanar a través del sentido”. Sanar, cuidar, acompañar lo que implica buscar sentido y esencia para vivir en plenitud.
+
+Mindfulness: Es una práctica que ayuda a la persona a enfocarse en el presente reconociendo que puede pasar por momentos de estrés, momentos de crisis laboral y personal, de baja autoestima y depresión. A través de herramientas de autoconocimiento, autoreconocimiento y autocontrol podemos entrenar la mente para tener una actitud de apertura, aceptación y solución en cualquier situación de nuestra vida para un balance y dominio emocional.
+</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -58,7 +63,7 @@ Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se compar
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34.81481481481481" y="93.888888888888886"/>
+            <point key="canvasLocation" x="35" y="94"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cJC-ol-Mld">
@@ -76,9 +81,9 @@ Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se compar
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMZ-tp-jgV">
                                 <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
-                                <string key="text">Aromaterapia y Musicoterapia: En un espacio y ambiente de tranquilidad la persona vive un estado de bienestar físico, emocional y mental mediante el uso controlado de los aromas de nuestras esencias combinado con musicoterapia transportando al individuo a un ambiente de armonía y sensación de calma y relajación con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.
+                                <mutableString key="text">Aromaterapia y Musicoterapia: En un espacio y ambiente de tranquilidad la persona vive un estado de bienestar físico, emocional y mental mediante el uso controlado de los aromas de nuestras esencias combinado con musicoterapia transportando al individuo a un ambiente de armonía y sensación de calma y relajación con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.
 
-Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la parte física, emocional y espiritual. Se trabaja en el conjunto de chakras ubicado a lo largo de la columna vertebral hasta el cerebro. Esta energía circula a través de la persona y representa el conjunto de experiencias de distintos niveles y se almacena a lo largo de su vida y en ocasiones se encuentra bloqueada. Ayudamos a que esa energía fluya en el individuo para restablecer la armonía y conexión con su mente, sus emociones, su cuerpo y su espíritu.</string>
+Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la parte física, emocional y espiritual. Se trabaja en el conjunto de chakras ubicado a lo largo de la columna vertebral hasta el cerebro. Esta energía circula a través de la persona y representa el conjunto de experiencias de distintos niveles y se almacena a lo largo de su vida y en ocasiones se encuentra bloqueada. Ayudamos a que esa energía fluya en el individuo para restablecer la armonía y conexión con su mente, sus emociones, su cuerpo y su espíritu.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -125,9 +130,9 @@ Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la par
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0P-n0-VeB">
                                 <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
-                                <string key="text">Flores De Bach: Ayuda a reestablecer el equilibrio emocional y energético mediante extractos naturales extraídos de flores silvestres con el fin de relajar y aliviar la mente en situaciones de duelo, ansiedad, miedos, stress, entre otros. No tienen efectos secundarios y sin problema se pueden utilizar mientras consumes otros medicamentos. Contamos con 38 soluciones naturales.
+                                <mutableString key="text">Flores De Bach: Ayuda a reestablecer el equilibrio emocional y energético mediante extractos naturales extraídos de flores silvestres con el fin de relajar y aliviar la mente en situaciones de duelo, ansiedad, miedos, stress, entre otros. No tienen efectos secundarios y sin problema se pueden utilizar mientras consumes otros medicamentos. Contamos con 38 soluciones naturales.
 
-Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia que, a través del olfato, estimula el sistema nervioso central ofreciendo resultados positivos en el manejo de las emociones. Se cuenta con brisas relajantes, brisas reanimante y brisas equilibrantes.</string>
+Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia que, a través del olfato, estimula el sistema nervioso central ofreciendo resultados positivos en el manejo de las emociones. Se cuenta con brisas relajantes, brisas reanimante y brisas equilibrantes.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1244,12 +1249,822 @@ Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia qu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chK-zQ-iQT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="1839"/>
+            <point key="canvasLocation" x="1789" y="1904"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s8J-be-hGU">
+            <objects>
+                <viewController id="1GN-Bb-75c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Ho-hL-XX1">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompañamiento individual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JK6-u8-ljs">
+                                <rect key="frame" x="159.5" y="80" width="491" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Edk-6c-jKM">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Acompañamiento Individual: Proceso individual en donde se crea un vínculo de afecto y confianza, la persona se siente escuchada, comprendida, respetada y aceptada. Se busca resignificar su propia vida de alguna situación que está viviendo o vivió (miedos, violencia, dudas, inseguridades, bloqueos, vicios, etc.) con el fin de ayudarlos a desarrollar soluciones en su propio beneficio y vivir el aquí y el ahora.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Acompañamiento individual" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-hC-rfr">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Dhn-hC-rfr" secondAttribute="height" multiplier="811:303" id="58l-0w-CpA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="42W-JV-zPu"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="42W-JV-zPu" firstAttribute="trailing" secondItem="Edk-6c-jKM" secondAttribute="trailing" constant="71" id="0vv-R3-CQ5"/>
+                            <constraint firstItem="Dhn-hC-rfr" firstAttribute="leading" secondItem="2Ho-hL-XX1" secondAttribute="leading" id="9Iw-xa-Us2"/>
+                            <constraint firstItem="Dhn-hC-rfr" firstAttribute="top" secondItem="JK6-u8-ljs" secondAttribute="bottom" constant="90" id="CHz-9h-uDs"/>
+                            <constraint firstItem="Edk-6c-jKM" firstAttribute="leading" secondItem="42W-JV-zPu" secondAttribute="leading" constant="71" id="HLQ-LV-uGY"/>
+                            <constraint firstItem="JK6-u8-ljs" firstAttribute="centerX" secondItem="2Ho-hL-XX1" secondAttribute="centerX" id="U1p-rM-WW3"/>
+                            <constraint firstItem="Edk-6c-jKM" firstAttribute="top" secondItem="Dhn-hC-rfr" secondAttribute="bottom" constant="43" id="WMv-Wg-Lli"/>
+                            <constraint firstItem="42W-JV-zPu" firstAttribute="bottom" secondItem="Edk-6c-jKM" secondAttribute="bottom" constant="40" id="XFX-MX-zBU"/>
+                            <constraint firstAttribute="trailing" secondItem="Dhn-hC-rfr" secondAttribute="trailing" id="igL-Tw-6dN"/>
+                            <constraint firstItem="JK6-u8-ljs" firstAttribute="top" secondItem="42W-JV-zPu" secondAttribute="top" constant="80" id="ix8-kZ-s7V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k7a-Th-x8J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="55"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UAp-9k-LlU">
+            <objects>
+                <viewController id="wZu-Gb-e4t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKu-7X-7aF">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompañamiento grupal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnb-lg-X5A">
+                                <rect key="frame" x="188.5" y="80" width="433" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xL-rp-aij">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Acompañamiento Grupal: Proceso en donde las personas no se enjuician, se comparten las experiencias que al mismo tiempo está siendo vivida por el resto de los participantes. Se crean lazos de confianza, compasión, empatía y aceptación en un espacio seguro en donde se es libre de comunicar y dar solución ante una situación.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Acompañamiento grupal" translatesAutoresizingMaskIntoConstraints="NO" id="KzD-t9-8m5">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KzD-t9-8m5" secondAttribute="height" multiplier="811:303" id="mQa-j7-fCB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UNl-RY-xJf"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="UNl-RY-xJf" firstAttribute="trailing" secondItem="6xL-rp-aij" secondAttribute="trailing" constant="71" id="6Os-SA-mQ3"/>
+                            <constraint firstItem="Xnb-lg-X5A" firstAttribute="top" secondItem="UNl-RY-xJf" secondAttribute="top" constant="80" id="HWd-ff-a4a"/>
+                            <constraint firstItem="KzD-t9-8m5" firstAttribute="leading" secondItem="lKu-7X-7aF" secondAttribute="leading" id="IeJ-2B-U1a"/>
+                            <constraint firstAttribute="trailing" secondItem="KzD-t9-8m5" secondAttribute="trailing" id="KG2-Bs-qnJ"/>
+                            <constraint firstItem="Xnb-lg-X5A" firstAttribute="centerX" secondItem="lKu-7X-7aF" secondAttribute="centerX" id="SmK-lH-0kC"/>
+                            <constraint firstItem="6xL-rp-aij" firstAttribute="leading" secondItem="UNl-RY-xJf" secondAttribute="leading" constant="71" id="byH-y2-4Mt"/>
+                            <constraint firstItem="UNl-RY-xJf" firstAttribute="bottom" secondItem="6xL-rp-aij" secondAttribute="bottom" constant="40" id="c0g-wy-shM"/>
+                            <constraint firstItem="KzD-t9-8m5" firstAttribute="top" secondItem="Xnb-lg-X5A" secondAttribute="bottom" constant="90" id="rzS-xz-fNO"/>
+                            <constraint firstItem="6xL-rp-aij" firstAttribute="top" secondItem="KzD-t9-8m5" secondAttribute="bottom" constant="43" id="yIF-vT-7C2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KM1-vT-ZYB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="744"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nb2-Pt-9xi">
+            <objects>
+                <viewController id="vhk-x7-FAD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hhx-JZ-Bxg">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanatología" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egi-tF-GeT">
+                                <rect key="frame" x="302.5" y="80" width="205" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rr2-eQ-ZxD">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Tanatología: Proceso de encuentro personal en donde a través de un diálogo con la ayuda de técnicas y herramientas tanatológicas la persona identifica y reconoce sus emociones ante una pérdida.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tanatologia" translatesAutoresizingMaskIntoConstraints="NO" id="ZyD-js-FVv">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZyD-js-FVv" secondAttribute="height" multiplier="811:303" id="gkw-uD-MQI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fz4-5G-7L2"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZyD-js-FVv" secondAttribute="trailing" id="0V8-yZ-6Ye"/>
+                            <constraint firstItem="ZyD-js-FVv" firstAttribute="leading" secondItem="Hhx-JZ-Bxg" secondAttribute="leading" id="4J0-Jr-3d6"/>
+                            <constraint firstItem="rr2-eQ-ZxD" firstAttribute="top" secondItem="ZyD-js-FVv" secondAttribute="bottom" constant="43" id="4W0-tF-Tzt"/>
+                            <constraint firstItem="fz4-5G-7L2" firstAttribute="bottom" secondItem="rr2-eQ-ZxD" secondAttribute="bottom" constant="40" id="8Te-mf-Q4O"/>
+                            <constraint firstItem="rr2-eQ-ZxD" firstAttribute="leading" secondItem="fz4-5G-7L2" secondAttribute="leading" constant="71" id="Fil-tO-ICP"/>
+                            <constraint firstItem="egi-tF-GeT" firstAttribute="top" secondItem="fz4-5G-7L2" secondAttribute="top" constant="80" id="ILE-gp-THw"/>
+                            <constraint firstItem="ZyD-js-FVv" firstAttribute="top" secondItem="egi-tF-GeT" secondAttribute="bottom" constant="90" id="NOf-uw-ZcE"/>
+                            <constraint firstItem="egi-tF-GeT" firstAttribute="centerX" secondItem="Hhx-JZ-Bxg" secondAttribute="centerX" id="Teg-Fa-0Ln"/>
+                            <constraint firstItem="fz4-5G-7L2" firstAttribute="trailing" secondItem="rr2-eQ-ZxD" secondAttribute="trailing" constant="71" id="eyf-0G-gTl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR4-qD-RkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="-603"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FAk-Br-ton">
+            <objects>
+                <viewController id="Qao-u7-F5x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIB-ZP-Nsg">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logoterapia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8q-Pm-YCd">
+                                <rect key="frame" x="299" y="80" width="212" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yxe-75-SYD">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Logoterapia: Proceso para guiar a la persona en su búsqueda del sentido de vida y permite descubrir la capacidad que tienen los humanos para superar los condicionamientos más difíciles “sanar a través del sentido”. Sanar, cuidar, acompañar lo que implica buscar sentido y esencia para vivir en plenitud.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logoterapia" translatesAutoresizingMaskIntoConstraints="NO" id="pbK-sV-tdt">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pbK-sV-tdt" secondAttribute="height" multiplier="811:303" id="qn4-fi-XQn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3DC-k3-cU9"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pbK-sV-tdt" secondAttribute="trailing" id="EXM-pl-aZP"/>
+                            <constraint firstItem="yxe-75-SYD" firstAttribute="leading" secondItem="3DC-k3-cU9" secondAttribute="leading" constant="71" id="JLm-aH-U43"/>
+                            <constraint firstItem="pbK-sV-tdt" firstAttribute="leading" secondItem="ZIB-ZP-Nsg" secondAttribute="leading" id="LnB-o2-DSu"/>
+                            <constraint firstItem="pbK-sV-tdt" firstAttribute="top" secondItem="q8q-Pm-YCd" secondAttribute="bottom" constant="90" id="Zxq-oh-bgm"/>
+                            <constraint firstItem="q8q-Pm-YCd" firstAttribute="centerX" secondItem="ZIB-ZP-Nsg" secondAttribute="centerX" id="oXL-1I-Z6H"/>
+                            <constraint firstItem="yxe-75-SYD" firstAttribute="top" secondItem="pbK-sV-tdt" secondAttribute="bottom" constant="43" id="qGy-To-uCm"/>
+                            <constraint firstItem="3DC-k3-cU9" firstAttribute="trailing" secondItem="yxe-75-SYD" secondAttribute="trailing" constant="71" id="teq-wN-C2a"/>
+                            <constraint firstItem="q8q-Pm-YCd" firstAttribute="top" secondItem="3DC-k3-cU9" secondAttribute="top" constant="80" id="vgw-dx-jrB"/>
+                            <constraint firstItem="3DC-k3-cU9" firstAttribute="bottom" secondItem="yxe-75-SYD" secondAttribute="bottom" constant="40" id="vrm-e1-zdA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmj-et-GLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="1429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u9e-nx-eTf">
+            <objects>
+                <viewController id="5QB-IX-iRx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YK4-Nx-ade">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindfulness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-1g-AsI">
+                                <rect key="frame" x="296" y="80" width="218" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6pz-Fv-Tya">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Mindfulness: Es una práctica que ayuda a la persona a enfocarse en el presente reconociendo que puede pasar por momentos de estrés, momentos de crisis laboral y personal, de baja autoestima y depresión. A través de herramientas de autoconocimiento, autoreconocimiento y autocontrol podemos entrenar la mente para tener una actitud de apertura, aceptación y solución en cualquier situación de nuestra vida para un balance y dominio emocional.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mindfulness" translatesAutoresizingMaskIntoConstraints="NO" id="At6-cw-dCR">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="At6-cw-dCR" secondAttribute="height" multiplier="811:303" id="gG7-lj-EMQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CfI-Gl-9Sx"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CfI-Gl-9Sx" firstAttribute="trailing" secondItem="6pz-Fv-Tya" secondAttribute="trailing" constant="71" id="4Ra-V3-g8W"/>
+                            <constraint firstItem="At6-cw-dCR" firstAttribute="top" secondItem="Ccj-1g-AsI" secondAttribute="bottom" constant="90" id="HLv-qV-xCH"/>
+                            <constraint firstItem="Ccj-1g-AsI" firstAttribute="top" secondItem="CfI-Gl-9Sx" secondAttribute="top" constant="80" id="dWv-Bs-Noc"/>
+                            <constraint firstAttribute="trailing" secondItem="At6-cw-dCR" secondAttribute="trailing" id="fhP-jB-LFM"/>
+                            <constraint firstItem="At6-cw-dCR" firstAttribute="leading" secondItem="YK4-Nx-ade" secondAttribute="leading" id="j8M-nS-pFV"/>
+                            <constraint firstItem="6pz-Fv-Tya" firstAttribute="leading" secondItem="CfI-Gl-9Sx" secondAttribute="leading" constant="71" id="mQe-uB-ZOL"/>
+                            <constraint firstItem="CfI-Gl-9Sx" firstAttribute="bottom" secondItem="6pz-Fv-Tya" secondAttribute="bottom" constant="40" id="muV-6B-ZPD"/>
+                            <constraint firstItem="Ccj-1g-AsI" firstAttribute="centerX" secondItem="YK4-Nx-ade" secondAttribute="centerX" id="omc-bM-0GK"/>
+                            <constraint firstItem="6pz-Fv-Tya" firstAttribute="top" secondItem="At6-cw-dCR" secondAttribute="bottom" constant="43" id="qGv-3J-r4g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTe-r3-i1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="2096"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l7v-e1-7lI">
+            <objects>
+                <viewController id="QVf-0e-P27" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSL-tC-tNv">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aromaterapia y Musicoterapia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1L-KX-2SQ">
+                                <rect key="frame" x="140.5" y="80" width="529" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaZ-sv-9cy">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Aromaterapia y Musicoterapia: En un espacio y ambiente de tranquilidad la persona vive un estado de bienestar físico, emocional y mental mediante el uso controlado de los aromas de nuestras esencias combinado con musicoterapia transportando al individuo a un ambiente de armonía y sensación de calma y relajación con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aromaterapia y musicoterapia" translatesAutoresizingMaskIntoConstraints="NO" id="cXG-6A-haq">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cXG-6A-haq" secondAttribute="height" multiplier="811:303" id="zzy-yK-yI8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rh8-sg-eBA"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rh8-sg-eBA" firstAttribute="trailing" secondItem="BaZ-sv-9cy" secondAttribute="trailing" constant="71" id="5C1-du-X91"/>
+                            <constraint firstItem="D1L-KX-2SQ" firstAttribute="top" secondItem="rh8-sg-eBA" secondAttribute="top" constant="80" id="9mN-5e-bal"/>
+                            <constraint firstItem="BaZ-sv-9cy" firstAttribute="top" secondItem="cXG-6A-haq" secondAttribute="bottom" constant="43" id="CH9-XC-920"/>
+                            <constraint firstItem="cXG-6A-haq" firstAttribute="top" secondItem="D1L-KX-2SQ" secondAttribute="bottom" constant="90" id="Jir-5w-bSG"/>
+                            <constraint firstAttribute="trailing" secondItem="cXG-6A-haq" secondAttribute="trailing" id="TPV-tN-eVI"/>
+                            <constraint firstItem="BaZ-sv-9cy" firstAttribute="leading" secondItem="rh8-sg-eBA" secondAttribute="leading" constant="71" id="Y4v-Kn-eOz"/>
+                            <constraint firstItem="cXG-6A-haq" firstAttribute="leading" secondItem="hSL-tC-tNv" secondAttribute="leading" id="hzJ-0f-FjJ"/>
+                            <constraint firstItem="rh8-sg-eBA" firstAttribute="bottom" secondItem="BaZ-sv-9cy" secondAttribute="bottom" constant="40" id="wgn-fV-hUQ"/>
+                            <constraint firstItem="D1L-KX-2SQ" firstAttribute="centerX" secondItem="hSL-tC-tNv" secondAttribute="centerX" id="xRY-8S-ZTN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRQ-XF-xkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="2778"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hKC-Oz-tIx">
+            <objects>
+                <viewController id="eLJ-Zy-v7C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bud-2u-9IQ">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cristaloterapia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQb-NI-u51">
+                                <rect key="frame" x="274" y="80" width="262" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wkl-fj-bbf">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <mutableString key="text">Cristaloterapia: Es una terapia energética que equilibra el cuerpo desde la parte física, emocional y espiritual. Se trabaja en el conjunto de chakras ubicado a lo largo de la columna vertebral hasta el cerebro. Esta energía circula a través de la persona y representa el conjunto de experiencias de distintos niveles y se almacena a lo largo de su vida y en ocasiones se encuentra bloqueada. Ayudamos a que esa energía fluya en el individuo para restablecer la armonía y conexión con su mente, sus emociones, su cuerpo y su espíritu.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cristales" translatesAutoresizingMaskIntoConstraints="NO" id="GsX-5s-W1j">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GsX-5s-W1j" secondAttribute="height" multiplier="811:303" id="O6P-no-Ufn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m90-3V-XC3"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Wkl-fj-bbf" firstAttribute="top" secondItem="GsX-5s-W1j" secondAttribute="bottom" constant="43" id="32z-xk-mKG"/>
+                            <constraint firstItem="uQb-NI-u51" firstAttribute="top" secondItem="m90-3V-XC3" secondAttribute="top" constant="80" id="6DO-hp-LNh"/>
+                            <constraint firstItem="GsX-5s-W1j" firstAttribute="top" secondItem="uQb-NI-u51" secondAttribute="bottom" constant="90" id="HPd-iz-Cjb"/>
+                            <constraint firstItem="m90-3V-XC3" firstAttribute="trailing" secondItem="Wkl-fj-bbf" secondAttribute="trailing" constant="71" id="YzB-Am-9HF"/>
+                            <constraint firstItem="uQb-NI-u51" firstAttribute="centerX" secondItem="Bud-2u-9IQ" secondAttribute="centerX" id="ZM0-kB-ecc"/>
+                            <constraint firstItem="GsX-5s-W1j" firstAttribute="leading" secondItem="Bud-2u-9IQ" secondAttribute="leading" id="gTT-2o-rBU"/>
+                            <constraint firstItem="m90-3V-XC3" firstAttribute="bottom" secondItem="Wkl-fj-bbf" secondAttribute="bottom" constant="40" id="nxk-Hf-la2"/>
+                            <constraint firstItem="Wkl-fj-bbf" firstAttribute="leading" secondItem="m90-3V-XC3" secondAttribute="leading" constant="71" id="rOw-XP-5v0"/>
+                            <constraint firstAttribute="trailing" secondItem="GsX-5s-W1j" secondAttribute="trailing" id="x78-Hj-OmH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMV-ae-dQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="3463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Luw-FZ-Skh">
+            <objects>
+                <viewController id="k6A-Yx-wd1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="twi-Yo-Jd9">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flores de Bach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7v4-5g-9gD">
+                                <rect key="frame" x="276" y="80" width="258" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vms-pK-Y2k">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Flores De Bach: Ayuda a reestablecer el equilibrio emocional y energético mediante extractos naturales extraídos de flores silvestres con el fin de relajar y aliviar la mente en situaciones de duelo, ansiedad, miedos, stress, entre otros. No tienen efectos secundarios y sin problema se pueden utilizar mientras consumes otros medicamentos. Contamos con 38 soluciones naturales.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flores de Bach" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-7h-daG">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dpD-7h-daG" secondAttribute="height" multiplier="811:303" id="e0n-xG-LZt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Re6-Sa-et9"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vms-pK-Y2k" firstAttribute="leading" secondItem="Re6-Sa-et9" secondAttribute="leading" constant="71" id="7sB-gx-r1a"/>
+                            <constraint firstItem="7v4-5g-9gD" firstAttribute="centerX" secondItem="twi-Yo-Jd9" secondAttribute="centerX" id="M8I-94-QVn"/>
+                            <constraint firstItem="dpD-7h-daG" firstAttribute="top" secondItem="7v4-5g-9gD" secondAttribute="bottom" constant="90" id="MkS-E2-W9T"/>
+                            <constraint firstItem="dpD-7h-daG" firstAttribute="leading" secondItem="twi-Yo-Jd9" secondAttribute="leading" id="RVz-jf-lMT"/>
+                            <constraint firstItem="Re6-Sa-et9" firstAttribute="trailing" secondItem="vms-pK-Y2k" secondAttribute="trailing" constant="71" id="RyQ-8J-yf2"/>
+                            <constraint firstItem="7v4-5g-9gD" firstAttribute="top" secondItem="Re6-Sa-et9" secondAttribute="top" constant="80" id="bgT-CI-wsC"/>
+                            <constraint firstAttribute="trailing" secondItem="dpD-7h-daG" secondAttribute="trailing" id="eoq-Nc-WUa"/>
+                            <constraint firstItem="vms-pK-Y2k" firstAttribute="top" secondItem="dpD-7h-daG" secondAttribute="bottom" constant="43" id="kCS-qa-nQC"/>
+                            <constraint firstItem="Re6-Sa-et9" firstAttribute="bottom" secondItem="vms-pK-Y2k" secondAttribute="bottom" constant="40" id="ukU-74-8g5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Azn-PT-ThF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="4143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rl0-3E-B0c">
+            <objects>
+                <viewController id="YUf-2L-O28" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YOt-m0-LUI">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brisas ambientales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-pm-YHe">
+                                <rect key="frame" x="238" y="80" width="334" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSj-C5-oi2">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Brisas Ambientales: Aromatizantes ambientales con propiedades de aromaterapia que, a través del olfato, estimula el sistema nervioso central ofreciendo resultados positivos en el manejo de las emociones. Se cuenta con brisas relajantes, brisas reanimante y brisas equilibrantes.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Brisas Ambientales" translatesAutoresizingMaskIntoConstraints="NO" id="xzy-HO-Hnw">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xzy-HO-Hnw" secondAttribute="height" multiplier="811:303" id="7o2-Kz-yO3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fFl-aj-Uog"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="fFl-aj-Uog" firstAttribute="bottom" secondItem="vSj-C5-oi2" secondAttribute="bottom" constant="40" id="47N-ZC-nj8"/>
+                            <constraint firstItem="Efd-pm-YHe" firstAttribute="centerX" secondItem="YOt-m0-LUI" secondAttribute="centerX" id="5Th-Kb-9nJ"/>
+                            <constraint firstAttribute="trailing" secondItem="xzy-HO-Hnw" secondAttribute="trailing" id="BH4-Lm-zEm"/>
+                            <constraint firstItem="xzy-HO-Hnw" firstAttribute="top" secondItem="Efd-pm-YHe" secondAttribute="bottom" constant="90" id="TNq-Pf-Tly"/>
+                            <constraint firstItem="fFl-aj-Uog" firstAttribute="trailing" secondItem="vSj-C5-oi2" secondAttribute="trailing" constant="71" id="bh8-38-LME"/>
+                            <constraint firstItem="xzy-HO-Hnw" firstAttribute="leading" secondItem="YOt-m0-LUI" secondAttribute="leading" id="gwk-Im-Qny"/>
+                            <constraint firstItem="Efd-pm-YHe" firstAttribute="top" secondItem="fFl-aj-Uog" secondAttribute="top" constant="80" id="mUx-QM-Hz7"/>
+                            <constraint firstItem="vSj-C5-oi2" firstAttribute="top" secondItem="xzy-HO-Hnw" secondAttribute="bottom" constant="43" id="oMP-nA-sVo"/>
+                            <constraint firstItem="vSj-C5-oi2" firstAttribute="leading" secondItem="fFl-aj-Uog" secondAttribute="leading" constant="71" id="qjg-X6-3bZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nb6-oY-Re3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997" y="4847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ygR-rx-Y0r">
+            <objects>
+                <viewController id="2he-oq-zHd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CmC-6s-WJF">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acompañamiento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmI-GF-uJU">
+                                <rect key="frame" x="248.5" y="80" width="313" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acompanamiento" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-gh-8ma">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2SD-gh-8ma" secondAttribute="height" multiplier="811:303" id="xnT-wo-N4u"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uc-hd-C4p">
+                                <rect key="frame" x="71" y="565.5" width="79" height="30"/>
+                                <state key="normal" title="Tanatología"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-qE-hVk">
+                                <rect key="frame" x="71" y="621.5" width="189" height="30"/>
+                                <state key="normal" title="Acompañamineto individual"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFA-b7-I1i">
+                                <rect key="frame" x="71" y="677.5" width="167" height="30"/>
+                                <state key="normal" title="Acompañamiento grupal"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9at-VO-ibL">
+                                <rect key="frame" x="71" y="733.5" width="82" height="30"/>
+                                <state key="normal" title="Logoterapia"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ab-Zl-K1h">
+                                <rect key="frame" x="71" y="789.5" width="84" height="30"/>
+                                <state key="normal" title="Mindfulness"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lor-JZ-ChI"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4Uc-hd-C4p" firstAttribute="top" secondItem="2SD-gh-8ma" secondAttribute="bottom" constant="47" id="1VK-d3-xYk"/>
+                            <constraint firstItem="SmI-GF-uJU" firstAttribute="top" secondItem="lor-JZ-ChI" secondAttribute="top" constant="80" id="2QM-1P-yOp"/>
+                            <constraint firstItem="2SD-gh-8ma" firstAttribute="top" secondItem="SmI-GF-uJU" secondAttribute="bottom" constant="90" id="DCn-Lk-s9K"/>
+                            <constraint firstItem="SmI-GF-uJU" firstAttribute="centerX" secondItem="CmC-6s-WJF" secondAttribute="centerX" id="DOc-FW-rCU"/>
+                            <constraint firstItem="zSs-qE-hVk" firstAttribute="top" secondItem="4Uc-hd-C4p" secondAttribute="bottom" constant="26" id="E5s-RS-gf8"/>
+                            <constraint firstItem="2SD-gh-8ma" firstAttribute="leading" secondItem="CmC-6s-WJF" secondAttribute="leading" id="GbN-2K-bVc"/>
+                            <constraint firstItem="4Uc-hd-C4p" firstAttribute="leading" secondItem="lor-JZ-ChI" secondAttribute="leading" constant="71" id="Mix-p6-g6C"/>
+                            <constraint firstAttribute="trailing" secondItem="2SD-gh-8ma" secondAttribute="trailing" id="Ndo-YF-S75"/>
+                            <constraint firstItem="9at-VO-ibL" firstAttribute="leading" secondItem="lor-JZ-ChI" secondAttribute="leading" constant="71" id="PPJ-g3-72k"/>
+                            <constraint firstItem="9at-VO-ibL" firstAttribute="top" secondItem="hFA-b7-I1i" secondAttribute="bottom" constant="26" id="Uw1-qW-lRR"/>
+                            <constraint firstItem="hFA-b7-I1i" firstAttribute="leading" secondItem="lor-JZ-ChI" secondAttribute="leading" constant="71" id="Vla-LS-R87"/>
+                            <constraint firstItem="hFA-b7-I1i" firstAttribute="top" secondItem="zSs-qE-hVk" secondAttribute="bottom" constant="26" id="Yci-Ja-KUa"/>
+                            <constraint firstItem="2Ab-Zl-K1h" firstAttribute="leading" secondItem="lor-JZ-ChI" secondAttribute="leading" constant="71" id="dnC-8i-1S1"/>
+                            <constraint firstItem="2Ab-Zl-K1h" firstAttribute="top" secondItem="9at-VO-ibL" secondAttribute="bottom" constant="26" id="ihc-nh-LQF"/>
+                            <constraint firstItem="zSs-qE-hVk" firstAttribute="leading" secondItem="lor-JZ-ChI" secondAttribute="leading" constant="71" id="wvv-rq-mKW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8EJ-2c-1fh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2171" y="617"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cHY-ax-15o">
+            <objects>
+                <viewController id="jN1-AV-nyF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ML6-YU-qAh">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holísticos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-J0-v5X">
+                                <rect key="frame" x="317" y="80" width="176" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holisticos" translatesAutoresizingMaskIntoConstraints="NO" id="bDX-H0-bgE">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bDX-H0-bgE" secondAttribute="height" multiplier="811:303" id="mN4-iB-KcQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRb-HP-1xi">
+                                <rect key="frame" x="71" y="565.5" width="93" height="30"/>
+                                <state key="normal" title="Aromaterapia"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PM-oC-VQV">
+                                <rect key="frame" x="71" y="621.5" width="100" height="30"/>
+                                <state key="normal" title="Cristaloterapia"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU5-NT-Hvo">
+                                <rect key="frame" x="71" y="677.5" width="33" height="30"/>
+                                <state key="normal" title="Reiki"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFY-6v-HfA">
+                                <rect key="frame" x="71" y="733.5" width="107" height="30"/>
+                                <state key="normal" title="Biomagnetismo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJk-k6-mUs">
+                                <rect key="frame" x="71" y="789.5" width="96" height="30"/>
+                                <state key="normal" title="Angeloterapia"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-MF-zbY">
+                                <rect key="frame" x="71" y="845.5" width="150" height="30"/>
+                                <state key="normal" title="Cama térmica de jade"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VXv-Lb-k08"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="cRb-HP-1xi" firstAttribute="top" secondItem="bDX-H0-bgE" secondAttribute="bottom" constant="47" id="ARy-zz-I58"/>
+                            <constraint firstItem="NFY-6v-HfA" firstAttribute="top" secondItem="QU5-NT-Hvo" secondAttribute="bottom" constant="26" id="Bfz-n7-D5g"/>
+                            <constraint firstItem="NFY-6v-HfA" firstAttribute="leading" secondItem="VXv-Lb-k08" secondAttribute="leading" constant="71" id="DAR-Ea-WJ0"/>
+                            <constraint firstItem="vJk-k6-mUs" firstAttribute="leading" secondItem="VXv-Lb-k08" secondAttribute="leading" constant="71" id="KMb-Dx-njm"/>
+                            <constraint firstItem="9PM-oC-VQV" firstAttribute="leading" secondItem="VXv-Lb-k08" secondAttribute="leading" constant="71" id="M4c-K6-Af4"/>
+                            <constraint firstItem="LNH-J0-v5X" firstAttribute="top" secondItem="VXv-Lb-k08" secondAttribute="top" constant="80" id="St3-OT-dmd"/>
+                            <constraint firstItem="bDX-H0-bgE" firstAttribute="top" secondItem="LNH-J0-v5X" secondAttribute="bottom" constant="90" id="VQo-zM-u67"/>
+                            <constraint firstItem="LNH-J0-v5X" firstAttribute="centerX" secondItem="ML6-YU-qAh" secondAttribute="centerX" id="exZ-qE-rhP"/>
+                            <constraint firstItem="9PM-oC-VQV" firstAttribute="top" secondItem="cRb-HP-1xi" secondAttribute="bottom" constant="26" id="fR8-GF-dKq"/>
+                            <constraint firstItem="bDX-H0-bgE" firstAttribute="leading" secondItem="ML6-YU-qAh" secondAttribute="leading" id="jW5-hU-qet"/>
+                            <constraint firstItem="nnE-MF-zbY" firstAttribute="top" secondItem="vJk-k6-mUs" secondAttribute="bottom" constant="26" id="qOr-gL-jNJ"/>
+                            <constraint firstItem="nnE-MF-zbY" firstAttribute="leading" secondItem="VXv-Lb-k08" secondAttribute="leading" constant="71" id="uxx-oX-kF3"/>
+                            <constraint firstItem="QU5-NT-Hvo" firstAttribute="top" secondItem="9PM-oC-VQV" secondAttribute="bottom" constant="26" id="vIm-ky-rij"/>
+                            <constraint firstItem="QU5-NT-Hvo" firstAttribute="leading" secondItem="VXv-Lb-k08" secondAttribute="leading" constant="71" id="w4b-jt-GGV"/>
+                            <constraint firstItem="vJk-k6-mUs" firstAttribute="top" secondItem="NFY-6v-HfA" secondAttribute="bottom" constant="26" id="wWP-jn-JLL"/>
+                            <constraint firstAttribute="trailing" secondItem="bDX-H0-bgE" secondAttribute="trailing" id="xg8-Gr-PRc"/>
+                            <constraint firstItem="cRb-HP-1xi" firstAttribute="leading" secondItem="VXv-Lb-k08" secondAttribute="leading" constant="71" id="zrS-lD-nCE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgj-se-G3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2171" y="1988"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WWH-A0-HKs">
+            <objects>
+                <viewController id="ho8-tz-wQM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j9B-HL-QQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternativos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-vf-FUn">
+                                <rect key="frame" x="297.5" y="80" width="215" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alternativos" translatesAutoresizingMaskIntoConstraints="NO" id="4AY-Qf-drZ">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4AY-Qf-drZ" secondAttribute="height" multiplier="811:303" id="Dgp-m8-X1q"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvs-Py-RzM">
+                                <rect key="frame" x="71" y="565.5" width="102" height="30"/>
+                                <state key="normal" title="Flores de Bach"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ3-h9-fq1">
+                                <rect key="frame" x="71" y="621.5" width="129" height="30"/>
+                                <state key="normal" title="Brisas ambientales"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eRU-zo-kXn"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="pZ3-h9-fq1" firstAttribute="leading" secondItem="eRU-zo-kXn" secondAttribute="leading" constant="71" id="36U-4I-iT2"/>
+                            <constraint firstItem="m2u-vf-FUn" firstAttribute="centerX" secondItem="j9B-HL-QQ5" secondAttribute="centerX" id="4Jc-hr-rbY"/>
+                            <constraint firstItem="m2u-vf-FUn" firstAttribute="top" secondItem="eRU-zo-kXn" secondAttribute="top" constant="80" id="5Zt-fZ-ab3"/>
+                            <constraint firstItem="pZ3-h9-fq1" firstAttribute="top" secondItem="Xvs-Py-RzM" secondAttribute="bottom" constant="26" id="B5n-fJ-EQb"/>
+                            <constraint firstItem="4AY-Qf-drZ" firstAttribute="top" secondItem="m2u-vf-FUn" secondAttribute="bottom" constant="90" id="F0h-br-KQk"/>
+                            <constraint firstItem="Xvs-Py-RzM" firstAttribute="top" secondItem="4AY-Qf-drZ" secondAttribute="bottom" constant="47" id="KV8-JQ-w2u"/>
+                            <constraint firstItem="4AY-Qf-drZ" firstAttribute="leading" secondItem="j9B-HL-QQ5" secondAttribute="leading" id="eIB-ab-P41"/>
+                            <constraint firstItem="Xvs-Py-RzM" firstAttribute="leading" secondItem="eRU-zo-kXn" secondAttribute="leading" constant="71" id="gRM-AN-vtT"/>
+                            <constraint firstAttribute="trailing" secondItem="4AY-Qf-drZ" secondAttribute="trailing" id="pO8-tP-xzN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrL-mn-KwM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2171" y="3073"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CV2-bt-ND3">
+            <objects>
+                <viewController id="GdO-xn-v3M" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zGK-Yp-MpT">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reiki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJx-9g-hro">
+                                <rect key="frame" x="362" y="80" width="86" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-kd-Nzy">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Reiki: Es un método de canalización y transmisión de energía vital para que la persona obtenga paz y equilibrio físico, mental, emocional y espiritual.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reiki" translatesAutoresizingMaskIntoConstraints="NO" id="EpQ-7s-ML0">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EpQ-7s-ML0" secondAttribute="height" multiplier="811:303" id="0je-49-g8l"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="71g-Ok-QG4"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="71g-Ok-QG4" firstAttribute="bottom" secondItem="aRx-kd-Nzy" secondAttribute="bottom" constant="40" id="3Re-kK-M1x"/>
+                            <constraint firstAttribute="trailing" secondItem="EpQ-7s-ML0" secondAttribute="trailing" id="5jw-PX-anC"/>
+                            <constraint firstItem="xJx-9g-hro" firstAttribute="centerX" secondItem="zGK-Yp-MpT" secondAttribute="centerX" id="864-tr-sVm"/>
+                            <constraint firstItem="EpQ-7s-ML0" firstAttribute="leading" secondItem="zGK-Yp-MpT" secondAttribute="leading" id="aAn-Kt-MI5"/>
+                            <constraint firstItem="aRx-kd-Nzy" firstAttribute="leading" secondItem="71g-Ok-QG4" secondAttribute="leading" constant="71" id="agy-3m-MbF"/>
+                            <constraint firstItem="aRx-kd-Nzy" firstAttribute="top" secondItem="EpQ-7s-ML0" secondAttribute="bottom" constant="43" id="cdf-Lw-Sgi"/>
+                            <constraint firstItem="71g-Ok-QG4" firstAttribute="trailing" secondItem="aRx-kd-Nzy" secondAttribute="trailing" constant="71" id="n48-yi-eAp"/>
+                            <constraint firstItem="xJx-9g-hro" firstAttribute="top" secondItem="71g-Ok-QG4" secondAttribute="top" constant="80" id="oiE-Hh-xBt"/>
+                            <constraint firstItem="EpQ-7s-ML0" firstAttribute="top" secondItem="xJx-9g-hro" secondAttribute="bottom" constant="90" id="rmH-xJ-hpy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C3e-XI-gBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="3463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jr8-nm-o9o">
+            <objects>
+                <viewController id="YyP-1L-BdM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l15-gy-FCo">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biomagnetismo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-Y0-ti5">
+                                <rect key="frame" x="267" y="80" width="276" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-Ta-56S">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Biomagnetismo: Es un método que busca el equilibrio en emociones, mente y energía a través de la colocación de imanes en posiciones estratégicas en el cuerpo para lograr una vida más próspera y saludable.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biomagnetismo" translatesAutoresizingMaskIntoConstraints="NO" id="6oH-tS-kJJ">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6oH-tS-kJJ" secondAttribute="height" multiplier="811:303" id="7CS-RD-8A4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ii7-P2-Zht"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6oH-tS-kJJ" secondAttribute="trailing" id="GGZ-my-adm"/>
+                            <constraint firstItem="6oH-tS-kJJ" firstAttribute="top" secondItem="cAm-Y0-ti5" secondAttribute="bottom" constant="90" id="RkL-EN-fKh"/>
+                            <constraint firstItem="6oH-tS-kJJ" firstAttribute="leading" secondItem="l15-gy-FCo" secondAttribute="leading" id="YZW-pC-ewh"/>
+                            <constraint firstItem="Ii7-P2-Zht" firstAttribute="trailing" secondItem="2Xe-Ta-56S" secondAttribute="trailing" constant="71" id="c3F-6O-mG4"/>
+                            <constraint firstItem="cAm-Y0-ti5" firstAttribute="top" secondItem="Ii7-P2-Zht" secondAttribute="top" constant="80" id="eEI-VY-zfY"/>
+                            <constraint firstItem="2Xe-Ta-56S" firstAttribute="top" secondItem="6oH-tS-kJJ" secondAttribute="bottom" constant="43" id="eQ5-Do-abR"/>
+                            <constraint firstItem="cAm-Y0-ti5" firstAttribute="centerX" secondItem="l15-gy-FCo" secondAttribute="centerX" id="f2p-eR-HrM"/>
+                            <constraint firstItem="2Xe-Ta-56S" firstAttribute="leading" secondItem="Ii7-P2-Zht" secondAttribute="leading" constant="71" id="s90-A6-Mm6"/>
+                            <constraint firstItem="Ii7-P2-Zht" firstAttribute="bottom" secondItem="2Xe-Ta-56S" secondAttribute="bottom" constant="40" id="wo8-7A-WLw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyb-o4-O8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="3463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="emo-Ps-69t">
+            <objects>
+                <viewController id="1KJ-mp-ySq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KIz-sf-eFa">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angeloterapia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiR-Mb-ulM">
+                                <rect key="frame" x="280.5" y="80" width="249" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2g9-8R-pFv">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Angeloterapia: Es una herramienta que te ayuda a trabajar tu autoestima, a darte cuenta de todo tu potencial; te ayuda a ver lo maravilloso y perfecto ser humano que eres y que no hay obstáculos que no puedas superar enfocándonos en una visión siempre positiva y optimista.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angeloterapia" translatesAutoresizingMaskIntoConstraints="NO" id="AbB-Rj-Ixd">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AbB-Rj-Ixd" secondAttribute="height" multiplier="811:303" id="c5L-Nk-DXH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RTF-rF-Hch"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2g9-8R-pFv" firstAttribute="top" secondItem="AbB-Rj-Ixd" secondAttribute="bottom" constant="43" id="3gj-fv-1FN"/>
+                            <constraint firstAttribute="trailing" secondItem="AbB-Rj-Ixd" secondAttribute="trailing" id="6QZ-Hm-c1i"/>
+                            <constraint firstItem="RTF-rF-Hch" firstAttribute="bottom" secondItem="2g9-8R-pFv" secondAttribute="bottom" constant="40" id="D8W-8Y-hkY"/>
+                            <constraint firstItem="UiR-Mb-ulM" firstAttribute="top" secondItem="RTF-rF-Hch" secondAttribute="top" constant="80" id="Dw0-wh-WcK"/>
+                            <constraint firstItem="AbB-Rj-Ixd" firstAttribute="leading" secondItem="KIz-sf-eFa" secondAttribute="leading" id="QTw-MX-xJy"/>
+                            <constraint firstItem="RTF-rF-Hch" firstAttribute="trailing" secondItem="2g9-8R-pFv" secondAttribute="trailing" constant="71" id="j6a-D8-Q05"/>
+                            <constraint firstItem="2g9-8R-pFv" firstAttribute="leading" secondItem="RTF-rF-Hch" secondAttribute="leading" constant="71" id="mag-hL-r0A"/>
+                            <constraint firstItem="AbB-Rj-Ixd" firstAttribute="top" secondItem="UiR-Mb-ulM" secondAttribute="bottom" constant="90" id="rRd-Am-IBM"/>
+                            <constraint firstItem="UiR-Mb-ulM" firstAttribute="centerX" secondItem="KIz-sf-eFa" secondAttribute="centerX" id="yAD-kb-la7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgh-a7-8dN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289" y="2778"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TBe-d1-MGT">
+            <objects>
+                <viewController id="Fex-y0-g4v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xDD-JQ-eGG">
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cama térmica de jade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCl-90-il7">
+                                <rect key="frame" x="214.5" y="80" width="381" height="46"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4y9-5R-7Un">
+                                <rect key="frame" x="71" y="561.5" width="668" height="478.5"/>
+                                <string key="text">Cama Térmica De Jade: El calor que expide la cama térmica con regulación de temperatura y la musicoterapia en conjunto, la persona es transportada a un ambiente de armonía y sensación de calma y relajación de los diferentes músculos de cuerpo con el fin de ayudar a equilibrar cambios de estado de ánimo y de energía corporal</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cama Térmica" translatesAutoresizingMaskIntoConstraints="NO" id="kdO-Gc-Bfl">
+                                <rect key="frame" x="0.0" y="216" width="810" height="302.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kdO-Gc-Bfl" secondAttribute="height" multiplier="811:303" id="Wyw-hC-re1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t0p-SD-D0d"/>
+                        <color key="backgroundColor" red="0.8706819415" green="0.91827225690000003" blue="0.8823494315" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kdO-Gc-Bfl" secondAttribute="trailing" id="Jk3-wb-AGC"/>
+                            <constraint firstItem="t0p-SD-D0d" firstAttribute="trailing" secondItem="4y9-5R-7Un" secondAttribute="trailing" constant="71" id="MBc-xU-bI0"/>
+                            <constraint firstItem="4y9-5R-7Un" firstAttribute="leading" secondItem="t0p-SD-D0d" secondAttribute="leading" constant="71" id="N3K-45-3de"/>
+                            <constraint firstItem="GCl-90-il7" firstAttribute="top" secondItem="t0p-SD-D0d" secondAttribute="top" constant="80" id="Ph1-MF-dZP"/>
+                            <constraint firstItem="t0p-SD-D0d" firstAttribute="bottom" secondItem="4y9-5R-7Un" secondAttribute="bottom" constant="40" id="ae9-MT-62a"/>
+                            <constraint firstItem="GCl-90-il7" firstAttribute="centerX" secondItem="xDD-JQ-eGG" secondAttribute="centerX" id="kWm-Wa-Iix"/>
+                            <constraint firstItem="kdO-Gc-Bfl" firstAttribute="leading" secondItem="xDD-JQ-eGG" secondAttribute="leading" id="ow1-rf-F7o"/>
+                            <constraint firstItem="4y9-5R-7Un" firstAttribute="top" secondItem="kdO-Gc-Bfl" secondAttribute="bottom" constant="43" id="rS4-Cm-bLN"/>
+                            <constraint firstItem="kdO-Gc-Bfl" firstAttribute="top" secondItem="GCl-90-il7" secondAttribute="bottom" constant="90" id="xbo-qI-NHh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHo-3N-xnM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356" y="2778"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Acompañamiento grupal" width="1920" height="1080"/>
+        <image name="Acompañamiento individual" width="1920" height="1080"/>
+        <image name="Brisas Ambientales" width="1280" height="720"/>
+        <image name="Cama Térmica" width="4091" height="1745"/>
+        <image name="Flores de Bach" width="1920" height="1572"/>
+        <image name="Logoterapia" width="1920" height="1080"/>
+        <image name="Mindfulness" width="1920" height="1080"/>
+        <image name="Reiki" width="1920" height="1478"/>
+        <image name="Tanatologia" width="1920" height="1275"/>
         <image name="acompanamiento" width="1024" height="459"/>
         <image name="alternativos" width="1000" height="640"/>
+        <image name="angeloterapia" width="1920" height="1280"/>
+        <image name="aromaterapia y musicoterapia" width="1920" height="1280"/>
+        <image name="biomagnetismo" width="1920" height="1280"/>
+        <image name="cristales" width="1920" height="1080"/>
         <image name="holisticos" width="800" height="400"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="mision" width="1400" height="784"/>

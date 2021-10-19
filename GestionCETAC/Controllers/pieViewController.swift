@@ -10,6 +10,9 @@ import Charts
 import TinyConstraints
 
 class pieViewController: UIViewController {
+    
+    let usuarioControlador = usuarioController()
+    
 
     @IBOutlet weak var pieView: UIView!
     
@@ -24,24 +27,64 @@ class pieViewController: UIViewController {
         sesionesChart.center(in: pieView)
         sesionesChart.width(to: pieView)
         sesionesChart.heightToWidth(of: pieView)
-        sesionesChartActualiza()
+        
+        usuarioControlador.getSexo(){ (result) in
+            switch result{
+            case .success(let sexo): self.sesionesChartActualiza(sexo);
+                
+            case .failure(let error):self.displayError(error, title: "No se pudo obtener el usuario")
+            }
+        }
        
         // Do any additional setup after loading the view.
     }
     
-    func sesionesChartActualiza(){
-        let punto1 = PieChartDataEntry(value:1)
-        let punto2 = PieChartDataEntry(value:4)
-        let punto3 = PieChartDataEntry(value:3)
-        let punto4 = PieChartDataEntry(value:2)
+    func sesionesChartActualiza(_ variables:[Int]){
+
+        let labels = ["Masculino","Femenino","Otro"]
         
-        var sesionesDataSet = PieChartDataSet(entries: [punto1,punto2,punto3,punto4])
-        var data = PieChartData(dataSet: sesionesDataSet)
+        /*let punto1 = PieChartDataEntry(value:Double(variables[0]))
+        let punto2 = PieChartDataEntry(value:Double(variables[1]))
+        let punto3 = PieChartDataEntry(value:Double(variables[2]))
+        
+        var sesionesDataSet = PieChartDataSet(entries: [punto1,punto2,punto3])
+        var data = PieChartData(dataSet: sesionesDataSet)*/
+        
+        var entries = [PieChartDataEntry]()
+            for (index, value) in variables.enumerated() {
+                let entry = PieChartDataEntry()
+                entry.y = Double(value)
+                entry.label = labels[index]
+                entries.append( entry)
+            }
+        
+        var colors: [UIColor] = []
+        
+        let sesionesDataSet = PieChartDataSet( values: entries, label: "Pie Chart")
+
+            for _ in 0..<sesionesDataSet.count {
+                let red = Double(arc4random_uniform(256))
+                let green = Double(arc4random_uniform(256))
+                let blue = Double(arc4random_uniform(256))
+                let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+                colors.append(color)
+            }
+        
+        sesionesDataSet.colors = colors
         
         sesionesChart.data = data
-        sesionesChart.chartDescription?.text = "Sesiones por usuario"
+        sesionesChart.chartDescription?.text = "Porcentaje de sexo de los usuarios"
         sesionesChart.notifyDataSetChanged()
     }
+    
+    func displayError(_ error: Error, title:String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
     
 
     /*
