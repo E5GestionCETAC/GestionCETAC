@@ -114,6 +114,32 @@ class usuarioController{
         }
     }
     
+    func getSexo(completion: @escaping (Result<[Int], Error>) -> Void){
+        var usuarios = [Usuario]()
+        var sexos:[Int] = [0,0,0]
+        
+        db.collection("usuarios").whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    var u = Usuario(aDoc: document)
+                    if u.sexo == "Masculino"{
+                        sexos[0] += 1
+                    }
+                    else if u.sexo == "Femenino"{
+                        sexos[1] += 1
+                    }
+                    else{
+                        sexos[2] += 1
+                    }
+                    
+                }
+                completion(.success(sexos))
+            }
+        }
+    }
+    
     func insertUsuario(nuevoUsuario:Usuario, completion: @escaping (Result<String, Error>) -> Void){
         var ref: DocumentReference? = nil
         ref = db.collection("usuarios").addDocument(data: [
