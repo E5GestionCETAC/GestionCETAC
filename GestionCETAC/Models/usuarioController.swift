@@ -122,50 +122,7 @@ class usuarioController{
         }
     }
     
-    func getMale(completion: @escaping (Result<Int, Error>) -> Void){
-        var usuarios = [Usuario]()
-        db.collection("usuarios").whereField("sexo", isEqualTo: "Masculino").getDocuments { (querySnapshot, error) in
-            if let error = error{
-                completion(.failure(error))
-            }else{
-                for document in querySnapshot!.documents{
-                    let u = Usuario(aDoc: document)
-                    usuarios.append(u)
-                }
-                completion(.success(usuarios.count))
-            }
-        }
-    }
-    
-    func getFemale(completion: @escaping (Result<Int, Error>) -> Void){
-        var usuarios = [Usuario]()
-        db.collection("usuarios").whereField("sexo", isEqualTo: "Femenino").getDocuments { (querySnapshot, error) in
-            if let error = error{
-                completion(.failure(error))
-            }else{
-                for document in querySnapshot!.documents{
-                    let u = Usuario(aDoc: document)
-                    usuarios.append(u)
-                }
-                completion(.success(usuarios.count))
-            }
-        }
-    }
-    
-    func getOtro(completion: @escaping (Result<Int, Error>) -> Void){
-        var usuarios = [Usuario]()
-        db.collection("usuarios").whereField("sexo", isEqualTo: "Otro").getDocuments { (querySnapshot, error) in
-            if let error = error{
-                completion(.failure(error))
-            }else{
-                for document in querySnapshot!.documents{
-                    let u = Usuario(aDoc: document)
-                    usuarios.append(u)
-                }
-                completion(.success(usuarios.count))
-            }
-        }
-    }
+
     // End Indicadores
     
     func getSexo(completion: @escaping (Result<[Int], Error>) -> Void){
@@ -190,6 +147,28 @@ class usuarioController{
                     
                 }
                 completion(.success(sexos))
+            }
+        }
+    }
+    
+    func fetchEdades(completion: @escaping (Result<[(key:Int, value:Int)], Error>) -> Void){
+        var topFive : [Int:Int] = [:]
+        db.collection("usuarios").whereField("activo", isEqualTo: true).getDocuments { (querySnapshot, error) in
+            if let error = error{
+                completion(.failure(error))
+            }else{
+                for document in querySnapshot!.documents{
+                    let u = Usuario(aDoc: document)
+                    let motivoExist = topFive[u.edad] != nil
+                    if motivoExist{
+                        topFive[u.edad]! += 1
+                    }
+                    else{
+                        topFive[u.edad] = 1
+                    }
+                }
+                let retDic = topFive.sorted{ $0.value > $1.value }
+                completion(.success(retDic))
             }
         }
     }

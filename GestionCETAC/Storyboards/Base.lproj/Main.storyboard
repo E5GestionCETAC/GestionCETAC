@@ -3757,9 +3757,14 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-eV-nni">
-                                <rect key="frame" x="57" y="175" width="694" height="712"/>
+                                <rect key="frame" x="207" y="134" width="397" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGU-3r-hku">
+                                <rect key="frame" x="207" y="581" width="397" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fv5-jg-EXQ"/>
@@ -3767,6 +3772,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                     </view>
                     <navigationItem key="navigationItem" title="Indicadores de los usuarios" id="LT3-Ue-j9v"/>
                     <connections>
+                        <outlet property="edadView" destination="aGU-3r-hku" id="G9d-0J-HbI"/>
                         <outlet property="pieView" destination="a4s-eV-nni" id="a7B-lb-oyt"/>
                     </connections>
                 </viewController>
@@ -4818,6 +4824,9 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
