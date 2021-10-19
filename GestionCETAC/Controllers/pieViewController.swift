@@ -41,34 +41,28 @@ class pieViewController: UIViewController {
     
     func sesionesChartActualiza(_ variables:[Int]){
 
-        let labels = ["Masculino","Femenino","Otro"]
         
-        let punto1 = PieChartDataEntry(value:Double(variables[0]))
-        let punto2 = PieChartDataEntry(value:Double(variables[1]))
-        let punto3 = PieChartDataEntry(value:Double(variables[2]))
+        let punto1 = PieChartDataEntry(value:Double(variables[0]),label:"Masculino")
+        let punto2 = PieChartDataEntry(value:Double(variables[1]),label:"Femenino")
+        let punto3 = PieChartDataEntry(value:Double(variables[2]),label:"Otro")
         
         var sesionesDataSet = PieChartDataSet(entries: [punto1,punto2,punto3])
         var data = PieChartData(dataSet: sesionesDataSet)
         
-        /*var entries = [PieChartDataEntry]()
-            for (index, value) in variables.enumerated() {
-                let entry = PieChartDataEntry()
-                entry.y = Double(value)
-                entry.label = labels[index]
-                entries.append( entry)
-            }*/
+
         
         var colors: [UIColor] = []
-        
-        //let sesionesDataSet = PieChartDataSet( values: entries, label: "Pie Chart")
 
-            for _ in 0..<sesionesDataSet.count {
-                let red = Double(arc4random_uniform(256))
-                let green = Double(arc4random_uniform(256))
-                let blue = Double(arc4random_uniform(256))
-                let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-                colors.append(color)
-            }
+
+          
+ 
+        let color1 = UIColor(red: CGFloat(50/255), green: CGFloat(255/255), blue: CGFloat(0/255), alpha: 1)
+        let color2 = UIColor(red: CGFloat(50/255), green: CGFloat(55/255), blue: CGFloat(255/255), alpha: 1)
+        let color3 = UIColor(red: CGFloat(255/255), green: CGFloat(0/255), blue: CGFloat(255/255), alpha: 1)
+        colors.append(color1)
+        colors.append(color2)
+        colors.append(color3)
+         
         
         sesionesDataSet.colors = colors
         

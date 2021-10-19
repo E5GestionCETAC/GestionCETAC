@@ -3797,7 +3797,7 @@ Dar acompañamiento y consejería a personas y pacientes que enfrentan situacion
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-eV-nni">
-                                <rect key="frame" x="57" y="175" width="694" height="712"/>
+                                <rect key="frame" x="207" y="134" width="397" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                             </view>
