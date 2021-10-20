@@ -139,10 +139,10 @@ class ReportesInfoViewController: UIViewController {
         expedienteID.isUserInteractionEnabled = false
         tanaText.isUserInteractionEnabled = false
         usuarioText.isUserInteractionEnabled = false
+        fechaText.isUserInteractionEnabled = false
         
         if editingMode == false{
             // Unable text fields and text views
-            fechaText.isUserInteractionEnabled = false
             
             motivoText.isUserInteractionEnabled = false
             servicioText.isUserInteractionEnabled = false
@@ -154,7 +154,6 @@ class ReportesInfoViewController: UIViewController {
         }
         else{
             // Enable text fields and text views
-            fechaText.isUserInteractionEnabled = true
             
             motivoText.isUserInteractionEnabled = true
             servicioText.isUserInteractionEnabled = true
