@@ -11,7 +11,7 @@ import Firebase
 class InformacionUsuarioViewController: UIViewController {
     //Picker view
     var datePicker = UIDatePicker()
-    let generos:[String] = ["", "Maculino", "Femenino", "Otro"]
+    let generos:[String] = ["", "Masculino", "Femenino", "Otro"]
     
     fileprivate let generoPickerView = ToolbarPickerView()
     //End picker view

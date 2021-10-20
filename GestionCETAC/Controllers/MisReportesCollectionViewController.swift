@@ -88,6 +88,8 @@ class MisReportesCollectionViewController: UICollectionViewController {
     func addSesion(_ sesion:Sesion){
         self.sesiones.insert(sesion, at: 0)
         if sesiones.count == usuarios.count{
+            sesiones = sesiones.sorted{$0.usuarioID > $1.usuarioID}
+            usuarios = usuarios.sorted{$0.id > $1.id}
             self.updateUI(with: self.sesiones)
         }
     }
