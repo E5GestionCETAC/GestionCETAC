@@ -24,7 +24,7 @@ class ValidateLogIn: XCTestCase {
     func testExample1() throws {
         let email = "daniel@test.com"
         let password = "Hello$88"
-        let expectedUID = "9EMHacDKNZcLWjrHG30xMvqBUt03"
+        let expectedUID = "4kBrtFMjO9cChNszHVnIAFNB7Z13"
         Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
             if error != nil{
                 XCTAssertNil(error)
@@ -40,7 +40,7 @@ class ValidateLogIn: XCTestCase {
     func testExample2() throws {
         let email = "daniel@test.co"
         let password = "Hello$88"
-        let expectedUID = "9EMHacDKNZcLWjrHG30xMvqBUt03"
+        let expectedUID = "4kBrtFMjO9cChNszHVnIAFNB7Z13"
         Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
             if error != nil{
                 XCTAssertNotNil(error)
@@ -56,7 +56,7 @@ class ValidateLogIn: XCTestCase {
     func testExample3() throws {
         let email = "daniel@test.com"
         let password = "Hello$8"
-        let expectedUID = "9EMHacDKNZcLWjrHG30xMvqBUt03"
+        let expectedUID = "4kBrtFMjO9cChNszHVnIAFNB7Z13"
         Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
             if error != nil{
                 XCTAssertNotNil(error)
@@ -73,7 +73,7 @@ class ValidateLogIn: XCTestCase {
     func testExample4() throws {
         let email = "daniel@test.com"
         let password = "Hello$88"
-        let expectedUID = "LfAwLvZWIBMterk5HCRIvIQOMrV2"
+        let expectedUID = "4kBrtFMjO9cChNszHVnIAFNB7Z1"
         Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
             if error != nil{
                 XCTAssertNil(error)

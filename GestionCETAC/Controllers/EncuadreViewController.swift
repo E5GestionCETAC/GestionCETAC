@@ -16,7 +16,7 @@ class EncuadreViewController: UIViewController {
     let motivos:[String] = ["","Abuso","Adicción","Ansiedad","Baja autoestima","Codependencia","Comunicación familiar","Conflicto con hermano","Conflicto con madre","Conflicto con padre","Dependencia","Divorcio","Duelo","Duelo grupal","Enfermedad","Enfermedad crónico degenerativa","Heridas de la infancia","Identidad de género","Infertilidad","Infidelidad","Intento de suicidio","Miedo","Pérdida de bienes materiales","Pérdida de identidad","Pérdida laboral","Relación con los padres","Ruptura de Noviazgo","Stress","Trastorno Obsesivo","Violación","Violencia intrafamiliar","Violencia psicológica","Viudez","Otro"]
     let intervenciones:[String] = ["","Tanatología", "Acompañamiento Individual", "Acompañamiento Grupal", "Logoterapia", "Mindfulness", "Aromaterapia y Musicoterapia", "Cristaloterapia", "Reiki", "Biomagnetismo", "Angeloterapia", "Cama Térmica De Jade", "Flores De Bach", "Brisas Ambientales"]
     let herramientas:[String] = ["","Contención","Diálogo","Ejercicio","Encuadre","Infografía","Dinámica","Lectura","Meditación","Video","Otro"]
-    let generos:[String] = ["", "Maculino", "Femenino", "Otro"]
+    let generos:[String] = ["", "Masculino", "Femenino", "Otro"]
     
     fileprivate let servicioPickerView = ToolbarPickerView()
     fileprivate let motivoPickerView = ToolbarPickerView()
@@ -130,6 +130,7 @@ class EncuadreViewController: UIViewController {
         let error = validateData()
         if let error = error {
             displayError(error, title: "Error")
+            return
         }
         if abrirExpedienteSwitch.isOn
         {

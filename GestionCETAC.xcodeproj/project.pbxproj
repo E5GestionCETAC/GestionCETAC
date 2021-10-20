@@ -35,7 +35,6 @@
 		C26378D12703B69400900453 /* reportes.png in Resources */ = {isa = PBXBuildFile; fileRef = C26378D02703B69400900453 /* reportes.png */; };
 		C26378D32703C41500900453 /* cetacUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26378D22703C41500900453 /* cetacUserController.swift */; };
 		C26378D52704B0B400900453 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26378D42704B0B400900453 /* Usuario.swift */; };
-		C27285D92712655700F6524A /* AddCetacUserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27285D82712655700F6524A /* AddCetacUserTest.swift */; };
 		C27285DC2712673300F6524A /* GetCetacUserInfoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27285DB2712673300F6524A /* GetCetacUserInfoTest.swift */; };
 		C274AFB3270235A3003DC50F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C274AFB2270235A3003DC50F /* GoogleService-Info.plist */; };
 		C274AFD227023907003DC50F /* loginBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C274AFD127023907003DC50F /* loginBackground.png */; };
@@ -125,7 +124,6 @@
 		C26378D02703B69400900453 /* reportes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reportes.png; sourceTree = "<group>"; };
 		C26378D22703C41500900453 /* cetacUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cetacUserController.swift; sourceTree = "<group>"; };
 		C26378D42704B0B400900453 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
-		C27285D82712655700F6524A /* AddCetacUserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCetacUserTest.swift; sourceTree = "<group>"; };
 		C27285DB2712673300F6524A /* GetCetacUserInfoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCetacUserInfoTest.swift; sourceTree = "<group>"; };
 		C274AFB2270235A3003DC50F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C274AFD127023907003DC50F /* loginBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackground.png; sourceTree = "<group>"; };
@@ -293,7 +291,6 @@
 				C2FDADAA2712339900DB7F19 /* ValidateEmailTest.swift */,
 				C2FDADAC2712350700DB7F19 /* ValidateLogInTest.swift */,
 				C2FDADAE27123DAC00DB7F19 /* ValidateSignUpTest.swift */,
-				C27285D82712655700F6524A /* AddCetacUserTest.swift */,
 				C27285DB2712673300F6524A /* GetCetacUserInfoTest.swift */,
 			);
 			path = Tests;
@@ -532,7 +529,6 @@
 				C2FDADA927122AC100DB7F19 /* ValidatePasswordTest.swift in Sources */,
 				C2FDADAD2712350700DB7F19 /* ValidateLogInTest.swift in Sources */,
 				C2FDADAF27123DAC00DB7F19 /* ValidateSignUpTest.swift in Sources */,
-				C27285D92712655700F6524A /* AddCetacUserTest.swift in Sources */,
 				C27285DC2712673300F6524A /* GetCetacUserInfoTest.swift in Sources */,
 				C2FDADAB2712339A00DB7F19 /* ValidateEmailTest.swift in Sources */,
 			);
