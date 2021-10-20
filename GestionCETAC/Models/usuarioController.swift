@@ -95,7 +95,12 @@ class usuarioController{
                 for document in querySnapshot!.documents{
                     usuario = Usuario(aDoc: document)
                 }
-                completion(.success(usuario!))
+                if usuario != nil{
+                    completion(.success(usuario!))
+                }else{
+                    completion(.failure(CustomError.notFound))
+                }
+                
             }
         }
     }

@@ -69,7 +69,12 @@ class sesionController{
                 for document in querySnapshot!.documents{
                     sesion = Sesion(aDoc: document)
                 }
-                completion(.success(sesion!))
+                if sesion != nil{
+                    completion(.success(sesion!))
+                }
+                else{
+                    completion(.failure(CustomError.notFound))
+                }
             }
         }
     }
@@ -84,7 +89,12 @@ class sesionController{
                 for document in querySnapshot!.documents{
                     sesion = Sesion(aDoc: document)
                 }
-                completion(.success(sesion!))
+                if sesion != nil{
+                    completion(.success(sesion!))
+                }
+                else{
+                    completion(.failure(CustomError.notFound))
+                }
             }
         }
     }
